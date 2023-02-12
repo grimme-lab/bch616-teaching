@@ -1,2 +1,0 @@
-The PSI4 manual can be found at:
-https://psicode.org/psi4manual/master/index.html

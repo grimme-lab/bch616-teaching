@@ -6,8 +6,14 @@
 .. |lrarr|  unicode:: U+2194 .. like \leftrightarrow in LaTeX
 .. |irarr|  unicode:: U+2192 .. arrow for irreversible chemical reaction
 .. |eqarr|  unicode:: U+21CC .. arrow for chemical equilibrium reaction
+.. |neq|    unicode:: U+2260 .. unequal
+.. |alpha|  unicode:: U+03B1 .. lowercase letter alpha
+.. |beta|   unicode:: U+03B2 .. lowercase letter beta
 .. |eps|    unicode:: U+03B5 .. lowercase letter epsilon
 .. |zeta|   unicode:: U+03B6 .. lowercase letter zeta
 .. |delta|  unicode:: U+03B4 .. lowercase letter delta
 .. |pi|     unicode:: U+03C0 .. lowercase letter pi
+.. |sigma|  unicode:: U+03C3 .. lowercase letter sigma
 .. |kappa|  unicode:: U+03BA .. lowercase letter kappa
+.. |mu|     unicode:: U+03Bc .. lowercase letter mu
+.. |nu|     unicode:: U+03Bd .. lowercase letter nu

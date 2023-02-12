@@ -17,12 +17,12 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Theoretical Methods for Condensed Matter'
+project = 'BCh 6.1.6 Computational Chemistry'
 copyright = '2022, Grimme group'
 author = 'Grimme group'
 
 # The full version, including alpha/beta/rc tags
-release = 'WS 22/23'
+release = 'SS 23'
 
 
 # -- General configuration ---------------------------------------------------
@@ -44,7 +44,7 @@ templates_path = ['_templates']
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'en'
+language = 'de'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -60,7 +60,7 @@ exclude_patterns = []
 html_theme = 'sphinx_book_theme'
 html_title = project
 html_theme_options = {
-    "repository_url": "https://github.com/grimme-lab/wp12-teaching",
+    "repository_url": "https://github.com/grimme-lab/bch616-teaching",
     "repository_branch": "main",
     "path_to_docs": "doc",
     "use_edit_page_button": True,
