@@ -14,7 +14,6 @@
 #import sys
 #sys.path.insert(0, os.path.abspath('.'))
 
-
 # -- Project information -----------------------------------------------------
 
 project = 'BCh 6.1.6 Computational Chemistry'
@@ -52,6 +51,8 @@ language = 'de'
 exclude_patterns = []
 
 
+
+
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
@@ -84,3 +85,5 @@ panels_add_bootstrap_css = False
 master_doc = 'index'
 
 latex_engine = 'xelatex'
+
+numfig = True

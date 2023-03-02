@@ -1,5 +1,7 @@
 .. include:: symbols.txt
 
+.. _exp_mol_bauen:
+
 Experiment: Moleküle am Computer bauen
 ======================================
 

@@ -20,3 +20,5 @@ Hier, ist das Praktikumsskript für der Grimme Teil "Hükel-Methode und Quantenc
    ex9_solv
    ex10_thermo
    ex11_ir_raman
+   appendix
+   
