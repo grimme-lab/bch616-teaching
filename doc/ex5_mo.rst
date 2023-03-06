@@ -1,5 +1,7 @@
 .. include:: symbols.txt
 
+.. _exp_mo:
+
 Experiment: Interpretation der Ergebnisse von MO Rechnungen
 ===========================================================
 

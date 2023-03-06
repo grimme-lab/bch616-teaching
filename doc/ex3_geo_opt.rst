@@ -8,6 +8,7 @@ Experiment: Geometrieoptimierung
 Hintergrund
 -----------
 
+.. _sec-geom-opt-PES:
 
 Energiehyperfläche (Potential Energy Surface, PES)
 ---------------------------------------------------

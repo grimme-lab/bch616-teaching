@@ -49,6 +49,36 @@ Molden öffnet daraufhin standardmäßig zwei Fenster: das Kontrolfenster (siehe
 
         Frequenzauswahl (links) und geplottetes Spektrum (rechts) in Molden. 
 
+.. _app-multiwfn:
+
+Differenzdichten mit MultiWfn
+-----------------------------
+
+Multiwfn ist ein Programm zur Analyse von elektronischen Wellenfunktionen. In diesem Praktikum wird es nur eingesetzt um die Differenzdichte zwischen aus zwei .cube Datein an der gleichen Geometrie zu bestimmen, Multiwfn bietet aber darüber hinaus auch eine große Vielfalt anderer Funktionalitäten an (siehe dafür das Manual). Multiwfn kann von der Komandozeile mit dem folgenden Befehl für eine erste Elektronendichte der ``A.cube`` Datei gestartet werden: 
+
+    .. code-block:: none   
+
+        multiwfn A.cube
+
+Multiwfn zeigt nun eine ausführliche Auflistung der möglichen Optionen an. Um von der ersten Elektronendichte eine zweite in der ``B.cube`` Datei abzuziehen und die Differenzdichte zu erhalten, braucht es die folgenden Optionen: 
+
+    .. code-block:: none   
+
+        13        // Process grid data
+        11        // Grid data calculation
+        4         // Subtract a grid file                 i.e. A-B=C
+        B.cube 
+        0         // Output present grid data to Gaussian cube file
+        Out.cube
+
+Die fertige Differenzdichte wird damit in die ``Out.cube`` Datei geschrieben. Bei der Berechnung der Differenzdichte ist es wichtig, dass für beide Rechnungen die gleichen Grid-Settings gewählt wurden. 
+
+.. _app-Plot-MO-Dens:
+
+MOs und Dichten mit VMD
+-----------------------
+
+
 
 .. _app-orca_mapspc:
 

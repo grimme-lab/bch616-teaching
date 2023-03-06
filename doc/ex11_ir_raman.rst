@@ -1,5 +1,7 @@
 .. include:: symbols.txt
 
+.. _exp_ir_raman:
+
 Experiment: Infrarot- und Raman-Spektroskopie
 =============================================
 

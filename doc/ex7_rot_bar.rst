@@ -1,5 +1,7 @@
 .. include:: symbols.txt
 
+.. _exp_rot_bar:
+
 Experiment: Rotationsbarriere von Ethan
 =======================================
 
