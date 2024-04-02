@@ -83,8 +83,8 @@ Wechseln Sie in dieses Verzeichnis (``cd hueckel``).
 Erstellen Sie die Eingabedatei mit einem Editor. Die erste Zeile enthält die Anzahl der :math:`\pi`-Atome. In der zweiten Zeile wird die Zahl der :math:`\pi`-Elektronen angegeben. Danach erfolgt die Eingabe der Hückel-Matrix, und zwar zuerst die Nummern der verbundenen Atome gefolgt vom Betrag des Resonanzintegrals :math:`\beta` bzw.\ des Coulombintegrals :math:`\alpha`.
 
 Im Folgenden ist eine Beispieleingabe für Pyrrol angegeben (5 Atome, 6 :math:`\pi`-Elektronen):
+
 .. code-block:: bash
-   :linenos:
 
    5
    6
@@ -94,7 +94,6 @@ Im Folgenden ist eine Beispieleingabe für Pyrrol angegeben (5 Atome, 6 :math:`\
    3 4 1.0
    4 5 1.0
    1 5 0.8
-
 
 
 
