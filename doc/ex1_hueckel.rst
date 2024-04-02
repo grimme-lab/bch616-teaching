@@ -10,17 +10,17 @@ Die Hückelmethode ist eine der einfachsten semiempirischen Methoden zur quanten
 Näherungen in der Hückel-Theorie
 --------------------------------
 
-Für planare, konjugierte (d.h. aus :math:'sp^{2}'-hybridisierten Atomen aufgebaute) Systeme können folgende Näherungen eingeführt werden:
+Für planare, konjugierte (d.h. aus :math:`\mathrm{sp}^{2}`-hybridisierten Atomen aufgebaute) Systeme können folgende Näherungen eingeführt werden:
 
 1. Die |sigma|-Elektronen werden explizit vernachl  ̈assigt, d.h. ergeben ein konstantes Potential für alle |pi|-Elektronen.
 2. Für jedes Atom wird nur ein Atomorbital pz in der LCAO-Entwicklung verwendet.
-3. Die Überlappungsintegrale werden vernachl ̈assigt für :math:'\\mu\\neq\\nu' (:math:'S\\mu\\mu = 1').
-4. Die Integrale :math:'H\\mu\\nu' werden empirisch festgelegt:
+3. Die Überlappungsintegrale werden vernachl ̈assigt für :math:`\mu\neq\nu` (:math:`S_{\mu\mu} = 1`).
+4. Die Integrale :math:`H_{\mu\nu}` werden empirisch festgelegt:
 
-(a) :math:'H\\mu\\nu = \\beta', falls die Atome |mu| und |nu| direkt verbunden sind (Energie eines Elektrons im Feld zweier Kerne mit impliziten Korrekturen für vernachlässigte Terme). Sind |mu| und |nu| nicht direkt miteinander verbunden, gilt :math:'H\\nu\\nu = 0'.
-(b) :math:'H\\nu\\nu = \\alpha' (Energie eines Elektrons im Feld des Kerns |mu| mit impliziten Korrekturen für vernachlässigte Terme).
+(a) :math:`H_{_{\mu\nu}} = \beta`, falls die Atome |mu| und |nu| direkt verbunden sind (Energie eines Elektrons im Feld zweier Kerne mit impliziten Korrekturen für vernachlässigte Terme). Sind |mu| und |nu| nicht direkt miteinander verbunden, gilt :math:`H_{\nu\nu} = 0`.
+(b) :math:`H_{\nu\nu} = \alpha` (Energie eines Elektrons im Feld des Kerns |mu| mit impliziten Korrekturen für vernachlässigte Terme).
 
-In der Praxis wird |alpha| für Kohlenstoff willkürlich auf Null gesetzt, und die Parameter anderer Atome werden relativ dazu empirisch bestimmt. |beta| (Resonanzintegral) wird für eine C--C Bindung der Länge 1.4|angst| als Standard auf --1 gesetzt. Bei Molekülen mit starken Abweichungen von dieser Standardlänge oder bei C--X Bindungen wird der |beta|-Wert empirisch verändert.
+In der Praxis wird |alpha| für Kohlenstoff willkürlich auf Null gesetzt, und die Parameter anderer Atome werden relativ dazu empirisch bestimmt. |beta| (Resonanzintegral) wird für eine :math:`\ce{C-C}` Bindung der Länge 1.4 Å als Standard auf --1 gesetzt. Bei Molekülen mit starken Abweichungen von dieser Standardlänge oder bei :math:`\ce{C-X}` Bindungen wird der |beta|-Wert empirisch verändert.
 
 Diskussion der eingeführten Näherungen
 --------------------------------------
