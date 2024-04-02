@@ -17,11 +17,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'BCh 6.1.6 Computational Chemistry'
-copyright = '2022, Grimme group'
+copyright = '2024, Grimme group'
 author = 'Grimme group'
 
 # The full version, including alpha/beta/rc tags
-release = 'SS 23'
+release = 'SS 24'
 
 
 # -- General configuration ---------------------------------------------------
@@ -30,9 +30,10 @@ release = 'SS 23'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "sphinx_panels",
-    "sphinx_copybutton",
-    "sphinx_togglebutton",
+    # "sphinx_panels",
+    # "sphinx_copybutton",
+    # "sphinx_togglebutton",
+    # "sphinx-design",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
