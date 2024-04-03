@@ -3,7 +3,7 @@
 .. _exp_disp:
 
 Experiment 4: Dispersion
-======================
+========================
 
 .. contents::
 
