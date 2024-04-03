@@ -2,7 +2,7 @@
 
 .. _exp_mo:
 
-Experiment: Interpretation der Ergebnisse von MO Rechnungen
+Experiment 5: Interpretation der Ergebnisse von MO Rechnungen
 ===========================================================
 
 .. contents::

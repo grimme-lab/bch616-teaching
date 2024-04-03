@@ -1,6 +1,6 @@
 .. include:: symbols.txt
 
-Experiment: Solvatationseffekte (CPCM)
+Experiment 9: Solvatationseffekte (CPCM)
 ======================================
 
 .. contents::

@@ -1,6 +1,6 @@
 .. include:: symbols.txt
 
-Experiment: Geometrieoptimierung
+Experiment 3: Geometrieoptimierung
 ================================
 
 .. contents::

@@ -1,6 +1,6 @@
 .. include:: symbols.txt
 
-Experiment: Hückel-Theorie für |pi|-Elektronensystem (HMO)
+Experiment 1: Hückel-Theorie für |pi|-Elektronensystem (HMO)
 ==========================================================
 
 .. contents::

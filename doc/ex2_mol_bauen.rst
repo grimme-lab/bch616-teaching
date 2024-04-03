@@ -2,7 +2,7 @@
 
 .. _exp_mol_bauen:
 
-Experiment: Moleküle am Computer bauen
+Experiment 2: Moleküle am Computer bauen
 ======================================
 
 .. contents::

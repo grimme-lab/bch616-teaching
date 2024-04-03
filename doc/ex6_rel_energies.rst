@@ -2,7 +2,7 @@
 
 .. _exp_rel_conf:
 
-Experiment: Relative Energien von Isomeren
+Experiment 6: Relative Energien von Isomeren
 ==========================================
 
 .. contents::

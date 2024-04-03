@@ -1,6 +1,6 @@
 .. include:: symbols.txt
 
-Experiment: Computer gestützte Thermodynamik
+Experiment 10: Computer gestützte Thermodynamik
 ============================================
 
 .. contents::

@@ -2,7 +2,7 @@
 
 .. _exp_TS:
 
-Experiment: Reaktionsmechanismen und Übergangszustände
+Experiment 8: Reaktionsmechanismen und Übergangszustände
 ======================================================
 
 .. contents::
