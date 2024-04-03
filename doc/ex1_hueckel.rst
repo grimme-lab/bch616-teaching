@@ -249,7 +249,7 @@ per Copy/Paste in einer Textdatei, damit Sie die Ergebnisse mehrmals auswerten k
 
 6. Führen Sie mit dem Hückel-Programm Rechnungen für die Verbindungen I, IIa und IIb durch.
 
-.. image:: img/naphtholquinolinisoquinolin.png
+.. image:: img/naphtholquinolin.png
    :scale: 75%
    :align: center
 
@@ -262,6 +262,37 @@ b) Zeichnen Sie Energiediagramme (Energieniveaus) für die Moleküle I und IIa. 
 c) Bilden Sie das LUMO+2 (das dritte LUMO) für die Moleküle I und IIa (mit relativen Größen der Orbitale) ab.
 d) Zeigen Sie die stärkste C-C Bindung für die beiden Moleküle I und IIa.
 e) Finden Sie die jeweils bevorzugte Kohlenstoffposition für a. elektrophile und b. nukleophile Substitutionen in den Molekülen IIa und IIb.
+
+
+7. Führen Sie mit dem Hückel-Programm Rechnungen für die in der Tabelle :ref:`Ionisationspotential <tab:IP>` aufgeführten aromatischen Kohlenwasserstoffe durch. Tragen Sie die Energie des HOMO gegen die experimentelle Ionisierungsenergie auf. Berechnen Sie die Ausgleichsgrade durch die Wertepaare (lineare Korrelation) und bestimmen Sie daraus den besten Wert für :math:`\beta` nach der Formel
+
+.. math::
+   :label: eq:homo_ip_formula
+
+   E_{HOMO} = \alpha + \frac{1}{\beta} \mathrm{IP} .
+
+Erklären Sie die Formel. Was bedeuten :math:`\alpha` und :math:`\beta`?
+
+.. table:: Tabelle 1: Ionisationspotential für verschiedene Moleküle.
+   :align: center
+
+   +-------------------------+------------+
+   | Molekül                 | IP [:math:`eV`]  |
+   +=========================+============+
+   | Benzen                  | 9.57       |
+   +-------------------------+------------+
+   | Naphthalin              | 8.68       |
+   +-------------------------+------------+
+   | Anthracen               | 8.20       |
+   +-------------------------+------------+
+   | Phenanthren             | 8.62       |
+   +-------------------------+------------+
+   | Tetracen                | 7.71       |
+   +-------------------------+------------+
+   | 3,4-Benzophenanthren    | 8.40       |
+   +-------------------------+------------+
+
+
 
 
 
