@@ -1,7 +1,7 @@
 .. include:: symbols.txt
 
 Experiment 10: Computer gestützte Thermodynamik
-============================================
+===============================================
 
 .. contents::
 
