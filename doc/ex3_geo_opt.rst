@@ -1,7 +1,7 @@
 .. include:: symbols.txt
 
 Experiment 3: Geometrieoptimierung
-================================
+==================================
 
 .. contents::
 
