@@ -3,7 +3,7 @@
 .. _exp_ir_raman:
 
 Experiment 11: Infrarot- und Raman-Spektroskopie
-=============================================
+================================================
 
 .. contents::
 
