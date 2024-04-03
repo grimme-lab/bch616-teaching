@@ -1,6 +1,6 @@
 .. include:: symbols.txt
 
-Experiment: Hückel-Theorie für |pi|-Elektronensystem (HMO)
+Experiment: Hückel-Theorie für π-Elektronensystem (HMO)
 ==========================================================
 
 .. contents::
@@ -12,12 +12,12 @@ Näherungen in der Hückel-Theorie
 
 Für planare, konjugierte (d.h. aus :math:`\mathrm{sp}^{2}`-hybridisierten Atomen aufgebaute) Systeme können folgende Näherungen eingeführt werden:
 
-1. Die |sigma|-Elektronen werden explizit vernachlässigt, d.h. ergeben ein konstantes Potential für alle |pi|-Elektronen.
+1. Die :math:`\sigma`-Elektronen werden explizit vernachlässigt, d.h. ergeben ein konstantes Potential für alle :math:`\pi`-Elektronen.
 2. Für jedes Atom wird nur ein Atomorbital pz in der LCAO-Entwicklung verwendet.
 3. Die Überlappungsintegrale werden vernachlässigt für :math:`\mu \neq \nu` (:math:`S_{\mu\mu} = 1`).
 4. Die Integrale :math:`H_{\mu\nu}` werden empirisch festgelegt:
 
-(a) :math:`H_{\mu\nu} = \beta`, falls die Atome |mu| und |nu| direkt verbunden sind (Energie eines Elektrons im Feld zweier Kerne mit impliziten Korrekturen für vernachlässigte Terme). Sind |mu| und |nu| nicht direkt miteinander verbunden, gilt :math:`H_{\nu\nu} = 0`.
+(a) :math:`H_{\mu\nu} = \beta`, falls die Atome :math:`\mu` und :math:`\nu` direkt verbunden sind (Energie eines Elektrons im Feld zweier Kerne mit impliziten Korrekturen für vernachlässigte Terme). Sind |mu| und |nu| nicht direkt miteinander verbunden, gilt :math:`H_{\nu\nu} = 0`.
 (b) :math:`H_{\nu\nu} = \alpha` (Energie eines Elektrons im Feld des Kerns |mu| mit impliziten Korrekturen für vernachlässigte Terme).
 
 In der Praxis wird :math:`\alpha` für Kohlenstoff willkürlich auf Null gesetzt, und die Parameter anderer Atome werden relativ dazu empirisch bestimmt. :math:`\beta` (Resonanzintegral) wird für eine :math:`\ce{C-C}` Bindung der Länge 1.4 :math:`\text{Å}` als Standard auf -1 gesetzt. Bei Molekülen mit starken Abweichungen von dieser Standardlänge oder bei :math:`\ce{C-X}` Bindungen wird der :math:`\beta`-Wert empirisch verändert.
@@ -263,17 +263,16 @@ c) Bilden Sie das LUMO+2 (das dritte LUMO) für die Moleküle I und IIa (mit rel
 d) Zeigen Sie die stärkste C-C Bindung für die beiden Moleküle I und IIa.
 e) Finden Sie die jeweils bevorzugte Kohlenstoffposition für a. elektrophile und b. nukleophile Substitutionen in den Molekülen IIa und IIb.
 
+7. Führen Sie mit dem Hückel-Programm Rechnungen für die in der Tabelle 1.1 aufgeführten aromatischen Kohlenwasserstoffe durch. Tragen Sie die Energie des HOMO gegen die experimentelle Ionisierungsenergie auf. Berechnen Sie die Ausgleichsgrade durch die Wertepaare (lineare Korrelation) und bestimmen Sie daraus den besten Wert für :math:`\beta` nach der Formel
 
-7. Führen Sie mit dem Hückel-Programm Rechnungen für die in der Tabelle :ref:`Ionisationspotential <tab:IP>` aufgeführten aromatischen Kohlenwasserstoffe durch. Tragen Sie die Energie des HOMO gegen die experimentelle Ionisierungsenergie auf. Berechnen Sie die Ausgleichsgrade durch die Wertepaare (lineare Korrelation) und bestimmen Sie daraus den besten Wert für :math:`\beta` nach der Formel
+   .. math::
+      :label: eq:homo_ip_formula
 
-.. math::
-   :label: eq:homo_ip_formula
+      E_{\text{HOMO}} = \alpha + \frac{1}{\beta} \mathrm{IP} .
 
-   E_{HOMO} = \alpha + \frac{1}{\beta} \mathrm{IP} .
+   Erklären Sie die Formel. Was bedeuten :math:`\alpha` und :math:`\beta`?
 
-Erklären Sie die Formel. Was bedeuten :math:`\alpha` und :math:`\beta`?
-
-.. table:: Tabelle 1: Ionisationspotential für verschiedene Moleküle.
+.. table:: Tabelle 1.1: Ionisationspotential für verschiedene Moleküle.
    :align: center
 
    +-------------------------+------------+
@@ -291,6 +290,42 @@ Erklären Sie die Formel. Was bedeuten :math:`\alpha` und :math:`\beta`?
    +-------------------------+------------+
    | 3,4-Benzophenanthren    | 8.40       |
    +-------------------------+------------+
+
+8. Führen Sie eine EHT-Rechnung für CO (:math:`r(\text{C-O}) = 1.15 \, \text{\AA}`) durch.
+   Zeichnen Sie ein MO-Schema aus den Informationen der MO-Eigenwerte und
+   skizzieren Sie die Molekülorbitale, indem Sie die Matrix der MO-Koeffizienten
+   am Ende des Outputs auswerten (MATRIX PRINTED: occ. MO-MATRIX).
+
+   Wiederholen Sie die Aufgabe für H\ :sub:`2`\ O und Formaldehyd.
+   Verwenden Sie dazu folgende Geometrien:
+
+   * H\ :sub:`2`\ O
+
+   .. code-block:: bash
+
+      3
+      O  0.0 0.0 0.0
+      H   x   y  0.0
+      H   x  -y  0.0
+
+   * CH\ :sub:`2`\ O
+
+   .. code-block:: bash
+
+      4
+      C  0.0 0.0 0.0
+      O   x  0.0 0.0
+      H  -y   z  0.0
+      H  -y  -z  0.0
+
+   Berechnen Sie die Werte für x, y und z aus den Angaben zu Bindungslänge und -winkel:
+
+   - R(OH): 0.95
+   - R(CO): 1.2
+   - R(CH): 1.1
+   - W(HOH): 105
+   - W(HCH): 120
+
 
 
 
