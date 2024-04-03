@@ -95,11 +95,173 @@ Im Folgenden ist eine Beispieleingabe für Pyrrol angegeben (5 Atome, 6 :math:`\
    4 5 1.0
    1 5 0.8
 
+.. image:: img/pyrrol.png
+   :width: 20%
+   :align: center
 
+Hinweis: Es wird empfohlen, bei komplizierteren Systemen zuerst eine Skizze des Moleküls anzufertigen,  
+die Nummerierung der Atome festzulegen und danach die Hückel-Matrix einzugeben. Für die spätere graphische Betrachtung
+muss die Nummerierung der 
+Atome fortlaufend entlang der längsten Kette (beginnend bei Brückenkopfatomen, falls vorhanden) erfolgen. 
+Es ist darauf zu achten, dass bei Polyzyklen die Brückenkopfatome möglichst niedrige Nummern bekommen.
 
-Anleitung für das Extended-H ̈uckel Programm EHT
+.. figure:: img/viewhuck_naph.png
+   :width: 50%
+   :align: center
+
+Nachdem die Matrix gespeichert (z.B. Inputdatei: ``pyr.in``) und der Editor verlassen ist, wird das HMO-Programm mit der Kommandozeile aufgerufen ``hueckel < Inputdatei``
+also z.B.:
+
+.. code-block:: bash
+
+   hueckel < pyr.in
+
+Das Programm schreibt die Ergebnisse in den *standard output*, was in der Regel der Bildschirm ist. Um die Ergebnisse zu speichern, muss die Ausgabe in eine Datei umgeleitet werden ``hueckel < Inputdatei > Outputdatei``
+also z.B.:
+
+.. code-block:: bash
+    ****************************************
+           H U E C K E L - PROGRAM
+           S. GRIMME, UNI MUENSTER
+    ****************************************
+    
+    NUMBER OF ATOMS ?
+    NUMBER OF ELECTRONS ?
+    ATOM I, ATOM J, ALPHA/BETA IJ (IN UNITS OF BETA) ?
+    STOP WITH -1 -1 -1
+    
+    MATRIX PRINTED:  HUECKEL-MATRIX
+    
+          1         2         3         4         5
+    
+    1   0.50000
+    2   0.80000   0.00000
+    3   0.00000   1.00000   0.00000
+    4   0.00000   0.00000   1.00000   0.00000
+    5   0.80000   0.00000   0.00000   1.00000   0.00000
+    
+    EIGENVALUES
+    
+    MO NR     :          1         2         3         4         5
+    OCCUPATION:         2.0       2.0       2.0       0.0       0.0
+    EPSILON   :      1.94464   0.75990   0.61803  -1.20454  -1.61803
+    
+    MATRIX PRINTED:  HMO-VECTORS
+    
+          1         2         3         4         5
+    
+    1   0.47364   0.71279   0.00000   0.51730   0.00000
+    2   0.42765   0.11579  -0.60150  -0.55110   0.37175
+    3   0.45271  -0.48224  -0.37175   0.24998  -0.60150
+    4   0.45271  -0.48224   0.37175   0.24998   0.60150
+    5   0.42765   0.11579   0.60150  -0.55110  -0.37175
+    
+    ALL ENERGETIC QUANTITIES IN UNITS OF BETA!
+    
+    TOTAL     ENERGY     :    6.645154
+    TOTAL     ENERGY/#EL :    1.107526
+    RESONANCE ENERGY     :    1.645154
+    RESONANCE ENERGY/#EL :    0.274192
+    
+    MATRIX PRINTED:  CHARGE DENSITY/BOND ORDER MATRIX
+    
+          1         2         3         4         5
+    
+    1   1.46480
+    2   0.57016   1.11619
+    3  -0.25863   0.72274   1.15141
+    4  -0.25863  -0.17168   0.59862   1.15141
+    5   0.57016  -0.33103  -0.17168   0.72274   1.11619
+    
+    MINIMUM BOND ORDER BETWEEN BONDED ATOMS  0.5701648900629098
+    MAXIMUM BOND ORDER BETWEEN BONDED ATOMS  0.7227442228601404
+
+Nachdem zuerst die Hückelmatrix in Diagonalform angegeben wird, folgt eine Auflistung der Energieeigenwerte der Hückel MO's.
+Die Koeffizientenmatrix (``HMO-VECTORS``) enthält die Orbitalkoeffizienten der :math:`\pi`-AO's (:math:`c_{iA}`), 
+wobei die MO's die Spalten und die AO's die Zeilen der Matrix bilden.
+
+Die Output-Daten können mit ``viewhuck`` graphisch dargestellt werden. Dies geschieht mit dem Befehl: ``viewhuck Dateiname``, also bspw.
+
+.. code-block:: bash
+
+    viewhuck < pyr.out
+
+Das Programm erzeugt eine Postskript-Datei (``Dateiname.ps``). Diese kann z.B. mit ``okular Dateiname.ps`` geöffnet werden.
+
+Anleitung für das Extended-Hückel Programm EHT
 ------------------------------------------------
+In der EHT Methode werden alle Valenzelektronen der beteiligten Atome betrachtet.
+Aus der berechneten Überlappmatrix und atomaren Parametern wird eine Hamiltonmatrix
+aufgestellt: :math:`H_{ab} = \frac{1}{2} k (H_{aa}+H_{bb})S_{ab}` und das Eigenwertproblem gelöst.
+Für die Durchführung der Rechnung muss daher die Geometrie des Moleküls festgelegt werden.
+Erstellen Sie eine Inputdatei mit den Atomkoordinaten im folgenden Format.
+In der ersten Zeile muss die Anzahl der Atome stehen. In den folgenden Zeilen stehen die Koordinaten im Format:
+``<El> <x> <y> <z>``. Die Koordinaten sind in Ångström.
+
+.. code-block:: bash
+
+    2
+    Li 0.0 0.0  0.8
+    H  0.0 0.0 -0.5
+
+Starten Sie das Programm mit
+
+.. code-block:: bash
+
+    eht -f <Dateiname>
+
+Sie finden die Energie-Eigenwerte und die Matrix der MO-Koeffizienten (MATRIX PRINTED: occ. MOs), die für die Aufgabe benötigt werden, am Ende des Outputs.
+Pro Atom sind vier Basisfunktionen berücksichtigt: :math:`s`, :math:`p_x`, :math:`p_y`, :math:`p_z`.
+Die :math:`p`-Orbitale sind wie das Molekül in der Eingabe orientiert, und die Reihenfolge der Atome ist dieselbe wie in der Geometrie-Eingabe.
 
 Aufgaben
 --------
+
+Tipp: Machen Sie sich eine Liste der Moleküle, die in mehreren Aufgaben vorkommen.
+Speichern Sie für diese Fälle den Input (oder den Output nach erfolgreicher Rechnung)
+per Copy/Paste in einer Textdatei, damit Sie die Ergebnisse mehrmals auswerten können.
+
+1. Berechnen Sie die Polyene Butadien, Hexatrien, Octatetraen und
+   Decapentaen. Stellen Sie den Verlauf der :math:`\pi`-Elektronenenergie pro
+   :math:`\pi`-Atom, den größten und kleinsten Wert für die Bindungsordnung zwischen
+   verbundenen Atomen und die Energiedifferenz zwischen HOMO und LUMO
+   als Funktion der Kettenlänge dar. Kommentieren Sie kurz Ihre Ergebnisse.
+
+2. Berechnen Sie die Annulene 
+   :math:`\rm C_4H_4`,
+   :math:`\rm C_5H_5^-`,
+   :math:`\rm C_6H_6`,
+   :math:`\rm C_7H_7^+`,
+   :math:`\rm C_8H_8`,
+   :math:`\rm C_{10}H_{10}`,
+   :math:`\rm C_{12}H_{12}` und
+   :math:`\rm C_{14}H_{14}`. Diskutieren Sie die Ergebnisse im Zusammenhang mit der Hückelregel. (Tragen Sie die Resonanzenergie gegen die Ringgröße auf. Beachten Sie, dass einige Moleküle geladen sind!)
+
+3. Berechnen Sie Phenol (:math:`\alpha_O=2.0`, :math:`\beta_{CO}=0.8`, :math:`N_\pi=8`!) und diskutieren Sie die Ladungsordnungen im Hinblick auf eine mögliche elektrophile aromatische Zweitsubstitution.
+
+4. Berechnen Sie die beiden Kationen, die bei der Protonierung von Naphthalin entstehen können. Geben Sie für beide Kationen die Lewis-Formel (mit Nummerierung der Atome) an. Welches Kation ist stabiler? An welchen Positionen ist eine elektrophile aromatische Substitution begünstigt? Wo ist sie nicht möglich? (für beide Kationen).
+
+5. Berechnen Sie folgende Verbindung und diskutieren Sie die Ladungsordnungen im Zusammenhang mit der Hückelregel. Darf das Molekül mit der Hückel-Methode berechnet werden? Begründen Sie.
+
+.. image:: img/cora.png
+   :scale: 60%
+   :align: center
+
+6. Führen Sie mit dem Hückel-Programm Rechnungen für die Verbindungen I, IIa und IIb durch.
+
+.. image:: img/naphtholquinolinisoquinolin.png
+   :scale: 75%
+   :align: center
+
+Das Lone pair des Stickstoffatoms liegt in der Molekülebene.
+Eines der Lone pairs des Sauerstoffatoms ist senkrecht zur Molekülebene.
+:math:`\alpha_N=0.5`, :math:`\beta_{C-N}=0.8`, :math:`\alpha_O=2.0`, :math:`\beta_{C-O}=0.8`.
+
+a) Welches der beiden Moleküle IIa und IIb ist stabiler?
+b) Zeichnen Sie Energiediagramme (Energieniveaus) für die Moleküle I und IIa. Geben Sie die Besetzung der Orbitale an. Markieren Sie HOMO und LUMO.
+c) Bilden Sie das LUMO+2 (das dritte LUMO) für die Moleküle I und IIa (mit relativen Größen der Orbitale) ab.
+d) Zeigen Sie die stärkste C-C Bindung für die beiden Moleküle I und IIa.
+e) Finden Sie die jeweils bevorzugte Kohlenstoffposition für a. elektrophile und b. nukleophile Substitutionen in den Molekülen IIa und IIb.
+
+
 
