@@ -31,7 +31,7 @@ Der Befehl lässt sich mit Strg + C wieder beenden.
 
 Der generelle Aufbau einer Inputdatei sieht so aus:
 
-.. code-block:: bash
+.. code-block:: none
 
    # Kommentarzeile (ueberall in der Datei moeglich)
    ! Methode Basissatz weitere-Schluesselwoerter
@@ -55,7 +55,7 @@ Zu Beachten ist: die Multiplizität ist definiert als `2S+1` wobei `S` der Gesam
 
 Ein Beispiel einer Single-Point-Rechnung für Wasserstoffperoxid (H2O2), einmmal mit Kartesischen Koordinaten:
 
-.. code-block:: bash
+.. code-block:: none
 
    # Optimierung von H2CO
    ! TPSS TZVP TightOpt TightSCF
@@ -74,7 +74,7 @@ Ein Beispiel einer Single-Point-Rechnung für Wasserstoffperoxid (H2O2), einmmal
 
 und einmal mit Z-Matrix:
 
-.. code-block:: bash
+.. code-block:: none
 
    # Optimierung von H2CO
    ! TPSS TZVP TightOpt TightSCF
@@ -111,7 +111,7 @@ Für weitere Informationen über die einzelnen Schlüsselwörter und welche es n
 
 Um nur einen bestimmten Teil eines Moleküls zu optimieren, kann man eine beschränkte (sog. contstraint optimization) Geometrieoptimierung durchführen:
 
-.. code-block:: bash
+.. code-block:: none
 
    ! TPSS TZVP TightSCF TightOpt
    %geom
@@ -163,7 +163,7 @@ Um nur einen bestimmten Teil eines Moleküls zu optimieren, kann man eine beschr
 Ein relaxierter Oberflächenscan kann folgendermaßen durchgeführt werden:
 In dem folgenden Beispiel wird die Bindungslänge zwischen C und O in 12 äquivalenten Schritten von 1.35 auf 1.10 Ångström reduziert und an jedem Punkt eine beschränkte Geometrieoptimierung durchgeführt.
 
-.. code-block:: bash
+.. code-block:: none
 
    ! TPSS TZVP TightSCF TightOpt
    %geom
@@ -184,7 +184,7 @@ In dem folgenden Beispiel wird die Bindungslänge zwischen C und O in 12 äquiva
 Das folgende Beispiel zeigt eine Übergangszustandsrechnung in der bekannt ist, welche Bindung für den Übergangszustand günstig ist.
 Diese Bindung wird mit ``TS_Mode{B A1 A2}`` angegeben.  
 
-.. code-block:: bash
+.. code-block:: none
 
    ! TPSS SVP TightSCF SlowConv NumFreq
    ! OptTS
@@ -223,7 +223,7 @@ Das dritte Atom wird in der `xz`-Ebene gesetzt und alle weiteren Atome benötige
 
 Das Format für ORCA ist wie folgt:
 
-.. code-block:: bash
+.. code-block:: none
 
    * int Ladung Multiplizitaet
    AtomName-1   NA NB NC  R A D
@@ -232,7 +232,7 @@ Das Format für ORCA ist wie folgt:
 
 Als Beispiel der Input von CO:
 
-.. code-block:: bash
+.. code-block:: none
 
    * int 0 1
    C   0 0 0   0.0   000.0   000.0
