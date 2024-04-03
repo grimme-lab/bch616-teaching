@@ -1,7 +1,7 @@
 .. include:: symbols.txt
 
 Experiment 1: Hückel-Theorie für |pi|-Elektronensystem (HMO)
-==========================================================
+============================================================
 
 .. contents::
 
