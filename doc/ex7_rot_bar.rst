@@ -3,7 +3,7 @@
 .. _exp_rot_bar:
 
 Experiment 7: Rotationsbarriere von Ethan
-=======================================
+=========================================
 
 .. contents::
 
