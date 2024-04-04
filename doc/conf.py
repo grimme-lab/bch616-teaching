@@ -30,10 +30,10 @@ release = 'SS 24'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "sphinx.ext.autodoc",
     # "sphinx_panels",
     # "sphinx_copybutton",
     # "sphinx_togglebutton",
-    # "sphinx-design",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -51,7 +51,14 @@ language = 'de'
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
-
+# Add necessary packages for LaTeX
+latex_elements = {
+    'preamble': r'''
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mhchem}'''
+}
 
 
 # -- Options for HTML output -------------------------------------------------

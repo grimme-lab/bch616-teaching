@@ -1,7 +1,7 @@
 BCh 6.1.6 Computational Chemistry -- Teil 1: Hükel-Methode und Quantenchemie
 ============================================================================
 
-Hier, ist das Praktikumsskript für der Grimme Teil "Hükel-Methode und Quantenchemie" des Bachelorwahlpflichtpraktiums "Computational Chemistry".
+Das ist das Praktikumsskript für der Grimme Teil "Hükel-Methode und Quantenchemie" des Bachelorwahlpflichtpraktiums "Computational Chemistry".
 
 .. toctree::
    :maxdepth: 3

@@ -21,7 +21,7 @@ Molden ist ein schnelles Programm um Molekülgeometrien, Optimierungsverläufe o
 
     mold file
 
-Molden öffnet daraufhin standardmäßig zwei Fenster: das Kontrolfenster (siehe Abbildung :numref:`fig-molden-control`) und das Abbildungsfenster.
+Molden öffnet daraufhin standardmäßig zwei Fenster: das Kontrolfenster (siehe Abbildung :ref:`fig-molden-control`) und das Abbildungsfenster.
 
 .. _fig-molden-control:
 
@@ -40,7 +40,7 @@ Molden öffnet daraufhin standardmäßig zwei Fenster: das Kontrolfenster (siehe
 
 .. admonition:: 3. Normalmoden: 
 
-    Die Schwingungsmoden eines Moleküls können über die Option ``Norm. Mode`` angezeigt werden, wenn die Orca-Outputdatei einer Frequenzrechnung geöffnet wird. Dabei öffnet sich ein Fenster für die Auswahl der visualisierten Schwingungsmode sowie ein Fenster mit dem Schwingungsspektrum (siehe Abbildung :numref:`fig-molden-frequency`). Die gewählte Normalmode wird dann im Abbildungsfenster dargestellt. Dabei kann die Auslenkung der Schwingung mit einem Skalierungsfaktor angepasst werden. 
+    Die Schwingungsmoden eines Moleküls können über die Option ``Norm. Mode`` angezeigt werden, wenn die Orca-Outputdatei einer Frequenzrechnung geöffnet wird. Dabei öffnet sich ein Fenster für die Auswahl der visualisierten Schwingungsmode sowie ein Fenster mit dem Schwingungsspektrum (siehe Abbildung :ref:`fig-molden-frequency`). Die gewählte Normalmode wird dann im Abbildungsfenster dargestellt. Dabei kann die Auslenkung der Schwingung mit einem Skalierungsfaktor angepasst werden. 
 
 .. _fig-molden-frequency:
 
