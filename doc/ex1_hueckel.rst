@@ -61,17 +61,15 @@ Atom :math:`A` erhalten wird.
 2. **Bindungsordnung** zwischen den Atomen :math:`A` und :math:`B`
 
 .. math::
-      \begin{split}
-      p_{AB} \equiv \frac{1}{2} \frac{\partial E}{\partial \beta_{AB}} &= \frac{1}{2} \sum_{j=1}^{M} n_j \frac{\partial \epsilon_j}{\partial \beta_{AB}}\\
-      &= \frac{1}{2}\sum_{j=1}^{M} n_j \frac{\partial}{\partial \beta_{AB}}(\sum_{r=1}^{M} c^2_{jr}\alpha_r + \sum_{r\ne s} c_{jr}c_{js}\beta_{rs})\\
-      &= \sum_{j=1}^{M} n_j c_{jA} c_{jB} 
-      \end{split}
+   \begin{split}
+   p_{AB} \equiv \frac{1}{2} \frac{\partial E}{\partial \beta_{AB}} &= \frac{1}{2} \sum_{j=1}^{M} n_j \frac{\partial \epsilon_j}{\partial \beta_{AB}}\\
+   &= \frac{1}{2}\sum_{j=1}^{M} n_j \frac{\partial}{\partial \beta_{AB}}(\sum_{r=1}^{M} c^2_{jr}\alpha_r + \sum_{r\ne s} c_{jr}c_{js}\beta_{rs})\\
+   &= \sum_{j=1}^{M} n_j c_{jA} c_{jB} 
+   \end{split}
+
 
 Wie erkennbar ist, hat dieser Ausdruck eine große Ähnlichkeit mit der Definition der Ladungsordnung. 
-Es wird ebenfalls über alle besetzten MOs summiert. Um eine *Bindungs*ordnung zu erhalten, sind 
-die Summanden aber hier Produkte von AO-Koeffizienten benachbarter Atome.
-
-
+Es wird ebenfalls über alle besetzten MOs summiert. Um eine *Bindungsordnung* zu erhalten, sind die Summanden aber hier Produkte von AO-Koeffizienten benachbarter Atome.
 
 
 Anleitung: Durchführung einer Hückel-Rechnung
@@ -95,8 +93,8 @@ Im Folgenden ist eine Beispieleingabe für Pyrrol angegeben (5 Atome, 6 :math:`\
    4 5 1.0
    1 5 0.8
 
-.. image:: img/pyrrol.png
-   :width: 20%
+.. figure:: img/pyrrol.png
+   :width: 150px
    :align: center
 
 Hinweis: Es wird empfohlen, bei komplizierteren Systemen zuerst eine Skizze des Moleküls anzufertigen,  
@@ -106,7 +104,7 @@ Atome fortlaufend entlang der längsten Kette (beginnend bei Brückenkopfatomen,
 Es ist darauf zu achten, dass bei Polyzyklen die Brückenkopfatome möglichst niedrige Nummern bekommen.
 
 .. figure:: img/viewhuck_naph.png
-   :width: 50%
+   :width: 400px
    :align: center
 
 Nachdem die Matrix gespeichert (z.B. Inputdatei: ``pyr.in``) und der Editor verlassen ist, wird das HMO-Programm mit der Kommandozeile aufgerufen ``hueckel < Inputdatei``
@@ -120,61 +118,62 @@ Das Programm schreibt die Ergebnisse in den *standard output*, was in der Regel 
 also z.B.:
 
 .. code-block:: bash
-    ****************************************
-           H U E C K E L - PROGRAM
-           S. GRIMME, UNI MUENSTER
-    ****************************************
-    
-    NUMBER OF ATOMS ?
-    NUMBER OF ELECTRONS ?
-    ATOM I, ATOM J, ALPHA/BETA IJ (IN UNITS OF BETA) ?
-    STOP WITH -1 -1 -1
-    
-    MATRIX PRINTED:  HUECKEL-MATRIX
-    
-          1         2         3         4         5
-    
-    1   0.50000
-    2   0.80000   0.00000
-    3   0.00000   1.00000   0.00000
-    4   0.00000   0.00000   1.00000   0.00000
-    5   0.80000   0.00000   0.00000   1.00000   0.00000
-    
-    EIGENVALUES
-    
-    MO NR     :          1         2         3         4         5
-    OCCUPATION:         2.0       2.0       2.0       0.0       0.0
-    EPSILON   :      1.94464   0.75990   0.61803  -1.20454  -1.61803
-    
-    MATRIX PRINTED:  HMO-VECTORS
-    
-          1         2         3         4         5
-    
-    1   0.47364   0.71279   0.00000   0.51730   0.00000
-    2   0.42765   0.11579  -0.60150  -0.55110   0.37175
-    3   0.45271  -0.48224  -0.37175   0.24998  -0.60150
-    4   0.45271  -0.48224   0.37175   0.24998   0.60150
-    5   0.42765   0.11579   0.60150  -0.55110  -0.37175
-    
-    ALL ENERGETIC QUANTITIES IN UNITS OF BETA!
-    
-    TOTAL     ENERGY     :    6.645154
-    TOTAL     ENERGY/#EL :    1.107526
-    RESONANCE ENERGY     :    1.645154
-    RESONANCE ENERGY/#EL :    0.274192
-    
-    MATRIX PRINTED:  CHARGE DENSITY/BOND ORDER MATRIX
-    
-          1         2         3         4         5
-    
-    1   1.46480
-    2   0.57016   1.11619
-    3  -0.25863   0.72274   1.15141
-    4  -0.25863  -0.17168   0.59862   1.15141
-    5   0.57016  -0.33103  -0.17168   0.72274   1.11619
-    
-    MINIMUM BOND ORDER BETWEEN BONDED ATOMS  0.5701648900629098
-    MAXIMUM BOND ORDER BETWEEN BONDED ATOMS  0.7227442228601404
+
+   ****************************************
+         H U E C K E L - PROGRAM
+         S. GRIMME, UNI MUENSTER
+   ****************************************
+   
+   NUMBER OF ATOMS ?
+   NUMBER OF ELECTRONS ?
+   ATOM I, ATOM J, ALPHA/BETA IJ (IN UNITS OF BETA) ?
+   STOP WITH -1 -1 -1
+   
+   MATRIX PRINTED:  HUECKEL-MATRIX
+   
+         1         2         3         4         5
+   
+   1   0.50000
+   2   0.80000   0.00000
+   3   0.00000   1.00000   0.00000
+   4   0.00000   0.00000   1.00000   0.00000
+   5   0.80000   0.00000   0.00000   1.00000   0.00000
+   
+   EIGENVALUES
+   
+   MO NR     :          1         2         3         4         5
+   OCCUPATION:         2.0       2.0       2.0       0.0       0.0
+   EPSILON   :      1.94464   0.75990   0.61803  -1.20454  -1.61803
+   
+   MATRIX PRINTED:  HMO-VECTORS
+   
+         1         2         3         4         5
+   
+   1   0.47364   0.71279   0.00000   0.51730   0.00000
+   2   0.42765   0.11579  -0.60150  -0.55110   0.37175
+   3   0.45271  -0.48224  -0.37175   0.24998  -0.60150
+   4   0.45271  -0.48224   0.37175   0.24998   0.60150
+   5   0.42765   0.11579   0.60150  -0.55110  -0.37175
+   
+   ALL ENERGETIC QUANTITIES IN UNITS OF BETA!
+   
+   TOTAL     ENERGY     :    6.645154
+   TOTAL     ENERGY/#EL :    1.107526
+   RESONANCE ENERGY     :    1.645154
+   RESONANCE ENERGY/#EL :    0.274192
+   
+   MATRIX PRINTED:  CHARGE DENSITY/BOND ORDER MATRIX
+   
+         1         2         3         4         5
+   
+   1   1.46480
+   2   0.57016   1.11619
+   3  -0.25863   0.72274   1.15141
+   4  -0.25863  -0.17168   0.59862   1.15141
+   5   0.57016  -0.33103  -0.17168   0.72274   1.11619
+   
+   MINIMUM BOND ORDER BETWEEN BONDED ATOMS  0.5701648900629098
+   MAXIMUM BOND ORDER BETWEEN BONDED ATOMS  0.7227442228601404
 
 Nachdem zuerst die Hückelmatrix in Diagonalform angegeben wird, folgt eine Auflistung der Energieeigenwerte der Hückel MO's.
 Die Koeffizientenmatrix (``HMO-VECTORS``) enthält die Orbitalkoeffizienten der :math:`\pi`-AO's (:math:`c_{iA}`), 
@@ -243,14 +242,14 @@ per Copy/Paste in einer Textdatei, damit Sie die Ergebnisse mehrmals auswerten k
 
 5. Berechnen Sie folgende Verbindung und diskutieren Sie die Ladungsordnungen im Zusammenhang mit der Hückelregel. Darf das Molekül mit der Hückel-Methode berechnet werden? Begründen Sie.
 
-.. image:: img/cora.png
-   :scale: 60%
+.. figure:: img/cora.png
+   :width: 400px
    :align: center
 
 6. Führen Sie mit dem Hückel-Programm Rechnungen für die Verbindungen I, IIa und IIb durch.
 
-.. image:: img/naphtholquinolin.png
-   :scale: 75%
+.. figure:: img/naphtholquinolin.png
+   :width: 400px
    :align: center
 
 Das Lone pair des Stickstoffatoms liegt in der Molekülebene.
@@ -275,21 +274,21 @@ e) Finden Sie die jeweils bevorzugte Kohlenstoffposition für a. elektrophile un
 .. table:: Tabelle 1.1: Ionisationspotential für verschiedene Moleküle.
    :align: center
 
-   +-------------------------+------------+
+   +-------------------------+------------------+
    | Molekül                 | IP [:math:`eV`]  |
-   +=========================+============+
-   | Benzen                  | 9.57       |
-   +-------------------------+------------+
-   | Naphthalin              | 8.68       |
-   +-------------------------+------------+
-   | Anthracen               | 8.20       |
-   +-------------------------+------------+
-   | Phenanthren             | 8.62       |
-   +-------------------------+------------+
-   | Tetracen                | 7.71       |
-   +-------------------------+------------+
-   | 3,4-Benzophenanthren    | 8.40       |
-   +-------------------------+------------+
+   +=========================+==================+
+   | Benzen                  | 9.57             |
+   +-------------------------+------------------+
+   | Naphthalin              | 8.68             |
+   +-------------------------+------------------+
+   | Anthracen               | 8.20             |
+   +-------------------------+------------------+
+   | Phenanthren             | 8.62             |
+   +-------------------------+------------------+
+   | Tetracen                | 7.71             |
+   +-------------------------+------------------+
+   | 3,4-Benzophenanthren    | 8.40             |
+   +-------------------------+------------------+
 
 8. Führen Sie eine EHT-Rechnung für CO (:math:`r(\text{C-O}) = 1.15 \, \text{\AA}`) durch.
    Zeichnen Sie ein MO-Schema aus den Informationen der MO-Eigenwerte und
