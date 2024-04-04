@@ -187,15 +187,17 @@ Die Output-Daten können mit ``viewhuck`` graphisch dargestellt werden. Dies ges
 
 Das Programm erzeugt eine Postskript-Datei (``Dateiname.ps``). Diese kann z.B. mit ``okular Dateiname.ps`` geöffnet werden.
 
+
 Anleitung für das Extended-Hückel Programm EHT
 ------------------------------------------------
+
 In der EHT Methode werden alle Valenzelektronen der beteiligten Atome betrachtet.
 Aus der berechneten Überlappmatrix und atomaren Parametern wird eine Hamiltonmatrix
 aufgestellt: :math:`H_{ab} = \frac{1}{2} k (H_{aa}+H_{bb})S_{ab}` und das Eigenwertproblem gelöst.
 Für die Durchführung der Rechnung muss daher die Geometrie des Moleküls festgelegt werden.
 Erstellen Sie eine Inputdatei mit den Atomkoordinaten im folgenden Format.
 In der ersten Zeile muss die Anzahl der Atome stehen. In den folgenden Zeilen stehen die Koordinaten im Format:
-``<El> <x> <y> <z>``. Die Koordinaten sind in |angst|ngström.
+``<El> <x> <y> <z>``. Die Koordinaten sind in |angst|.
 
 .. code-block:: bash
 
