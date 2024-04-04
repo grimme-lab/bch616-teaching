@@ -13,7 +13,7 @@ Infrarot- und Raman-Spektroskopie sind Formen der Schwingungsspektroskopie und b
 
 Schwingungsfrequenzen
 ---------------------
-Bei Molekülschwingungen handelt es sich um eine Bewegungen der Atomkerne relativ zu einander. Hier kann erneut die (sehr gute) Born-Oppenheimer Näherung (Elektronen folgen den Kernen instantan) getroffen werde, um die Bewegung von Kernen und Elektronen zu separieren. Die Potentialhyperfläche :math:`E(\vec{R})` ist dann ausschließlich von den Kernkoordinaten :math:`\vec{R}` abhängig und kann, wie auch schon für die Geometrieoptimierung, als Taylorreihe um die aktuelle Geometrie :math:`\vec{R}_{0}` entwickelt werden (siehe Gleichung :eq:`eq-geom-opt-minimum` in :numref:`sec-geom-opt-minimum`).  Die Reihenentwicklung wird für gewöhnlich nach der zweiten Ordnung abgebrochen. Zusätzlich der Term erster Ordnung fällt weg, wenn die Geometrie :math:`\vec{R}_{0}` vor der Frequenzberechnung optimiert wurde (Gradient :math:`\vec{g}(R_{0})=0`). In diesem Modell verhält sich die Energie
+Bei Molekülschwingungen handelt es sich um eine Bewegungen der Atomkerne relativ zu einander. Hier kann erneut die (sehr gute) Born-Oppenheimer Näherung (Elektronen folgen den Kernen instantan) getroffen werde, um die Bewegung von Kernen und Elektronen zu separieren. Die Potentialhyperfläche :math:`E(\vec{R})` ist dann ausschließlich von den Kernkoordinaten :math:`\vec{R}` abhängig und kann, wie auch schon für die Geometrieoptimierung, als Taylorreihe um die aktuelle Geometrie :math:`\vec{R}_{0}` entwickelt werden (siehe Gleichung :eq:`eq-geom-opt-minimum` in :ref:`sec-geom-opt-minimum`).  Die Reihenentwicklung wird für gewöhnlich nach der zweiten Ordnung abgebrochen. Zusätzlich der Term erster Ordnung fällt weg, wenn die Geometrie :math:`\vec{R}_{0}` vor der Frequenzberechnung optimiert wurde (Gradient :math:`\vec{g}(R_{0})=0`). In diesem Modell verhält sich die Energie
 
 .. math:: 
 
@@ -113,7 +113,7 @@ Beschreibung des Experiments
 
     1. Optimieren Sie die Geometrie von Benzol. Berechnen Sie anschließend die Schwingungsfrequenzen, IR- und Raman-Intensitäten. Verwenden Sie hierzu erneut die r\ :sup:`2`-SCAN-3c Methode mit den gleichen Einstellung wie in der vorherigen Aufgabe. 
 
-    2. Ordnen Sie nun die berechneten den experimentellen Frequenzen von Benzol zu. Bestimmen Die auch den Charakter der Schwingung (sym/anti-CH-Streckschwinung, CH-Deformationsschwingung oder Ringschwingung). Visualisieren Sie dazu die Schwingungsmoden mit dem Programm Molden (siehe :numref:`app-molden` für eine kurze Einführung). Experimentelle Frequenzen:
+    2. Ordnen Sie nun die berechneten den experimentellen Frequenzen von Benzol zu. Bestimmen Die auch den Charakter der Schwingung (sym/anti-CH-Streckschwinung, CH-Deformationsschwingung oder Ringschwingung). Visualisieren Sie dazu die Schwingungsmoden mit dem Programm Molden (siehe :ref:`app-molden` für eine kurze Einführung). Experimentelle Frequenzen:
 
     +------+---------+---------+
     | IR   | Raman   | inaktiv |
@@ -161,13 +161,13 @@ Beschreibung des Experiments
 
     3. Geben Sie eine durchschnittliche und maximale absolute Abweichung der berechneten Frequenzen von den experimentellen Referenzwerten an.
 
-    4. Plotten Sie auch das berechnet IR-Spektrum mit ``orca_mapspc`` (siehe :numref:`app-orca_mapspc` für eine kurze Einführung). :numref:`fig_benzene_IR` zeigt ein experimentelles Referenzspektrum gemessen in der Gasphase.
+    4. Plotten Sie auch das berechnet IR-Spektrum mit ``orca_mapspc`` (siehe :ref:`app-orca_mapspc` für eine kurze Einführung). :numref:`fig_benzene_IR` zeigt ein experimentelles Referenzspektrum gemessen in der Gasphase.
 
 
     .. _fig_benzene_IR:
     
     .. figure:: img/benzeneIRneu.png
-        :width: 400
+        :width: 400px
 
         Experimentelles IR-Spektrum von Benzol in der Gasphase.
 
@@ -183,10 +183,10 @@ Beschreibung des Experiments
     2. In :numref:`table-spec` ist das experimentelle IR-Spektrum von Benzoesäure in Gasphase (links) und in einer 2%-igen CCl\ :sub:`4` Lösung (rechts) abgebildet. [#]_ Vergleichen Sie diese mit den berechneten Spektren. Können Sie eine Aussage über das Vorliegen des Benzoesäure Monomers und Dimers machen? An welchen Banden machen Sie dies fest?
 
     .. |pic1| image:: img/benzoic-acid_gas.png
-        :scale: 60%
+        :scale: 35%
 
     .. |pic2| image:: img/benzoic-acid_solv.png
-        :scale: 60%
+        :scale: 35%
 
     .. _table-spec:
 

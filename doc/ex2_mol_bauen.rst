@@ -53,7 +53,7 @@ Der generelle Aufbau einer Inputdatei sieht so aus:
 
 Zu Beachten ist: die Multiplizität ist definiert als `2S+1` wobei `S` der Gesamtspin ist. Für geschlossenschalige Moleküle ist die Multiplizität immer `1`.
 
-Ein Beispiel einer Single-Point-Rechnung für Wasserstoffperoxid (H2O2), einmmal mit Kartesischen Koordinaten:
+Ein Beispiel einer Single-Point-Rechnung für Wasserstoffperoxid (:math:`\ce{H2O2}`), einmmal mit Kartesischen Koordinaten:
 
 .. code-block:: none
 
@@ -161,7 +161,7 @@ Um nur einen bestimmten Teil eines Moleküls zu optimieren, kann man eine beschr
 
 
 Ein relaxierter Oberflächenscan kann folgendermaßen durchgeführt werden:
-In dem folgenden Beispiel wird die Bindungslänge zwischen C und O in 12 äquivalenten Schritten von 1.35 auf 1.10 Ångström reduziert und an jedem Punkt eine beschränkte Geometrieoptimierung durchgeführt.
+In dem folgenden Beispiel wird die Bindungslänge zwischen C und O in 12 äquivalenten Schritten von 1.35 auf 1.10 |angst| reduziert und an jedem Punkt eine beschränkte Geometrieoptimierung durchgeführt.
 
 .. code-block:: none
 
@@ -218,7 +218,7 @@ Die Definition von `NA`, `NB` und `NC` ist wie folgt:
 - `NC`: Das aktuelle Atom hat einen Diederwinkel von `D` mit den Atomen `NA`, `NB` und `NC`. `D` ist der Winkel zwischen dem aktuellen Atom und dem Atom `NC`, wenn entlang der `NA`-`NB` Achse geschaut wird.
 
 Alle Winkel werden in Grad angegeben. Das erste Atom wird immer an den Ursprung ``(0,0,0)`` gesetzt. 
-Das zweite Atom wird im Abstand `R` entlang einer Koordinatenachse (z.B. `x`) gesetzt. Die Angabe der Längen erfolgt standardmäßig in Ångström.
+Das zweite Atom wird im Abstand `R` entlang einer Koordinatenachse (z.B. `x`) gesetzt. Die Angabe der Längen erfolgt standardmäßig in |angst|.
 Das dritte Atom wird in der `xz`-Ebene gesetzt und alle weiteren Atome benötigen alle sechs oben beschriebenen Parameter.
 
 Das Format für ORCA ist wie folgt:
@@ -244,39 +244,41 @@ Als Beispiel der Input von CO:
 Beschreibung des Experiments
 ----------------------------
 
-Erstellen Sie die Z-Matrizen für folgende Moleküle:
+.. admonition:: Z-Matrizen
 
-1. :math:`\text{CH}_4`
-2. :math:`\text{H}_3\text{COH}`
-3. :math:`\text{CO}_2`
-4. :math:`\text{NH}_3`
-5. :math:`\text{H}_2\text{O}`
+   Erstellen Sie die Z-Matrizen für folgende Moleküle:
+
+   1. :math:`\text{CH}_4`
+   2. :math:`\text{H}_3\text{COH}`
+   3. :math:`\text{CO}_2`
+   4. :math:`\text{NH}_3`
+   5. :math:`\text{H}_2\text{O}`
 
 .. table:: Geometrieparameter für verschiedene Bindungen.
 
-   +--------------------+------------------+
-   | Bindung            | Bindungslänge (Å)|
-   +====================+==================+
-   | :math:`\text{C-C}` | 1.54             |
-   +--------------------+------------------+
-   | :math:`\text{C-O}` | 1.40             |
-   +--------------------+------------------+
-   | :math:`\text{C=O}` | 1.20             |
-   +--------------------+------------------+
-   | :math:`\text{C-H}` | 1.10             |
-   +--------------------+------------------+
-   | :math:`\text{N-H}` | 1.05             |
-   +--------------------+------------------+
-   | :math:`\text{O-H}` | 1.00             |
-   +--------------------+------------------+
-   | Tetraeder Winkel   | 109.4712°        |
-   +--------------------+------------------+
+   +--------------------+------------------------+
+   | Bindung            | Bindungslänge (|angst|)|
+   +====================+========================+
+   | :math:`\text{C-C}` | 1.54                   |
+   +--------------------+------------------------+
+   | :math:`\text{C-O}` | 1.40                   |
+   +--------------------+------------------------+
+   | :math:`\text{C=O}` | 1.20                   |
+   +--------------------+------------------------+
+   | :math:`\text{C-H}` | 1.10                   |
+   +--------------------+------------------------+
+   | :math:`\text{N-H}` | 1.05                   |
+   +--------------------+------------------------+
+   | :math:`\text{O-H}` | 1.00                   |
+   +--------------------+------------------------+
+   | Tetraeder Winkel   | 109.4712°              |
+   +--------------------+------------------------+
 
 .. table:: Resultierende Z-Matrix für verschiedenen Moleküle.
    :align: center
 
    +------------------------------+--------------------------------------------------+
-   | Moleküle                     | Koordinaten (Å und $^{\circ}$)                   |
+   | Moleküle                     | Koordinaten (|angst| und $^{\circ}$)             |
    +==============================+==================================================+
    | :math:`\text{CH}_4`          | C                                                |
    +                              +--------------------------------------------------+

@@ -100,33 +100,38 @@ Im Unterschied dazu ist die Atomisierungsenergie :math:`E^{atom}` definiert als 
 Beschreibung des Experiments
 ----------------------------
 
-Um das Konzept zu verstehen, werden Sie einfache chemische Systeme untersuchen und die Änderung der freien Gibbs-Enthalpie :math:`\Delta G^0` berechnen. Die Beispielreaktionen beinhalten die Haber-Bosch-Reaktion, die Knallgas-Reaktion von Wasserstoff und Sauerstoff zu Wasser und eine Gasphasenreaktion zwischen Wasser und Kohlenstoffmonoxid (Wassergasgleichgewicht).
+.. admonition:: Änderung der freien Gibbs-Enthalpie
 
-* Knallgas-Reaktion: :math:`\ce{2 H2 + O2 -> 2 H2O}`
-* Haber-Bosch-Reaktion: :math:`\ce{N2 + 3 H2 -> 2 NH3}`
-* Wassergasgleichgewicht: :math:`\ce{H2O + CO -> H2 + CO2}`
+   Um das Konzept zu verstehen, werden Sie einfache chemische Systeme untersuchen und die Änderung der freien Gibbs-Enthalpie :math:`\Delta G^0` berechnen. Die Beispielreaktionen beinhalten die Haber-Bosch-Reaktion, die Knallgas-Reaktion von Wasserstoff und Sauerstoff zu Wasser und eine Gasphasenreaktion zwischen Wasser und Kohlenstoffmonoxid (Wassergasgleichgewicht).
 
-#. Im ersten Schritt optimieren Sie die Geometrie aller Reaktanden. Nutzen Sie dazu das TPSS Funktional und einen TZVP Basissatz.
-#. Führen Sie eine Frequenzrechnung für die optimierten Strukturen durch und entnehmen Sie dem Output die relevanten thermochemischen Daten.
-#. Berechnen Sie die Änderung der freien Gibbs-Enthalpie für alle Reaktionen und vergleichen Sie diese mit den experimentellen Werten.
+   * Knallgas-Reaktion: :math:`\ce{2 H2 + O2 -> 2 H2O}`
+   * Haber-Bosch-Reaktion: :math:`\ce{N2 + 3 H2 -> 2 NH3}`
+   * Wassergasgleichgewicht: :math:`\ce{H2O + CO -> H2 + CO2}`
 
-Als nächstes soll die Stärke verschiedener :math:`\ce{C-H}`-Bindungen an verschiedenen, einfachen, organischen Molekülen untersucht werden. Folgende Systeme sollen untersucht werden: Methan, Acetylen, Benzen und Acetaldehyd.
+   #. Im ersten Schritt optimieren Sie die Geometrie aller Reaktanden. Nutzen Sie dazu das TPSS Funktional und einen TZVP Basissatz.
+   #. Führen Sie eine Frequenzrechnung für die optimierten Strukturen durch und entnehmen Sie dem Output die relevanten thermochemischen Daten.
+   #. Berechnen Sie die Änderung der freien Gibbs-Enthalpie für alle Reaktionen und vergleichen Sie diese mit den experimentellen Werten.
 
-#. Optimieren Sie die Struktur für alle Moleküle. Starten Sie wieder mit der Kombination von TPSS und TZVP.
 
-#. Machen Sie sich mit der Berechnung von Radikalen vertraut (Stichworte: Multiplizität, UHF-Rechnung). Bestimmen Sie die Bindungsenergie für folgenden Vorgang: :math:`\ce{CH4 -> H3C. + H.}`. Vergleichen Sie diese mit :math:`\frac{1}{4}` der Atomisierungsenergie von :math:`\ce{CH4}`.
+.. admonition:: Stärke verschiedener :math:`\ce{C-H}`-Bindungen
 
-#. Berechnen Sie ebenfalls die Bindungsenergien für:
-   
-   a. :math:`\ce{H-CCH -> H. + HCC.}`
-   
-   b. :math:`\ce{H-C6H5 -> H. + H5C6.}`
-   
-   c. :math:`\ce{H-CH2CHO -> H. + CHOH2C.}`
-   
-   d. :math:`\ce{H-COCH3 -> H. + CH3OC.}`
-   
-#. Wiederholen Sie die Rechnungen mit einem kleineren (SVP) und einem größeren (QZVP) Basissatz. Beobachten Sie einen Basissatzeffekt?
+   Als nächstes soll die Stärke verschiedener :math:`\ce{C-H}`-Bindungen an verschiedenen, einfachen, organischen Molekülen untersucht werden. Folgende Systeme sollen untersucht werden: Methan, Acetylen, Benzen und Acetaldehyd.
+
+   #. Optimieren Sie die Struktur für alle Moleküle. Starten Sie wieder mit der Kombination von TPSS und TZVP.
+
+   #. Machen Sie sich mit der Berechnung von Radikalen vertraut (Stichworte: Multiplizität, UHF-Rechnung). Bestimmen Sie die Bindungsenergie für folgenden Vorgang: :math:`\ce{CH4 -> H3C. + H.}`. Vergleichen Sie diese mit :math:`\frac{1}{4}` der Atomisierungsenergie von :math:`\ce{CH4}`.
+
+   #. Berechnen Sie ebenfalls die Bindungsenergien für:
+      
+      a. :math:`\ce{H-CCH -> H. + HCC.}`
+      
+      b. :math:`\ce{H-C6H5 -> H. + H5C6.}`
+      
+      c. :math:`\ce{H-CH2CHO -> H. + CHOH2C.}`
+      
+      d. :math:`\ce{H-COCH3 -> H. + CH3OC.}`
+      
+   #. Wiederholen Sie die Rechnungen mit einem kleineren (SVP) und einem größeren (QZVP) Basissatz. Beobachten Sie einen Basissatzeffekt?
 
 .. csv-table:: Bindungsdissoziationsenergie von :math:`\ce{C-H}`-Bindungen
    :header: "Bindung", ":math:`D_{298}^{0}` [kJ/mol]"

@@ -140,60 +140,75 @@ Beschreibung des Experiments
 
 Nehmen Sie die Moleküle die Sie schon in den letzten Experimenten verwendet haben und die entsprechenden Ergebnisse aus den vorherigen Rechnungen (TPSS/TZVP).
 
+.. admonition:: 1. Populationsanalyse
 
-- Schauen Sie sich die Ergebnisse der Populationsanalyse an und trage Sie die partiellen Ladungen der Kohlenstoffatome in Methan, Ethan, Ethen, Ethin, Methanol und Kohlenstoffdioxid in die etsprechende folgene Tabelle ein. Stimmen die Ergebnisse mit Ihrer chemischen Intuition überein?
-- Schauen Sie sich die Grenzorbitale an (Gabedit) und klassifizieren Sie die MOs nach |pi|, :math:`\pi^{\ast}`, |sigma|, :math:`\sigma^{\ast}` oder als Lone pair.
-- Erstellen Sie ein quantitatives MO Schema für Ethen. Geben Sie die Orbitalenergien in eV an. Das Schema soll alle besetzten und die ersten drei unbesetzten MO's enthalten. Finden Sie die irreduziblen Darstellungen für alle MO's und beschriften Sie die MO's entsprechend. Berücksichtigen Sie dabei nur die Molekülorbitale, die einzelnen Atomorbitale müssen nicht berücksichtigt werden.
-- Bestimmen Sie das Ionisationspotential nach dem Koopmans' Theorem und vergleichen Sie die Ergebnisse mit den experimentellen Daten aus der folgenden Tabelle.
-- Bestimmen Sie das Dipolmoment, dieses finden Sie am Ende des Outputs und vergleichen Sie die Ergebnisse mit den experimentellen Daten aus der folgenden Tabelle.
+   Schauen Sie sich die Ergebnisse der Populationsanalyse an und trage Sie die partiellen Ladungen der Kohlenstoffatome in Methan, Ethan, Ethen, Ethin, Methanol und Kohlenstoffdioxid in die etsprechende folgene Tabelle ein. Stimmen die Ergebnisse mit Ihrer chemischen Intuition überein?
 
-.. csv-table:: Dipolmoment und Ionisationspotential für die kleinen Moleküle in Experiment. 
-   :header: "Molecule", "Dipole Moment (Debye)", "Ionization Potential (eV)"
-   :widths: 20, 20, 20
+   .. csv-table:: Populationsanalyse der Kohlenstoffatome.
+      :header: "Molecule", "Mulliken", "Löwdin", "Oxidationsstufe"
+      :widths: 20, 20, 20, 20
+
+      ":math:`\ce{CH4}`", "", "", ""
+      ":math:`\ce{C2H6}`", "", "", ""
+      ":math:`\ce{C2H4}`", "", "", ""
+      ":math:`\ce{C2H2}`", "", "", ""
+      ":math:`\ce{H3COH}`", "", "", ""
+      ":math:`\ce{CO2}`", "", "", ""
+
+.. admonition:: 2. MO Analyse
+
+   Schauen Sie sich die Grenzorbitale an (Gabedit) und klassifizieren Sie die MOs nach |pi|, :math:`\pi^{\ast}`, |sigma|, :math:`\sigma^{\ast}` oder als Lone pair.
 
 
-   ":math:`\ce{CH4}`", 0.000, "12.61 ± 0.01"
-   ":math:`\ce{C2H6}`", 0.000, "11.56 ± 0.02"
-   ":math:`\ce{C2H4}`", 0.000, "10.51 ± 0.015"
-   ":math:`\ce{C2H2}`", 0.000, "11.41 ± 0.01"
-   ":math:`\ce{H3COH}`", 1.700, "10.84 ± 0.07"
-   ":math:`\ce{CO2}`", 0.000, "13.778 ± 0.002"
-   ":math:`\ce{NH3}`", 1.470, "10.07 ± 0.01"
-   ":math:`\ce{H2O}`", 1.850, "12.6188 ±0.0009"
+.. admonition:: 3. Orbitalenergien
 
-.. csv-table:: Populationsanalyse der Kohlenstoffatome.
-   :header: "Molecule", "Mulliken", "Löwdin", "Oxidationsstufe"
-   :widths: 20, 20, 20, 20
+   Erstellen Sie ein quantitatives MO Schema für Ethen. Geben Sie die Orbitalenergien in eV an. Das Schema soll alle besetzten und die ersten drei unbesetzten MO's enthalten. Finden Sie die irreduziblen Darstellungen für alle MO's und beschriften Sie die MO's entsprechend. Berücksichtigen Sie dabei nur die Molekülorbitale, die einzelnen Atomorbitale müssen nicht berücksichtigt werden.
 
-   ":math:`\ce{CH4}`", "", "", ""
-   ":math:`\ce{C2H6}`", "", "", ""
-   ":math:`\ce{C2H4}`", "", "", ""
-   ":math:`\ce{C2H2}`", "", "", ""
-   ":math:`\ce{H3COH}`", "", "", ""
-   ":math:`\ce{CO2}`", "", "", ""
 
-.. csv-table:: Ionisationspotentiale nach dem Koopman's Theorem in eV.
-   :header: "Molekül", "Exp.", "Berechnete Daten", ":math:`\\Delta(\\mathrm{calc-exp})`"
-   :widths: 20, 20, 20, 20
+.. admonition:: 4. Ionisationspotentiale
 
-   ":math:`\ce{CH4}`", "12.610", "", ""
-   ":math:`\ce{C2H6}`", "11.560", "", ""
-   ":math:`\ce{C2H4}`", "10.510", "", ""
-   ":math:`\ce{C2H2}`", "11.410", "", ""
-   ":math:`\ce{H3COH}`", "10.840", "", ""
-   ":math:`\ce{CO2}`", "13.778", "", ""
-   ":math:`\ce{NH3}`", "10.070", "", ""
-   ":math:`\ce{H2O}`", "12.619", "", ""
+   Bestimmen Sie das Ionisationspotential nach dem Koopmans' Theorem und vergleichen Sie die Ergebnisse mit den experimentellen Daten aus der folgenden Tabelle.
 
-.. csv-table:: Dipolmoment in Debye.
-   :header: "Molekül", "Exp.", "Berechnete Daten", ":math:`\\Delta(\\mathrm{calc-exp})`"
-   :widths: 20, 20, 20, 20
+   .. csv-table:: Experimentelle Dipolmomente und Ionisationspotentiale für kleine Moleküle. 
+      :header: "Molecule", "Dipole Moment (Debye)", "Ionization Potential (eV)"
+      :widths: 20, 20, 20
 
-   ":math:`\ce{CH4}`", "0.000", "", ""
-   ":math:`\ce{C2H6}`", "0.000", "", ""
-   ":math:`\ce{C2H4}`", "0.000", "", ""
-   ":math:`\ce{C2H2}`", "0.000", "", ""
-   ":math:`\ce{H3COH}`", "1.700", "", ""
-   ":math:`\ce{CO2}`", "0.000", "", ""
-   ":math:`\ce{NH3}`", "1.470", "", ""
-   ":math:`\ce{H2O}`", "1.850", "", ""
+      ":math:`\ce{CH4}`", 0.000, "12.61 ± 0.01"
+      ":math:`\ce{C2H6}`", 0.000, "11.56 ± 0.02"
+      ":math:`\ce{C2H4}`", 0.000, "10.51 ± 0.015"
+      ":math:`\ce{C2H2}`", 0.000, "11.41 ± 0.01"
+      ":math:`\ce{H3COH}`", 1.700, "10.84 ± 0.07"
+      ":math:`\ce{CO2}`", 0.000, "13.778 ± 0.002"
+      ":math:`\ce{NH3}`", 1.470, "10.07 ± 0.01"
+      ":math:`\ce{H2O}`", 1.850, "12.6188 ±0.0009"
+
+   .. csv-table:: Ionisationspotentiale nach dem Koopman's Theorem in eV.
+      :header: "Molekül", "Exp.", "Berechnete Daten", ":math:`\\Delta(\\mathrm{calc-exp})`"
+      :widths: 20, 20, 20, 20
+
+      ":math:`\ce{CH4}`", "12.610", "", ""
+      ":math:`\ce{C2H6}`", "11.560", "", ""
+      ":math:`\ce{C2H4}`", "10.510", "", ""
+      ":math:`\ce{C2H2}`", "11.410", "", ""
+      ":math:`\ce{H3COH}`", "10.840", "", ""
+      ":math:`\ce{CO2}`", "13.778", "", ""
+      ":math:`\ce{NH3}`", "10.070", "", ""
+      ":math:`\ce{H2O}`", "12.619", "", ""
+
+
+.. admonition:: 5. Dipolmomente
+
+   Bestimmen Sie das Dipolmoment, dieses finden Sie am Ende des Outputs und vergleichen Sie die Ergebnisse mit den experimentellen Daten aus der vorherigen Tabelle.
+
+   .. csv-table:: Dipolmoment in Debye.
+      :header: "Molekül", "Exp.", "Berechnete Daten", ":math:`\\Delta(\\mathrm{calc-exp})`"
+      :widths: 20, 20, 20, 20
+
+      ":math:`\ce{CH4}`", "0.000", "", ""
+      ":math:`\ce{C2H6}`", "0.000", "", ""
+      ":math:`\ce{C2H4}`", "0.000", "", ""
+      ":math:`\ce{C2H2}`", "0.000", "", ""
+      ":math:`\ce{H3COH}`", "1.700", "", ""
+      ":math:`\ce{CO2}`", "0.000", "", ""
+      ":math:`\ce{NH3}`", "1.470", "", ""
+      ":math:`\ce{H2O}`", "1.850", "", ""

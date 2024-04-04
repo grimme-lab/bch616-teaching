@@ -19,51 +19,51 @@ Zu den populären Modellen gehört das Conductor-like polarizable continuum mode
 Beschreibung des Experiments
 ----------------------------
 
-Teil I: Berechnung der Solvationsenergie für kleine Moleküle
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Berechnen Sie die Solvatationsenergie für die folgenden Moleküle:
+.. admonition:: 1. Berechnung der Solvationsenergie für kleine Moleküle
 
-- Wasser
-- Aceton
-- n-Octan
-- Benzen
-- :math:`\ce{OH^-}`
-- :math:`\ce{Cl^-}`
+   Berechnen Sie die Solvatationsenergie für die folgenden Moleküle:
 
-Die Berechnung besteht aus mehreren Schritten:
+   - Wasser
+   - Aceton
+   - n-Octan
+   - Benzen
+   - :math:`\ce{OH^-}`
+   - :math:`\ce{Cl^-}`
 
-1. Optimieren Sie die Molekülgeometrie in der Gasphase, nutzten Sie das TPSS Funktional und einen TZVP Basissatz.
+   Die Berechnung besteht aus mehreren Schritten:
 
-.. code-block:: none
+   1. Optimieren Sie die Molekülgeometrie in der Gasphase, nutzten Sie das TPSS Funktional und einen TZVP Basissatz.
 
-   ! TPSS TZVP TightSCF TightOpt
+   .. code-block:: none
 
-2. Optimieren Sie die Struktur in wässriger Lösung, nutzen Sie dazu das CPCM Modell.
+      ! TPSS TZVP TightSCF TightOpt
 
-.. code-block:: none
+   2. Optimieren Sie die Struktur in wässriger Lösung, nutzen Sie dazu das CPCM Modell.
 
-   ! TPSS TZVP CPCM(water) TightSCF TightOpt
+   .. code-block:: none
 
-3. Tragen Sie die Werte der Solvatationsenergie in eine Tabelle ein.
-4. Betrachten Sie die absoluten Werte. Was fällt Ihnen auf?
-5. Welche Beiträge fehlen um die freie Energie der Solvatation zu berechnen?
+      ! TPSS TZVP CPCM(water) TightSCF TightOpt
 
-Teil II: Berechnung von Glycin in der Gasphase und in Lösung
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   3. Tragen Sie die Werte der Solvatationsenergie in eine Tabelle ein.
+   4. Betrachten Sie die absoluten Werte. Was fällt Ihnen auf?
+   5. Welche Beiträge fehlen um die freie Energie der Solvatation zu berechnen?
 
-Glycin ist eine der zwanzig natürlich vorkommenden Aminosäuren und die kleinste Aminosäure, welche in Lösung als Zwitterion vorliegt. 
-Sie bietet sich daher gut als Testmolekül für das CPCM-Modell an.
-Ist es in der Lage Glycin in der zwitterionischen Form zu stabilisieren? Führen Sie die Berechnungen auf TPSS/TZVP Level durch. 
 
-1. Optimieren Sie beide Strukturen (neutrale und zwitterionische Form) von Glycin sowohl in der Gasphase als auch in Wasser. Was fällt auf? Berechnen Sie die Stabilisierungsenergie der neutralen Form in der Gasphase und die der zwitterionischen Form in Lösung. 
-2. Variieren Sie die Dielektrizitätskonstante und bestimmen Sie den Wert, an welchem die zwitterionische Form gerade noch stabilisiert wird. Benutzen Sie für die neutrale Form die gasphasenoptimierte Geometrie aus 1. und für die zwitterionische Form ausschließlich die bereits in Wasser optimierte Geometrie. Überlegen Sie dazu zunächst, in welchem Bereich beide Formen gleich stabil sein könnten. Variieren Sie dort die Dielektrizitätskonstante in Schritten von 0.1.
+.. admonition:: 2. Berechnung von Glycin in der Gasphase und in Lösung
 
-.. code-block:: none
+   Glycin ist eine der zwanzig natürlich vorkommenden Aminosäuren und die kleinste Aminosäure, welche in Lösung als Zwitterion vorliegt. 
+   Sie bietet sich daher gut als Testmolekül für das CPCM-Modell an.
+   Ist es in der Lage Glycin in der zwitterionischen Form zu stabilisieren? Führen Sie die Berechnungen auf TPSS/TZVP Level durch. 
 
-   ! TPSS TZVP TightSCF
+   1. Optimieren Sie beide Strukturen (neutrale und zwitterionische Form) von Glycin sowohl in der Gasphase als auch in Wasser. Was fällt auf? Berechnen Sie die Stabilisierungsenergie der neutralen Form in der Gasphase und die der zwitterionischen Form in Lösung. 
+   2. Variieren Sie die Dielektrizitätskonstante und bestimmen Sie den Wert, an welchem die zwitterionische Form gerade noch stabilisiert wird. Benutzen Sie für die neutrale Form die gasphasenoptimierte Geometrie aus 1. und für die zwitterionische Form ausschließlich die bereits in Wasser optimierte Geometrie. Überlegen Sie dazu zunächst, in welchem Bereich beide Formen gleich stabil sein könnten. Variieren Sie dort die Dielektrizitätskonstante in Schritten von 0.1.
 
-   %cpcm		     
-      epsilon 80.40 # Dielektrizitaetskonstante Wasser
-      refrac   1.33 # Brechungsindex Wasser
-   end 		     
+   .. code-block:: none
+
+      ! TPSS TZVP TightSCF
+
+      %cpcm		     
+         epsilon 80.40 # Dielektrizitaetskonstante Wasser
+         refrac   1.33 # Brechungsindex Wasser
+      end 		     

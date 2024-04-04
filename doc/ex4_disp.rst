@@ -10,7 +10,9 @@ Experiment 4: Dispersion
 Beschreibung des Experiments
 ----------------------------
 
-1. Erstellen Sie Potentialkurven für folgende Edelgasdimere: :math:`\ce{Ar-Ar}`, :math:`\ce{Kr-Kr}`. verwenden Sie dazu das B3LYP-Funktional jeweils ohne und mit Dispersionskorrektur (Keyword: `D3BJ`) mit einer TZVP-Basis. Ein Beispielinput für ein diatomaren System (:math:`\ce{He2}`) ist gegeben. In folgendem Beispiel wird ein unrelaxierter Scan für die Bindungslänge von 3 bis 9 Angström in 60 Schritten durchgeführt:
+.. admonition:: 1. Potentialkurven
+
+   Erstellen Sie Potentialkurven für folgende Edelgasdimere: :math:`\ce{Ar-Ar}`, :math:`\ce{Kr-Kr}`. verwenden Sie dazu das B3LYP-Funktional jeweils ohne und mit Dispersionskorrektur (Keyword: `D3BJ`) mit einer TZVP-Basis. Ein Beispielinput für ein diatomaren System (:math:`\ce{He2}`) ist gegeben. In folgendem Beispiel wird ein unrelaxierter Scan für die Bindungslänge von 3 bis 9 Angström in 60 Schritten durchgeführt:
 
    .. code-block:: none
 
@@ -25,7 +27,12 @@ Beschreibung des Experiments
       He 0 0 0 
       He 0 0 {R}
 
-   Sie finden die aufzutragenden Daten im Output. Tragen Sie Abstände (in Å) gegen relative Energie (in :math:`\text{kcal} \cdot \text{mol}^{-1}`) auf. 
+   Sie finden die aufzutragenden Daten im Output. Tragen Sie Abstände (in |angst|) gegen relative Energie (in :math:`\text{kcal} \cdot \text{mol}^{-1}`) auf. 
 
-2. Bestimmen Sie jeweils den optimalen :math:`\ce{Ar-Ar}`- und :math:`\ce{Kr-Kr}`-Abstand. Berechnen Sie die Dissoziationsenergien (B3LYP/TZVP und B3LYP-D3BJ/TZVP) und geben Sie diese in :math:`\text{kcal} \cdot \text{mol}^{-1}` an.
-3. Wie verändern sich die Potentialkurven und Dissoziationsenergien mit Dispersionskorrektur im Gegensatz zu den Kurven ohne Dispersionskorrektur? 
+.. admonition:: 2. Optimale Abstände und Dissoziationsenergien
+
+   Bestimmen Sie jeweils den optimalen :math:`\ce{Ar-Ar}`- und :math:`\ce{Kr-Kr}`-Abstand. Berechnen Sie die Dissoziationsenergien (B3LYP/TZVP und B3LYP-D3BJ/TZVP) und geben Sie diese in :math:`\text{kcal} \cdot \text{mol}^{-1}` an.
+
+.. admonition:: 3. Diskussion
+
+   Wie verändern sich die Potentialkurven und Dissoziationsenergien mit Dispersionskorrektur im Gegensatz zu den Kurven ohne Dispersionskorrektur? 

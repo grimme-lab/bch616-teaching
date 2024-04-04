@@ -27,13 +27,27 @@ Das Ziel dieses Experiments ist es ein Gefühl für verschiedenen Minima auf ein
 Beschreibung des Experiments
 ----------------------------
 
-Verfahren Sie wie in den vorherigen Experimenten. Erstellen Sie die beiden Geometriekonformere von Glyoxal (cis, und trans-) und die drei verschiedenen Konformere/Isomere von Butadien (cis-, trans-) und Cyclobuten. 
-Führen Sie alle Berechnungen mit dem TPSS Funktional durch und nutzten Sie einen TZVP Basissatz.
+.. admonition:: 1. Vorarbeit
 
-1. Führen Sie eine vollständige Geometrieoptimierung für alle Konformere durch und bestimmen Sie die stationären Punkte auf der Energiehyperfläche. Verwenden Sie dazu auch verschiedene Startgeometrien (verzerren Sie das Molekül).
-2. Wenn Sie die verschiedenen lokalen Minima gefunden haben, vergleichen Sie die relativen Energien von jedem Isomer und tragen Sie die Werte in die Tabelle ein.
-3. Bestimmen Sie, ob es sich bei den stationären Punkten um lokale Minima handelt. Führen Sie dazu eine Frequenzrechnung durch (Schlüsselwort NumFreq).
-4. Nutzen Sie Ihr chemisches Verständnis um eine Startstruktur in der Nähe des Übergangszustandes zu finden. Finden Sie so mittels Geometrieoptimierung (Schlüsselwort OptTS) einen Sattelpunkt erster Ordnung und klassifizieren Sie diesen durch eine Frequenzrechnung. Geben Sie die Diederwinkel aller Strukturen (Minimumsstrukturen und Übergansgeometrien) an.
+   Verfahren Sie wie in den vorherigen Experimenten. Erstellen Sie die beiden Geometriekonformere von Glyoxal (cis, und trans-) und die drei verschiedenen Konformere/Isomere von Butadien (cis-, trans-) und Cyclobuten. 
+   Führen Sie alle Berechnungen mit dem TPSS Funktional durch und nutzten Sie einen TZVP Basissatz.
+
+.. admonition:: 2. Geometrieoptimierung
+
+   Führen Sie eine vollständige Geometrieoptimierung für alle Konformere durch und bestimmen Sie die stationären Punkte auf der Energiehyperfläche. Verwenden Sie dazu auch verschiedene Startgeometrien (verzerren Sie das Molekül).
+
+.. admonition:: 3. Energievergleich
+
+   Wenn Sie die verschiedenen lokalen Minima gefunden haben, vergleichen Sie die relativen Energien von jedem Isomer und tragen Sie die Werte in die Tabelle ein.
+
+.. admonition:: 4. Frequenzrechnung
+
+   Bestimmen Sie, ob es sich bei den stationären Punkten um lokale Minima handelt. Führen Sie dazu eine Frequenzrechnung durch (Schlüsselwort `NumFreq`).
+
+.. admonition:: 5. Diskussion
+
+   Nutzen Sie Ihr chemisches Verständnis um eine Startstruktur in der Nähe des Übergangszustandes zu finden. Finden Sie so mittels Geometrieoptimierung (Schlüsselwort `OptTS`) einen Sattelpunkt erster Ordnung und klassifizieren Sie diesen durch eine Frequenzrechnung. Geben Sie die Diederwinkel aller Strukturen (Minimumsstrukturen und Übergansgeometrien) an.
+
 
 .. csv-table:: Relative Energien der Isomere von :math:`\ce{C2H2O2}` und :math:`\ce{C4H6}` in kJ/mol.
    :header: "", ":math:`\\ce{C2H2O2}`", ":math:`\\ce{C4H6}`"

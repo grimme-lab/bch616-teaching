@@ -167,6 +167,6 @@ and the unit cell vectors a ⃗\ :sub:`1` , a ⃗\ :sub:`2` and a ⃗\ :sub:`3` 
    s_i \approx \frac{1}{|\vec{a}_i|*\rho_\kappa}
 
 where *s*\ :sub:`i` are the corresponding dimensionless SHRINK parameter, rounded to the next
-non-zero integer. Note that the a ⃗\ :sub:`i` in fort.34 are in Ångström.
+non-zero integer. Note that the a ⃗\ :sub:`i` in fort.34 are in |angst|ngström.
 When converting a ``.cif`` file with ``cif2crystal`` you will receive the k-mesh density and the
 SHRINK parameters corrsponding to the structure automatically.
