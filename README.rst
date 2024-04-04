@@ -1,5 +1,5 @@
 Resources for Computational Chemistry
-==================================
+=====================================
 
 This project contains the resources used for teaching the Bachelor of Science course "Computational Chemistry" (Elective Module BCh 6.1.6) at the university of Bonn.
 
