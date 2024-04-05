@@ -328,7 +328,20 @@ e) Finden Sie die jeweils bevorzugte Kohlenstoffposition für a. elektrophile un
    - W(HCH): 120
 
 
+Protokoll
+---------
 
+.. csv-table:: 1. Polyene)
+   :header: Polyene, :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`, :math:`max(p_{AB})` :math:`[e]`, :math:`min(p_{AB})` :math:`[e]`, :math:`E_{\text{HOMO}}-E_{\text{LUMO}}` :math:`[-\beta]`
+   :align: center
 
+   :math:`\ce{C4H6}`, , , ,
+   :math:`\ce{C6H8}`, , , ,
+   :math:`\ce{C8H10}`, , , ,
+   :math:`\ce{C10H12}`, , , ,
 
+.. figure:: img/tab41protokoll.png
+   :scale: 60%
+   :align: center
+   :alt: Figure
 
