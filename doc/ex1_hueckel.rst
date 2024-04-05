@@ -392,12 +392,51 @@ Protokoll
 6c.) LUMO+2 Abbildungen
 
 .. figure:: img/emptyspace.png
-   :width: 600px
+   :width: 400px
    :align: center
 
 .. csv-table:: 6d.) Bindungsordnungen
-   :header: :math:`\ce{C9H7N}`, :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`
+   :header: I, BO. ,IIa, BO.
    :align: center
 
-   IIa, 
-   IIb,
+   2-3, ,1-10,
+   3-4, ,1-2,
+   4-5, ,2-3,
+   5-6, ,3-4,
+   6-7, ,4-5,
+   7-8, ,5-6,
+   8-9, ,6-7,
+   9-10, ,7-8,
+   10-11, ,8-9,
+   2-11, ,9-10,
+   6-11, ,4-9,
+
+.. csv-table:: 6e.) Ladungsordnungen
+   :header: ,IIa, IIb
+   :align: center
+
+   1,
+   2,
+   3,   
+   4,
+   5,
+   6,
+   7,   
+   8,
+   9,
+   10
+
+.. csv-table:: 7.) Ionisierungsenergien
+   :header: ,IP :math:`[eV]`, :math:`E_\text{HOMO}` :math:`[\beta]`
+   :align: center
+
+   Benzen, 9.57
+   Naphthalin, 8.68
+   Anthracen, 8.20   
+   Phenanthren, 8.62
+   Tetracen, 7.71
+   3;4-Benzophenanthren, 8.40
+
+.. figure:: img/IPprotokoll.png
+   :width: 500px
+   :align: center
