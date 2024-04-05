@@ -335,22 +335,22 @@ Protokoll
    :header: Polyene, :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`, :math:`max(p_{AB})` :math:`[e]`, :math:`min(p_{AB})` :math:`[e]`, :math:`E_{\text{HOMO}}-E_{\text{LUMO}}` :math:`[-\beta]`
    :align: center
 
-   :math:`\ce{C4H6}`, , , ,
-   :math:`\ce{C6H8}`, , , ,
-   :math:`\ce{C8H10}`, , , ,
-   :math:`\ce{C10H12}`, , , ,
+   :math:`\rm C_4H_6`, , , ,
+   :math:`\rm C_6H_8`, , , ,
+   :math:`\rm C_8H_{10}`, , , ,
+   :math:`\rm C_{10}H_{12}`, , , ,
 
 .. figure:: img/tab41protokoll.png
    :width: 700px
    :align: center
   
 .. csv-table:: 2.) Annulene
-   :header: Annunlen, :math:`\ce{C4H4}`, :math:`\ce{C5H5-}`, :math:`\ce{C6H6}`, :math:`\ce{C7H7+}`
+   :header: Annunlen, :math:`\rm C_4H_4`, :math:`\rm C_5H_5^-`, :math:`\rm C_6H_6`, :math:`\rm C_7H_7^+`
    :align: center
 
    :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`, , , ,
 
-   Annunlen, :math:`\ce{C8H8}`, :math:`\ce{C10H10}`, :math:`\ce{C12H12}`, :math:`\ce{C14H14}`
+   Annunlen, :math:`\rm C_8H_8`,  :math:`\rm C_{10}H_{10}`,  :math:`\rm C_{12}H_{12}`,  :math:`\rm C_{14}H_{14}`
    :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`, , , ,
 
 .. figure:: img/tab42protokoll.png
@@ -364,7 +364,7 @@ Protokoll
    :math:`q_{A}` :math:`[e]`, , , , 
 
 .. csv-table:: 4.) Protoniertes Naphthalin
-   :header: :math:`\ce{C10H9+}`, :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`
+   :header: :math:`\ce{C10H9+}`, :math:`E_{\text{res}}/\pi\text{-At.}` [:math:`\beta`]
    :align: center
 
    1, 
@@ -377,7 +377,7 @@ Protokoll
    :math:`q_{A}` :math:`[e]`, , , , 
 
 .. csv-table:: 6a.) 1-Naphthol, Quinolin, Isoquinolin
-   :header: :math:`\ce{C9H7N}`, :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`
+   :header: :math:`\rm C_{9}H_{7}N`, :math:`E_{\text{res}}/\pi\text{-At.}` [:math:`\beta`]
    :align: center
 
    IIa, 
@@ -427,7 +427,7 @@ Protokoll
    10
 
 .. csv-table:: 7.) Ionisierungsenergien
-   :header: ,IP :math:`[eV]`, :math:`E_\text{HOMO}` :math:`[\beta]`
+   :header: ,IP :math:`[eV]`, :math:`E_\text{HOMO}` [:math:`\beta`]
    :align: center
 
    Benzen, 9.57
