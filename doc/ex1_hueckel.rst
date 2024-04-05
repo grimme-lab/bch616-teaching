@@ -341,7 +341,48 @@ Protokoll
    :math:`\ce{C10H12}`, , , ,
 
 .. figure:: img/tab41protokoll.png
-   :scale: 60%
+   :width: 700px
    :align: center
-   :alt: Figure
+  
+.. csv-table:: 2. Annulene)
+   :header: Annunlen, :math:`\ce{C4H4}`, :math:`\ce{C5H5-}`, :math:`\ce{C6H6}`, :math:`\ce{C7H7+}`
+   :align: center
 
+   :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`, , , ,
+
+   Annunlen, :math:`\ce{C8H8}`, :math:`\ce{C10H10}`, :math:`\ce{C12H12}`, :math:`\ce{C14H14}`
+   :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`, , , ,
+
+.. figure:: img/tab42protokoll.png
+   :width: 700px
+   :align: center
+
+.. csv-table:: 3. Phenol)
+   :header: Atom, O, ipso C, ortho C, meta C, para C
+   :align: center
+
+   :math:`q_{A}` :math:`[e]`, , , , 
+
+.. csv-table:: 4. Protoniertes Naphthalin)
+   :header: :math:`\ce{C10H9+}`, :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`
+   :align: center
+
+   1, 
+   2, 
+
+.. csv-table:: 5. Corannulen)
+   :header: Atom, 6/9/12/15/18, 7/8/10/11/13/14/16/17/19/20
+   :align: center
+
+   :math:`q_{A}` :math:`[e]`, , , , 
+
+.. csv-table:: 6a. 1-Naphthol, Quinolin, Isoquinolin)
+   :header: :math:`\ce{C9H7N}`, :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`
+   :align: center
+
+   IIa, 
+   IIb, 
+
+.. figure:: img/mo_diagramm.png
+   :width: 600px
+   :align: center
