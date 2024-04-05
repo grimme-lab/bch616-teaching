@@ -331,7 +331,7 @@ e) Finden Sie die jeweils bevorzugte Kohlenstoffposition für a. elektrophile un
 Protokoll
 ---------
 
-.. csv-table:: 1. Polyene)
+.. csv-table:: 1.) Polyene
    :header: Polyene, :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`, :math:`max(p_{AB})` :math:`[e]`, :math:`min(p_{AB})` :math:`[e]`, :math:`E_{\text{HOMO}}-E_{\text{LUMO}}` :math:`[-\beta]`
    :align: center
 
@@ -344,7 +344,7 @@ Protokoll
    :width: 700px
    :align: center
   
-.. csv-table:: 2. Annulene)
+.. csv-table:: 2.) Annulene
    :header: Annunlen, :math:`\ce{C4H4}`, :math:`\ce{C5H5-}`, :math:`\ce{C6H6}`, :math:`\ce{C7H7+}`
    :align: center
 
@@ -357,32 +357,47 @@ Protokoll
    :width: 700px
    :align: center
 
-.. csv-table:: 3. Phenol)
+.. csv-table:: 3.) Phenol
    :header: Atom, O, ipso C, ortho C, meta C, para C
    :align: center
 
    :math:`q_{A}` :math:`[e]`, , , , 
 
-.. csv-table:: 4. Protoniertes Naphthalin)
+.. csv-table:: 4.) Protoniertes Naphthalin
    :header: :math:`\ce{C10H9+}`, :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`
    :align: center
 
    1, 
    2, 
 
-.. csv-table:: 5. Corannulen)
+.. csv-table:: 5.) Corannulen
    :header: Atom, 6/9/12/15/18, 7/8/10/11/13/14/16/17/19/20
    :align: center
 
    :math:`q_{A}` :math:`[e]`, , , , 
 
-.. csv-table:: 6a. 1-Naphthol, Quinolin, Isoquinolin)
+.. csv-table:: 6a.) 1-Naphthol, Quinolin, Isoquinolin
    :header: :math:`\ce{C9H7N}`, :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`
    :align: center
 
    IIa, 
    IIb, 
 
+6b.) MO-Diagramme
+
 .. figure:: img/mo_diagramm.png
    :width: 600px
    :align: center
+
+6c.) LUMO+2 Abbildungen
+
+.. figure:: img/emptyspace.png
+   :width: 600px
+   :align: center
+
+.. csv-table:: 6d.) Bindungsordnungen
+   :header: :math:`\ce{C9H7N}`, :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`
+   :align: center
+
+   IIa, 
+   IIb,
