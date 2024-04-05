@@ -36,14 +36,14 @@ Bindungsordnung definiert. Die Ladungsordnung kann mit dem Begriff
 der Partialladung in Verbindung gebracht werden. Die Bindungsordnung
 ist ein Maß für die Stärke der :math:`\pi`-Bindung zwischen zwei Atomen und
 kann sehr gut mit Bindungslängen korreliert werden. Da die Hückel-Orbitalenergie
-$\epsilon_i$ durch den folgenden Ausdruck
+:math:`\epsilon` durch den folgenden Ausdruck
 
 .. math::
    \epsilon_i=\sum_{r=1}^{M} c^2_{ir}\alpha_r + \sum_{r\ne s} c_{ir}c_{is}\beta_{rs}
 
 gegeben ist (:math:`M` ist die Zahl der :math:`\pi`-Atome bzw. Atomorbitale :math:`p_z`, :math:`c_{ir}` ist der LCAO-Entwicklungskoeffizient des MOs :math:`i` am Atom(orbital) :math:`r`), ergeben sich für Ladungs- und Bindungsordnung die folgenden Ausdrücke:
 
-1. **Ladungsordnung** am Atom $A$
+1. **Ladungsordnung** am Atom :math:`A`
 
 .. math::
    \begin{split}
@@ -52,7 +52,7 @@ gegeben ist (:math:`M` ist die Zahl der :math:`\pi`-Atome bzw. Atomorbitale :mat
    &= \sum_{i=1}^{M} n_i |c_{iA}|^2.
    \end{split}
 
-:math:`n_i` ist dabei die Besetzungszahl des MOs $i$ (0, 1 oder 2).
+:math:`n_i` ist dabei die Besetzungszahl des MOs :math:`i` (0, 1 oder 2).
 
 Anschaulich summiert man also von allen besetzten MOs (für unbesetzte ist :math:`n_i = 0`) die 
 AO-Koeffizienten am Atom :math:`A` auf, so dass eine "Gesamt-:math:`\pi`-Elektronendichte" am 
@@ -335,22 +335,22 @@ Protokoll
    :header: Polyene, :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`, :math:`max(p_{AB})` :math:`[e]`, :math:`min(p_{AB})` :math:`[e]`, :math:`E_{\text{HOMO}}-E_{\text{LUMO}}` :math:`[-\beta]`
    :align: center
 
-   :math:`\rm C_4H_6`, , , ,
-   :math:`\rm C_6H_8`, , , ,
-   :math:`\rm C_8H_{10}`, , , ,
-   :math:`\rm C_{10}H_{12}`, , , ,
+   :math:`\text{C}_4\text{H}_6`, , , ,
+   :math:`\text{C}_6\text{H}_8`, , , ,
+   :math:`\text{C}_8\text{H}_{10}`, , , ,
+   :math:`\text{C}_{10}\text{H}_{12}`, , , ,
 
 .. figure:: img/tab41protokoll.png
    :width: 700px
    :align: center
   
 .. csv-table:: 2.) Annulene
-   :header: Annunlen, :math:`\rm C_4H_4`, :math:`\rm C_5H_5^-`, :math:`\rm C_6H_6`, :math:`\rm C_7H_7^+`
+   :header: Annunlen, :math:`\text{C}_4\text{H}_4`, :math:`\text{C}_5\text{H}_5^-`, :math:`\text{C}_6\text{H}_6`, :math:`\text{C}_7\text{H}_7^+`
    :align: center
 
    :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`, , , ,
 
-   Annunlen, :math:`\rm C_8H_8`,  :math:`\rm C_{10}H_{10}`,  :math:`\rm C_{12}H_{12}`,  :math:`\rm C_{14}H_{14}`
+   Annunlen, :math:`\text{C}_8\text{H}_8`,  :math:`\text{C}_{10}\text{H}_{10}`,  :math:`\text{C}_{12}\text{H}_{12}`,  :math:`\text{C}_{14}\text{H}_{14}`
    :math:`E_{\text{res}}/\pi\text{-At.}` :math:`[\beta]`, , , ,
 
 .. figure:: img/tab42protokoll.png
@@ -364,7 +364,7 @@ Protokoll
    :math:`q_{A}` :math:`[e]`, , , , 
 
 .. csv-table:: 4.) Protoniertes Naphthalin
-   :header: :math:`\ce{C10H9+}`, :math:`E_{\text{res}}/\pi\text{-At.}` [:math:`\beta`]
+   :header: :math:`\text{C}_{10}\text{H}_{9}^{+}`, :math:`E_{\text{res}}/\pi\text{-At.}` [:math:`\beta`]
    :align: center
 
    1, 
@@ -377,7 +377,7 @@ Protokoll
    :math:`q_{A}` :math:`[e]`, , , , 
 
 .. csv-table:: 6a.) 1-Naphthol, Quinolin, Isoquinolin
-   :header: :math:`\rm C_{9}H_{7}N`, :math:`E_{\text{res}}/\pi\text{-At.}` [:math:`\beta`]
+   :header: :math:`\text{C}_{9}\text{H}_{7}\text{N}`, :math:`E_{\text{res}}/\pi\text{-At.}` [:math:`\beta`]
    :align: center
 
    IIa, 
