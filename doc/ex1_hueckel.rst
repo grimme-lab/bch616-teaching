@@ -292,7 +292,7 @@ e) Finden Sie die jeweils bevorzugte Kohlenstoffposition für a. elektrophile un
    | 3,4-Benzophenanthren    | 8.40             |
    +-------------------------+------------------+
 
-8. Führen Sie eine EHT-Rechnung für CO (:math:`r(\text{C-O}) = 1.15 \, \text{\AA}`) durch.
+8. Führen Sie eine EHT-Rechnung für CO (:math:`r`(C-O) = 1.15 |angst|) durch.
    Zeichnen Sie ein MO-Schema aus den Informationen der MO-Eigenwerte und
    skizzieren Sie die Molekülorbitale, indem Sie die Matrix der MO-Koeffizienten
    am Ende des Outputs auswerten (MATRIX PRINTED: occ. MO-MATRIX).
@@ -462,21 +462,20 @@ Protokoll
    :align: center
 
    +--------------------+-------------------+----------------------------------+
-   |                    | IP :math:`[eV]`   | :math:`E_\text{HOMO}` [:math:`\beta`] |
+   |                    | IP (:math:`eV`)   | :math:`E_\text{HOMO}` (:math:`\beta`) |
    +====================+===================+==================================+
-   | Benzen              |       9.57        |                                  |
+   | Benzen             |       9.57        |                                  |
    +--------------------+-------------------+----------------------------------+
-   | Naphthalin          |       8.68        |                                  |
+   | Naphthalin         |       8.68        |                                  |
    +--------------------+-------------------+----------------------------------+
-   | Anthracen           |       8.20        |                                  |
+   | Anthracen          |       8.20        |                                  |
    +--------------------+-------------------+----------------------------------+
-   | Phenanthren         |       8.62        |                                  |
+   | Phenanthren        |       8.62        |                                  |
    +--------------------+-------------------+----------------------------------+
-   | Tetracen            |       7.71        |                                  |
+   | Tetracen           |       7.71        |                                  |
    +--------------------+-------------------+----------------------------------+
    | 3,4-Benzophenanthren|      8.40        |                                  |
    +--------------------+-------------------+----------------------------------+
-
 
 
 .. figure:: img/IPprotokoll.png
