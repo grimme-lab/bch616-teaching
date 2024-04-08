@@ -345,7 +345,7 @@ Protokoll
    :align: center
 
 
-.. table:: 2.) Annulene
+.. table:: (2.) Annulene
    :align: center
 
    +------------------------------------+--------------------------+------------------------------------+----------------------------+------------------------------------+
@@ -363,13 +363,17 @@ Protokoll
    :width: 700px
    :align: center
 
-.. csv-table:: 3.) Phenol
-   :header: Atom, O, ipso C, ortho C, meta C, para C
+.. table:: (3.) Phenol
    :align: center
 
-   :math:`q_{A}` :math:`[e]`, , , , 
+   +-------------------+-----+---------+---------+---------+---------+
+   | Atom              | O   | ipso C  | ortho C | meta C  | para C  |
+   +===================+=====+=========+=========+=========+=========+
+   | :math:`q_A\ [e]`  |     |         |         |         |         |
+   +-------------------+-----+---------+---------+---------+---------+
+ 
 
-.. table:: 4.) Protoniertes Naphthalin
+.. table:: (4.) Protoniertes Naphthalin
    :align: center
 
    +-------------------------------------+-----------------------------------+
@@ -381,13 +385,18 @@ Protokoll
    +-------------------------------------+-----------------------------------+
 
 
-.. csv-table:: 5.) Corannulen
-   :header: Atom, 6/9/12/15/18, 7/8/10/11/13/14/16/17/19/20
+.. table:: (5.) Corannulen
    :align: center
 
-   :math:`q_{A}` :math:`[e]`, , , , 
+   +--------------------+-------------------+-----------------------------+
+   | Atom               | 6,9,12,15,18      | 7,8,10,11,13,14,16,17,19,20 |
+   +====================+===================+=============================+
+   | :math:`q_A\ [e]`   |                   |                             |
+   +--------------------+-------------------+-----------------------------+
 
-.. table:: 6a.) 1-Naphthol, Quinolin, Isoquinolin
+
+
+.. table:: (6a.) 1-Naphthol, Quinolin, Isoquinolin
    :align: center
 
    +---------------------------------+------------------------------------+
@@ -411,7 +420,7 @@ Protokoll
    :width: 400px
    :align: center
 
-.. table:: 6d.) Bindungsordnungen
+.. table:: (6d.) Bindungsordnungen
    :align: center
 
    +------+-------+------+-------+
@@ -441,7 +450,7 @@ Protokoll
    +------+-------+------+-------+
 
 
-.. table:: 6e.) Ionisationspotential für verschiedene Moleküle.
+.. table:: (6e.) Ionisationspotential für verschiedene Moleküle.
    :align: center
 
    +-----+-----+-----+
@@ -469,7 +478,7 @@ Protokoll
    +-----+-----+-----+
 
 
-.. table:: 6f.) Ionisierungsenergien
+.. table:: (6f.) Ionisierungsenergien
    :align: center
 
    +---------------------+---------+--------------------+
