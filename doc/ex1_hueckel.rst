@@ -273,7 +273,7 @@ e) Finden Sie die jeweils bevorzugte Kohlenstoffposition für a. elektrophile un
 
    Erklären Sie die Formel. Was bedeuten :math:`\alpha` und :math:`\beta`?
 
-.. table:: Tabelle 1.1: Ionisationspotential für verschiedene Moleküle.
+.. table:: Ionisationspotential für verschiedene Moleküle.
    :align: center
 
    +-------------------------+------------------+
