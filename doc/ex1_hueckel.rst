@@ -17,15 +17,15 @@ Für planare, konjugierte (d.h. aus :math:`\mathrm{sp}^{2}`-hybridisierten Atome
 3. Die Überlappungsintegrale werden vernachlässigt für :math:`\mu \neq \nu` (:math:`S_{\mu\mu} = 1`).
 4. Die Integrale :math:`H_{\mu\nu}` werden empirisch festgelegt:
 
-(a) :math:`H_{\mu\nu} = \beta`, falls die Atome :math:`\mu` und :math:`\nu` direkt verbunden sind (Energie eines Elektrons im Feld zweier Kerne mit impliziten Korrekturen für vernachlässigte Terme). Sind |mu| und |nu| nicht direkt miteinander verbunden, gilt :math:`H_{\nu\nu} = 0`.
-(b) :math:`H_{\nu\nu} = \alpha` (Energie eines Elektrons im Feld des Kerns |mu| mit impliziten Korrekturen für vernachlässigte Terme).
+(a) :math:`H_{\mu\nu} = \beta`, falls die Atome :math:`\mu` und :math:`\nu` direkt verbunden sind (Energie eines Elektrons im Feld zweier Kerne mit impliziten Korrekturen für vernachlässigte Terme). Sind |mu| und |nu| nicht direkt miteinander verbunden, gilt :math:`H_{\mu\nu} = 0`.
+(b) :math:`H_{\nu\nu} = \alpha` (Energie eines Elektrons im Feld des Kerns |nu| mit impliziten Korrekturen für vernachlässigte Terme).
 
 In der Praxis wird :math:`\alpha` für Kohlenstoff willkürlich auf Null gesetzt, und die Parameter anderer Atome werden relativ dazu empirisch bestimmt. :math:`\beta` (Resonanzintegral) wird für eine :math:`\ce{C-C}` Bindung der Länge 1.4 |angst| als Standard auf -1 gesetzt. Bei Molekülen mit starken Abweichungen von dieser Standardlänge oder bei :math:`\ce{C-X}` Bindungen wird der :math:`\beta`-Wert empirisch verändert.
 
 Diskussion der eingeführten Näherungen
 --------------------------------------
 
-1.  Die :math:`\sigma`-:math:`\pi`-Separation ist gerechtfertigt, wenn die :math:`\sigma`-Elektronen in guter Näherung für die Reihe zu vergleichender :math:`\pi`-Zustände durch die gleiche Produktfunktion dargestellt werden können, d.h. wenn es innerhalb einer Reihe keine unterschiedlichen  :math:`\sigma`-:math:`\pi` Polarisationseffekte gibt. Behandelt man Aromaten unterschiedlichen Typs, ist diese Annahme jedoch bereits problematisch, da der Einfluss der :math:`\sigma`-Orbitale auf die Stabilität von Aromaten wohl nicht zu vernachlässigen ist. Ähnliches gilt für elektronische Spektren von Aromaten.
+1.  Die :math:`\sigma`-:math:`\pi`-Separation ist gerechtfertigt, wenn es innerhalb einer Reihe keine unterschiedlichen :math:`\sigma`-:math:`\pi` Polarisationseffekte gibt (:math:`\sigma` und :math:`\pi` sind entkoppelt). Behandelt man Aromaten unterschiedlichen Typs, ist diese Annahme jedoch bereits problematisch, da der Einfluss der :math:`\sigma`-Orbitale auf die Stabilität von Aromaten wohl nicht zu vernachlässigen ist. Ähnliches gilt für elektronische Spektren von Aromaten.
 2. Bei einfachen Kohlenwasserstoffen ist die Korrelation der Parameter :math:`\alpha` und :math:`\beta` mit experimentellen Größen recht brauchbar. Probleme treten beim Vorhandensein von Heteroatomen, stark polarisierbaren Atomen oder Molekülgruppen oder bei Bindungsstabilisierungseffekten wie Hyperkonjugation auf.
 
 Ladungsordnung und Bindungsordnung
@@ -41,7 +41,8 @@ kann sehr gut mit Bindungslängen korreliert werden. Da die Hückel-Orbitalenerg
 .. math::
    \epsilon_i=\sum_{r=1}^{M} c^2_{ir}\alpha_r + \sum_{r\ne s} c_{ir}c_{is}\beta_{rs}
 
-gegeben ist (:math:`M` ist die Zahl der :math:`\pi`-Atome bzw. Atomorbitale :math:`p_z`, :math:`c_{ir}` ist der LCAO-Entwicklungskoeffizient des MOs :math:`i` am Atom(orbital) :math:`r`), ergeben sich für Ladungs- und Bindungsordnung die folgenden Ausdrücke:
+gegeben ist (:math:`M` ist die Zahl der :math:`\pi`-Atome bzw. Atomorbitale :math:`p_z`, :math:`c_{ir}` ist der LCAO-Entwicklungskoeffizient des MOs :math:`i` am Atom :math:`r`).
+Dadurch ergeben sich für Ladungs- und Bindungsordnung die folgenden Ausdrücke:
 
 1. **Ladungsordnung** am Atom :math:`A`
 
@@ -78,114 +79,118 @@ Anleitung: Durchführung einer Hückel-Rechnung
 Erstellen Sie zunächst ein Verzeichnis für die Hückelrechnungen (z.B. ``mkdir hueckel``).  
 Wechseln Sie in dieses Verzeichnis (``cd hueckel``).  
 
-Erstellen Sie die Eingabedatei mit einem Editor. Die erste Zeile enthält die Anzahl der :math:`\pi`-Atome. In der zweiten Zeile wird die Zahl der :math:`\pi`-Elektronen angegeben. Danach erfolgt die Eingabe der Hückel-Matrix, und zwar zuerst die Nummern der verbundenen Atome gefolgt vom Betrag des Resonanzintegrals :math:`\beta` bzw.\ des Coulombintegrals :math:`\alpha`.
+.. admonition:: Aufgabe
 
-Im Folgenden ist eine Beispieleingabe für Pyrrol angegeben (5 Atome, 6 :math:`\pi`-Elektronen):
-
-.. code-block:: bash
-
-   5
-   6
-   1 1 0.5
-   1 2 0.8
-   2 3 1.0
-   3 4 1.0
-   4 5 1.0
-   1 5 0.8
-
-.. figure:: img/pyrrol.png
-   :width: 150px
-   :align: center
-
-Hinweis: Es wird empfohlen, bei komplizierteren Systemen zuerst eine Skizze des Moleküls anzufertigen,  
-die Nummerierung der Atome festzulegen und danach die Hückel-Matrix einzugeben. Für die spätere graphische Betrachtung
-muss die Nummerierung der 
-Atome fortlaufend entlang der längsten Kette (beginnend bei Brückenkopfatomen, falls vorhanden) erfolgen. 
-Es ist darauf zu achten, dass bei Polyzyklen die Brückenkopfatome möglichst niedrige Nummern bekommen.
-
-.. figure:: img/viewhuck_naph.png
-   :width: 400px
-   :align: center
-
-Nachdem die Matrix gespeichert (z.B. Inputdatei: ``pyr.in``) und der Editor verlassen ist, wird das HMO-Programm mit der Kommandozeile aufgerufen ``hueckel < Inputdatei``
-also z.B.:
-
-.. code-block:: bash
-
-   hueckel < pyr.in
-
-Das Programm schreibt die Ergebnisse in den *standard output*, was in der Regel der Bildschirm ist. Um die Ergebnisse zu speichern, muss die Ausgabe in eine Datei umgeleitet werden ``hueckel < Inputdatei > Outputdatei``
-also z.B.:
-
-.. code-block:: bash
-
-   ****************************************
-         H U E C K E L - PROGRAM
-         S. GRIMME, UNI MUENSTER
-   ****************************************
+   Erstellen Sie die Eingabedatei mit einem Editor.
    
-   NUMBER OF ATOMS ?
-   NUMBER OF ELECTRONS ?
-   ATOM I, ATOM J, ALPHA/BETA IJ (IN UNITS OF BETA) ?
-   STOP WITH -1 -1 -1
-   
-   MATRIX PRINTED:  HUECKEL-MATRIX
-   
-         1         2         3         4         5
-   
-   1   0.50000
-   2   0.80000   0.00000
-   3   0.00000   1.00000   0.00000
-   4   0.00000   0.00000   1.00000   0.00000
-   5   0.80000   0.00000   0.00000   1.00000   0.00000
-   
-   EIGENVALUES
-   
-   MO NR     :          1         2         3         4         5
-   OCCUPATION:         2.0       2.0       2.0       0.0       0.0
-   EPSILON   :      1.94464   0.75990   0.61803  -1.20454  -1.61803
-   
-   MATRIX PRINTED:  HMO-VECTORS
-   
-         1         2         3         4         5
-   
-   1   0.47364   0.71279   0.00000   0.51730   0.00000
-   2   0.42765   0.11579  -0.60150  -0.55110   0.37175
-   3   0.45271  -0.48224  -0.37175   0.24998  -0.60150
-   4   0.45271  -0.48224   0.37175   0.24998   0.60150
-   5   0.42765   0.11579   0.60150  -0.55110  -0.37175
-   
-   ALL ENERGETIC QUANTITIES IN UNITS OF BETA!
-   
-   TOTAL     ENERGY     :    6.645154
-   TOTAL     ENERGY/#EL :    1.107526
-   RESONANCE ENERGY     :    1.645154
-   RESONANCE ENERGY/#EL :    0.274192
-   
-   MATRIX PRINTED:  CHARGE DENSITY/BOND ORDER MATRIX
-   
-         1         2         3         4         5
-   
-   1   1.46480
-   2   0.57016   1.11619
-   3  -0.25863   0.72274   1.15141
-   4  -0.25863  -0.17168   0.59862   1.15141
-   5   0.57016  -0.33103  -0.17168   0.72274   1.11619
-   
-   MINIMUM BOND ORDER BETWEEN BONDED ATOMS  0.5701648900629098
-   MAXIMUM BOND ORDER BETWEEN BONDED ATOMS  0.7227442228601404
+   Die erste Zeile enthält die Anzahl der :math:`\pi`-Atome. In der zweiten Zeile wird die Zahl der :math:`\pi`-Elektronen angegeben. Danach erfolgt die Eingabe der Hückel-Matrix, und zwar zuerst die Nummern der verbundenen Atome gefolgt vom Betrag des Resonanzintegrals :math:`\beta` bzw.\ des Coulombintegrals :math:`\alpha`.
+      
+   Im Folgenden ist eine Beispieleingabe für Pyrrol angegeben (5 Atome, 6 :math:`\pi`-Elektronen):
+      
+   .. code-block:: bash
 
-Nachdem zuerst die Hückelmatrix in Diagonalform angegeben wird, folgt eine Auflistung der Energieeigenwerte der Hückel MO's.
-Die Koeffizientenmatrix (``HMO-VECTORS``) enthält die Orbitalkoeffizienten der :math:`\pi`-AO's (:math:`c_{iA}`), 
-wobei die MO's die Spalten und die AO's die Zeilen der Matrix bilden.
+      5
+      6
+      1 1 0.5
+      1 2 0.8
+      2 3 1.0
+      3 4 1.0
+      4 5 1.0
+      1 5 0.8
 
-Die Output-Daten können mit ``viewhuck`` graphisch dargestellt werden. Dies geschieht mit dem Befehl: ``viewhuck Dateiname``, also bspw.
+   .. figure:: img/pyrrol.png
+      :width: 150px
+      :align: center
 
-.. code-block:: bash
+   .. hint::
 
-    viewhuck < pyr.out
+      Es wird empfohlen, bei komplizierteren Systemen zuerst eine Skizze des Moleküls anzufertigen, die Nummerierung der Atome festzulegen und danach die Hückel-Matrix einzugeben. Für die spätere graphische Betrachtung muss die Nummerierung der Atome fortlaufend entlang der längsten Kette (beginnend bei Brückenkopfatomen, falls vorhanden) erfolgen. Es ist darauf zu achten, dass bei Polyzyklen die Brückenkopfatome möglichst niedrige Nummern bekommen.
 
-Das Programm erzeugt eine Postskript-Datei (``Dateiname.ps``). Diese kann z.B. mit ``okular Dateiname.ps`` geöffnet werden.
+   .. figure:: img/viewhuck_naph.png
+      :width: 400px
+      :align: center
+
+   Nachdem die Matrix gespeichert (z.B. Inputdatei: ``pyr.in``) und der Editor verlassen ist, wird das HMO-Programm mit der Kommandozeile aufgerufen ``hueckel < Inputdatei``
+   also z.B.:
+
+   .. code-block:: bash
+
+      hueckel < pyr.in
+
+   Das Programm schreibt die Ergebnisse in den *standard output*, was in der Regel der Bildschirm ist. Um die Ergebnisse zu speichern, muss die Ausgabe in eine Datei umgeleitet werden ``hueckel < Inputdatei > Outputdatei``
+   also z.B.:
+
+   .. code-block:: bash
+
+      ****************************************
+            H U E C K E L - PROGRAM
+            S. GRIMME, UNI MUENSTER
+      ****************************************
+      
+      NUMBER OF ATOMS ?
+      NUMBER OF ELECTRONS ?
+      ATOM I, ATOM J, ALPHA/BETA IJ (IN UNITS OF BETA) ?
+      STOP WITH -1 -1 -1
+      
+      MATRIX PRINTED:  HUECKEL-MATRIX
+      
+            1         2         3         4         5
+      
+      1   0.50000
+      2   0.80000   0.00000
+      3   0.00000   1.00000   0.00000
+      4   0.00000   0.00000   1.00000   0.00000
+      5   0.80000   0.00000   0.00000   1.00000   0.00000
+      
+      EIGENVALUES
+      
+      MO NR     :          1         2         3         4         5
+      OCCUPATION:         2.0       2.0       2.0       0.0       0.0
+      EPSILON   :      1.94464   0.75990   0.61803  -1.20454  -1.61803
+      
+      MATRIX PRINTED:  HMO-VECTORS
+      
+            1         2         3         4         5
+      
+      1   0.47364   0.71279   0.00000   0.51730   0.00000
+      2   0.42765   0.11579  -0.60150  -0.55110   0.37175
+      3   0.45271  -0.48224  -0.37175   0.24998  -0.60150
+      4   0.45271  -0.48224   0.37175   0.24998   0.60150
+      5   0.42765   0.11579   0.60150  -0.55110  -0.37175
+      
+      ALL ENERGETIC QUANTITIES IN UNITS OF BETA!
+      
+      TOTAL     ENERGY     :    6.645154
+      TOTAL     ENERGY/#EL :    1.107526
+      RESONANCE ENERGY     :    1.645154
+      RESONANCE ENERGY/#EL :    0.274192
+      
+      MATRIX PRINTED:  CHARGE DENSITY/BOND ORDER MATRIX
+      
+            1         2         3         4         5
+      
+      1   1.46480
+      2   0.57016   1.11619
+      3  -0.25863   0.72274   1.15141
+      4  -0.25863  -0.17168   0.59862   1.15141
+      5   0.57016  -0.33103  -0.17168   0.72274   1.11619
+      
+      MINIMUM BOND ORDER BETWEEN BONDED ATOMS  0.5701648900629098
+      MAXIMUM BOND ORDER BETWEEN BONDED ATOMS  0.7227442228601404
+
+   Nachdem zuerst die Hückelmatrix in Diagonalform angegeben wird, folgt eine Auflistung der Energieeigenwerte der Hückel MO's.
+   Die Koeffizientenmatrix (``HMO-VECTORS``) enthält die Orbitalkoeffizienten der :math:`\pi`-AO's (:math:`c_{iA}`), 
+   wobei die MO's die Spalten und die AO's die Zeilen der Matrix bilden.
+
+   Die Output-Daten können mit ``viewhuck`` graphisch dargestellt werden. Dies geschieht mit dem Befehl: ``viewhuck Dateiname``, also bspw.
+
+   .. code-block:: bash
+
+      viewhuck < pyr.out
+
+   Das Programm erzeugt eine Postskript-Datei (``Dateiname.ps``). Diese kann z.B. mit ``okular Dateiname.ps`` geöffnet werden.
+
+
 
 
 Anleitung für das Extended-Hückel Programm EHT
@@ -292,7 +297,7 @@ e) Finden Sie die jeweils bevorzugte Kohlenstoffposition für a. elektrophile un
    | 3,4-Benzophenanthren    | 8.40             |
    +-------------------------+------------------+
 
-8. Führen Sie eine EHT-Rechnung für CO (:math:`r`(C-O) = 1.15 |angst|) durch.
+8. Führen Sie eine EHT-Rechnung für CO ( :math:`r` (C-O) = 1.15 |angst|) durch.
    Zeichnen Sie ein MO-Schema aus den Informationen der MO-Eigenwerte und
    skizzieren Sie die Molekülorbitale, indem Sie die Matrix der MO-Koeffizienten
    am Ende des Outputs auswerten (MATRIX PRINTED: occ. MO-MATRIX).
@@ -334,17 +339,17 @@ Protokoll
 .. table:: (1.) Polyene
    :align: center
 
-   +----------------------------+-----------------------------------+---------------------------------+---------------------------------+----------------------------------------------+
-   | Polyene                    | :math:`E_{res}/π-At.` [:math:`β`] | :math:`max(p_{AB})` [:math:`e`] | :math:`min(p_{AB})` [:math:`e`] | E\ :sub:`HOMO` − E\ :sub:`LUMO` [:math:`-β`] |
-   +============================+===================================+=================================+=================================+==============================================+
-   | C\ :sub:`4`\ H\ :sub:`6`   |                                   |                                 |                                 |                                              |
-   +----------------------------+-----------------------------------+---------------------------------+---------------------------------+----------------------------------------------+
-   | C\ :sub:`6`\ H\ :sub:`8`   |                                   |                                 |                                 |                                              |
-   +----------------------------+-----------------------------------+---------------------------------+---------------------------------+----------------------------------------------+
-   | C\ :sub:`8`\ H\ :sub:`10`  |                                   |                                 |                                 |                                              |
-   +----------------------------+-----------------------------------+---------------------------------+---------------------------------+----------------------------------------------+
-   | C\ :sub:`10`\ H\ :sub:`12` |                                   |                                 |                                 |                                              |
-   +----------------------------+-----------------------------------+---------------------------------+---------------------------------+----------------------------------------------+
+   +----------------------------+-------------------------------------+---------------------------------+---------------------------------+------------------------------------------------------+
+   | Polyene                    | :math:`E_{res}/\pi-At. ~ [\beta]`   | :math:`max(p_{AB})` [:math:`e`] | :math:`min(p_{AB})` [:math:`e`] | :math:`E_\mathrm{HOMO} - E_\mathrm{LUMO} ~ [-\beta]` |
+   +============================+=====================================+=================================+=================================+======================================================+
+   | C\ :sub:`4`\ H\ :sub:`6`   |                                     |                                 |                                 |                                                      |
+   +----------------------------+-------------------------------------+---------------------------------+---------------------------------+------------------------------------------------------+
+   | C\ :sub:`6`\ H\ :sub:`8`   |                                     |                                 |                                 |                                                      |
+   +----------------------------+-------------------------------------+---------------------------------+---------------------------------+------------------------------------------------------+
+   | C\ :sub:`8`\ H\ :sub:`10`  |                                     |                                 |                                 |                                                      |
+   +----------------------------+-------------------------------------+---------------------------------+---------------------------------+------------------------------------------------------+
+   | C\ :sub:`10`\ H\ :sub:`12` |                                     |                                 |                                 |                                                      |
+   +----------------------------+-------------------------------------+---------------------------------+---------------------------------+------------------------------------------------------+
 
 
 .. figure:: img/tab41protokoll.png
@@ -355,15 +360,15 @@ Protokoll
 .. table:: (2.) Annulene
    :align: center
 
-   +------------------------------------+--------------------------+------------------------------------+----------------------------+------------------------------------+
-   | Annulene                           | C\ :sub:`4`\ H\ :sub:`4` | C\ :sub:`5`\ H\ :sub:`5`\ :sup:`-` | C\ :sub:`6`\ H\ :sub:`6`   | C\ :sub:`7`\ H\ :sub:`7`\ :sup:`+` |
-   +====================================+==========================+====================================+============================+====================================+
-   | :math:`E_{res}/π-At.` [:math:`β`]  |                          |                                    |                            |                                    |
-   +------------------------------------+--------------------------+------------------------------------+----------------------------+------------------------------------+
-   | Annulene                           | C\ :sub:`8`\ H\ :sub:`8` | C\ :sub:`10`\ H\ :sub:`10`         | C\ :sub:`12`\ H\ :sub:`12` | C\ :sub:`14`\ H\ :sub:`14`         |
-   +------------------------------------+--------------------------+------------------------------------+----------------------------+------------------------------------+
-   | :math:`E_{res}/π-At.` [:math:`β`]  |                          |                                    |                            |                                    |
-   +------------------------------------+--------------------------+------------------------------------+----------------------------+------------------------------------+
+   +--------------------------------------+--------------------------+------------------------------------+----------------------------+------------------------------------+
+   | Annulene                             | C\ :sub:`4`\ H\ :sub:`4` | C\ :sub:`5`\ H\ :sub:`5`\ :sup:`-` | C\ :sub:`6`\ H\ :sub:`6`   | C\ :sub:`7`\ H\ :sub:`7`\ :sup:`+` |
+   +======================================+==========================+====================================+============================+====================================+
+   | :math:`E_{res}/\pi-At. ~ [\beta]`    |                          |                                    |                            |                                    |
+   +--------------------------------------+--------------------------+------------------------------------+----------------------------+------------------------------------+
+   | Annulene                             | C\ :sub:`8`\ H\ :sub:`8` | C\ :sub:`10`\ H\ :sub:`10`         | C\ :sub:`12`\ H\ :sub:`12` | C\ :sub:`14`\ H\ :sub:`14`         |
+   +--------------------------------------+--------------------------+------------------------------------+----------------------------+------------------------------------+
+   | :math:`E_{res}/\pi-At. ~ [\beta]`    |                          |                                    |                            |                                    |
+   +--------------------------------------+--------------------------+------------------------------------+----------------------------+------------------------------------+
 
 
 .. figure:: img/tab42protokoll.png
@@ -376,7 +381,7 @@ Protokoll
    +-------------------+-----+---------+---------+---------+---------+
    | Atom              | O   | ipso C  | ortho C | meta C  | para C  |
    +===================+=====+=========+=========+=========+=========+
-   | :math:`q_A\ [e]`  |     |         |         |         |         |
+   | :math:`q_A ~[e]`  |     |         |         |         |         |
    +-------------------+-----+---------+---------+---------+---------+
  
 
@@ -384,7 +389,7 @@ Protokoll
    :align: center
 
    +-------------------------------------+-----------------------------------+
-   | C\ :sub:`10`\ H\ :sub:`9`\ :sup:`+` | :math:`E_{res}/π-At.` [:math:`β`] |
+   | C\ :sub:`10`\ H\ :sub:`9`\ :sup:`+` | :math:`E_{res}/\pi-At. ~ [\beta]` |
    +=====================================+===================================+
    | 1                                   |                                   |
    +-------------------------------------+-----------------------------------+
@@ -398,7 +403,7 @@ Protokoll
    +--------------------+-------------------+-----------------------------+
    | Atom               | 6,9,12,15,18      | 7,8,10,11,13,14,16,17,19,20 |
    +====================+===================+=============================+
-   | :math:`q_A\ [e]`   |                   |                             |
+   | :math:`q_A ~[e]`   |                   |                             |
    +--------------------+-------------------+-----------------------------+
 
 
@@ -407,7 +412,7 @@ Protokoll
    :align: center
 
    +---------------------------------+------------------------------------+
-   | C\ :sub:`9`\ H\ :sub:`7`\ N     |  :math:`E_{res}/π-At.` [:math:`β`] |
+   | C\ :sub:`9`\ H\ :sub:`7`\ N     |  :math:`E_{res}/\pi-At. ~ [\beta]` |
    +=================================+====================================+
    | IIa                             |                                    |
    +---------------------------------+------------------------------------+
@@ -488,21 +493,21 @@ Protokoll
 .. table:: (6f.) Ionisierungsenergien
    :align: center
 
-   +---------------------+---------+--------------------+
-   |                     | IP (eV) | E\ :sub:`HOMO` (β) |
-   +=====================+=========+====================+
-   | Benzen              | 9.57    |                    |
-   +---------------------+---------+--------------------+
-   | Naphthalin          | 8.68    |                    |
-   +---------------------+---------+--------------------+
-   | Anthracen           | 8.20    |                    |
-   +---------------------+---------+--------------------+
-   | Phenanthren         | 8.62    |                    |
-   +---------------------+---------+--------------------+
-   | Tetracen            | 7.71    |                    |
-   +---------------------+---------+--------------------+
-   | 3,4-Benzophenanthren| 8.40    |                    |
-   +---------------------+---------+--------------------+
+   +---------------------+---------+----------------------------------+
+   |                     | IP (eV) | :math:`E_\mathrm{HOMO} ~[\beta]` |
+   +=====================+=========+==================================+
+   | Benzen              | 9.57    |                                  |
+   +---------------------+---------+----------------------------------+
+   | Naphthalin          | 8.68    |                                  |
+   +---------------------+---------+----------------------------------+
+   | Anthracen           | 8.20    |                                  |
+   +---------------------+---------+----------------------------------+
+   | Phenanthren         | 8.62    |                                  |
+   +---------------------+---------+----------------------------------+
+   | Tetracen            | 7.71    |                                  |
+   +---------------------+---------+----------------------------------+
+   | 3,4-Benzophenanthren| 8.40    |                                  |
+   +---------------------+---------+----------------------------------+
 
 
 .. figure:: img/IPprotokoll.png
