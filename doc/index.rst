@@ -7,8 +7,6 @@ Das ist das Praktikumsskript für der Grimme Teil "Hükel-Methode und Quantenche
    :maxdepth: 3
    :caption: Inhaltsverzeichnis
 
-   recommendations
-   setup
    ex1_hueckel
    ex2_mol_bauen
    ex3_geo_opt
