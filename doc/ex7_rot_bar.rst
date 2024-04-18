@@ -26,9 +26,57 @@ Die Methode verwendet das r\ :sup:`2`-SCAN Dichtefunktional mit D4-Dispersionsko
 
         Orca beginnt bei der Zählung der Atome bei 0.
 
-    2. Führen Sie einen unrelaxierten Oberflächenscan durch. Varriieren Sie dazu den gefunden H-C-C-H Diederwinkel. Nutzen Sie dazu das Schlüsselwort ``%paras`` (siehe :ref:`exp_disp`).
+    2. Führen Sie einen unrelaxierten Oberflächenscan durch. Varriieren Sie dazu den gefunden H-C-C-H Diederwinkel. Nutzen Sie dazu folgenden Input durch:
 
-    3. Führen Sie nun auch einen relaxierten Oberflächenscan entlang des Diederwinkels durch. Nutzen Sie dabei das Schlüsselwort ``%geom`` (siehe :ref:`exp_mol_bauen`).
+    .. code-block:: none
+    
+          ! r2scan-3c TightSCF
+          
+          %pal
+          nprocs 4
+          end
+          
+          %paras
+            ang = 000.0000, 120.0000, 120
+          end
+          
+          *int 0 1
+             C 0 0 0 0.00 000.0000 000.0000
+             H 1 0 0 1.10 000.0000 000.0000
+             H 1 2 0 1.10 109.4712 000.0000
+             H 1 3 2 1.10 109.4712 120.0000
+             C 1 4 2 1.54 109.4712 120.0000
+             H 5 1 2 1.10 109.4712 {ang+180.0000}
+             H 5 6 1 1.10 109.4712 120.0000
+             H 5 7 1 1.10 109.4712 120.0000
+          *
+
+    3. Führen Sie nun auch einen relaxierten Oberflächenscan entlang des Diederwinkels mit folgendem Input durch:
+
+    .. code-block:: none
+
+          ! r2scan-3c TightSCF TightOpt
+          
+          %pal
+          nprocs 4
+          end
+          
+          %geom
+            Scan
+                d 1 0 4 5 = 180.0000, 300.0000, 120
+            end
+          end
+          
+          *int 0 1
+          C 0 0 0 0.00 000.0000 000.0000
+          H 1 0 0 1.10 000.0000 000.0000
+          H 1 2 0 1.10 109.4712 000.0000
+          H 1 3 2 1.10 109.4712 120.0000
+          C 1 4 2 1.54 109.4712 120.0000
+          H 5 1 2 1.10 109.4712 180.0000
+          H 5 6 1 1.10 109.4712 120.0000
+          H 5 7 1 1.10 109.4712 120.0000
+          *
 
     4. Tragen Sie die beiden Potentialkurve für die Rotation um die C-C Bindungsachse auf (Energie gegen Bindungswinkel). Vergleichen Sie die relaxierte und unrelaxierte Barriere. Was kann man generell über die Barriere des unrelaxierten Scans sagen?
 
@@ -36,7 +84,7 @@ Die Methode verwendet das r\ :sup:`2`-SCAN Dichtefunktional mit D4-Dispersionsko
 
 Wie Sie bei diesen Rechnungen bemerken konnten, ist das Scannen der Potentialhyperfläche schon für einen einzigen Freiheitsgrad aufwendig.
 Im Folgenden soll ein ähnlicher Oberflächenscan jedoch auch für das deutlich größere substituierte 1,2-Diphenylethan durchgeführt werden.
-Gegeben die Geometrie für die trans-Konformation (in xyz).
+Gegeben ist die Geometrie für die trans-Konformation (in xyz). Kopieren sie die Struktur in eine Datei und speichern Sie diese als ``xyz`` Datei (bpsw. als  ``struc.xyz``).
 
 .. code-block:: none
 
@@ -79,11 +127,31 @@ Führen Sie also im Folgenden einen solchen relaxierten Multilevel-Oberflächens
 
     6. Erstellen Sie einen ORCA-Input mit der gegebenen Geometrie von trans-1,2-Diphenylethan.
 
-    7. Starten Sie einen relaxierten Oberflächenscan von trans- bis cis-1,2-Diphenylethan mit GFN2-xTB. Ersetzen Sie dafür lediglich Funktional und Basissatz durch das ``GFN2-xTB`` Keyword. 
+    7. Starten Sie einen relaxierten Oberflächenscan von trans- bis cis-1,2-Diphenylethan mit GFN2-xTB mithilfe des folgenden Inputs:
+
+    .. code-block:: none
+    
+          ! GFN2-xTB TightOpt
+          
+          %pal
+          nprocs 4
+          end
+          
+          %geom
+            Scan
+                d 3 1 0 2 = 180.0000, 000.0000, 90
+            end
+          end
+          
+          * xyzfile 0 1 struc.xyz 
 
     8. Tragen Sie die Potentialkurve für den Scan mit GFN2-xTB auf. Bei welchem Diederwinkel treten Minima und Maxima der Potentialkurve auf und wie werden die entsprechenden Konformere bezeichnet? 
 
-    9. Rechnen Sie nun mit r\ :sup:`2`-SCAN-3c die Energien für die zuvor bestimmten Extremumsgeometrien aus. Optimieren Sie zusätzlich die die Extremumsgeometrien mit r\ :sup:`2`-SCAN-3c unter Einschränkung des Diederwinkels nach (``%geom Constraints``). Tragen Sie sowohl die Single-Point- als auch die Energie nach Optimierung mit der er GFN2-xTB Potentialkurve auf. Vergleichen Sie die drei berechneten Werte für die höchste Barrieren. 
+    9. Rechnen Sie nun mit r\ :sup:`2`-SCAN-3c die Energien für die zuvor bestimmten Extremumsgeometrien aus. Optimieren Sie zusätzlich die die Extremumsgeometrien mit r\ :sup:`2`-SCAN-3c unter Einschränkung des Diederwinkels nach (Nutzen Sie dafür den Input von 7, wobei sie die Zeile ``! GFN2-xTB TightOpt`` mit der Zeile ``! R2SCAN-3c TightSCF TightOpt`` ersetzen. Tragen Sie sowohl die Single-Point- als auch die Energie nach Optimierung mit der er GFN2-xTB Potentialkurve auf. Vergleichen Sie die drei berechneten Werte für die höchste Barrieren.  
+
+.. hint::
+
+    Mit der Zeile ``* xyzfile 0 1 struc.xyz`` im ORCA Input verweisen Sie dabei auf die ``.xyz`` Datei, in der Sie vorher die Struktur gespeichert haben (Diese muss sich immer im selben Ordner       befinden!).
 
 Basierend auf der Theorie des Übergangszustands können mit Hilfe der Eyring-Gleichung 
 
