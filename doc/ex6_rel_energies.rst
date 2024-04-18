@@ -50,7 +50,7 @@ Beschreibung des Experiments
 
 
 .. csv-table:: Relative Energien der Isomere von :math:`\ce{C2H2O2}` und :math:`\ce{C4H6}` in kJ/mol.
-   :header: "", ":math:`\\ce{C2H2O2}`", ":math:`\\ce{C4H6}`"
+   :header: "", ":math:`\rm C_2H_2O_2`", ":math:`\rm C_4H_6`"
    :widths: 10,10,10
 
    "Trans-", "0", "0"
@@ -58,7 +58,7 @@ Beschreibung des Experiments
    "Cyclo-", "--", "46"
 
 .. csv-table:: Berechnete Werte in kJ/mol.
-   :header: "", ":math:`\\ce{C2H2O2}`", ":math:`\\ce{C4H6}`"
+   :header: "", ":math:`\rm C_2H_2O_2`", ":math:`\rm C_4H_6`"
    :widths: 10,10,10
 
    "Trans-", "", ""
