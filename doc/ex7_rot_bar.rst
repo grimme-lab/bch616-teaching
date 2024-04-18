@@ -36,13 +36,48 @@ Die Methode verwendet das r\ :sup:`2`-SCAN Dichtefunktional mit D4-Dispersionsko
 
 Wie Sie bei diesen Rechnungen bemerken konnten, ist das Scannen der Potentialhyperfläche schon für einen einzigen Freiheitsgrad aufwendig.
 Im Folgenden soll ein ähnlicher Oberflächenscan jedoch auch für das deutlich größere substituierte 1,2-Diphenylethan durchgeführt werden.
+Gegeben die Geometrie für die trans-Konformation (in xyz).
+
+.. code-block:: none
+
+      28
+      
+      C  0.4479   -0.0177    0.6475
+      C -0.4429   -0.0175   -0.6108
+      C  1.9236   -0.0068    0.3310
+      C -1.9057   -0.0069   -0.3199
+      C  2.5956   -1.2100    0.1824
+      C -2.5973   -1.2099   -0.1781
+      C  2.5805    1.2060    0.1942
+      C -2.5821    1.2061   -0.1892
+      C  3.9594   -1.2001   -0.1102
+      C -3.9653   -1.2001    0.0942
+      C  3.9444    1.2158   -0.0986
+      C -3.9501    1.2158    0.0832
+      C  4.6337    0.0127   -0.2507
+      C -4.6417    0.0127    0.2248
+      H  0.2152   -0.8934    1.2684
+      H  0.2055    0.8502    1.2758
+      H -0.2014   -0.8912   -1.2316
+      H -0.1918    0.8486   -1.2385
+      H  2.0785   -2.1594    0.2878
+      H -2.0813   -2.1615   -0.2753
+      H  2.0516    2.1479    0.3087
+      H -2.0542    2.1502   -0.2951
+      H  4.4961   -2.1367   -0.2292
+      H -4.5038   -2.1368    0.2051
+      H  4.4695    2.1601   -0.2087
+      H -4.4768    2.1600    0.1857
+      H  5.6955    0.0204   -0.4789
+      H -5.7068    0.0204    0.4372
+
 Bei solchen aufwendigen Rechnungen bieten sich Multilevel-Workflows an, bei denen der aufwendige Schritt (hier der Scan) mit einer schnellen Methode (hier GFN2-xTB) durchgeführt wird und am Ende nur für die Geometrien von Interesse genaue Energien (hier erneut r\ :sup:`2`-SCAN-3c) bestimmt werden
 Dadurch können im Fall eines relaxierten Scans alle Geometrieoptimierung und sogar die meisten Energieberechnungen mit der teuren Methode vermieden werden.
 Führen Sie also im Folgenden einen solchen relaxierten Multilevel-Oberflächenscan durch: 
 
 .. admonition:: Teil II
 
-    6. Erstellen Sie zunächst die Geometrie von 1,2-Diphenylethan. Es ist nicht nötig die Z-Matrix aufzustellen, da Orca automatisch die Inputgeometrie in interne Koordinaten transformiert. Suchen Sie nur die im C-C-C-C Diederwinkel vorkommenden Atome heraus.
+    6. Erstellen Sie einen ORCA-Input mit der gegebenen Geometrie von trans-1,2-Diphenylethan.
 
     7. Starten Sie einen relaxierten Oberflächenscan von trans- bis cis-1,2-Diphenylethan mit GFN2-xTB. Ersetzen Sie dafür lediglich Funktional und Basissatz durch das ``GFN2-xTB`` Keyword. 
 
