@@ -83,16 +83,6 @@ Beschreibung des Experiments
     1.7. Tragen Sie die Ergebnisse für die relativen Energien zusammen mit PBE0 auf. Entspricht der Verlauf Ihrer Erwartung? Vergleichen Sie auch die Barrieren mit dem theoretischen Referenzwerte (CCSD(T)/def2-QZVP) von :math:`\Delta E^{\ddagger}=43.4\,`\ kcal/mol.
 
 
-
-      1.8. Um die Unterschiede in der Elektronendichte darzustellen, plotten Sie die Differenzdichte zwischen PBE und HF am Übergangszustand. Generieren Sie dafür zunächst in einer weiteren Single-Point-Rechnungen für PBE und HF die .cube Dateien mit der vollständigen Elektronendichte (``ElDens("ElDens.cube");`` im ``%plots`` Block, siehe :ref:`exp_mo`). Berechnen Sie nun mit dem Multiwfn Programm die Differenzdichte (siehe :ref:`app-multiwfn`) und plotten Sie die entstehende .cube Date mit VMD (siehe :ref:`app-Plot-MO-Dens`). Was ist in der Differenzdichte zu erkennen? Fokussieren Sie sich   dabei auf die Region in der sich die neue C-C Bindung bildet. 
-
-      .. hint::
-
-      Die Differenzdichte ist verglichen mit der gesamte Dichte einer Rechnung klein, und die Änderung im Bereich der Bindung noch kleiner. Deshalb muss der Isovalue für den Plot der Differenzdichte auch kleiner gewählt werden. Verwenden Sie also beim Plotten die Einstellungen: ``vmd_get_all.sh 1 0.0028``. 
-
-..
-
-
 .. admonition:: 2. Die S\ :sub:`N`\2 Reaktion: 
 
     Bei einfachen Reaktionen mit einer klar definierten Reaktionskoordinate kann es hilfreich sein einen relaxierten Scan durchzuführen, um eine gute Startgeometrie für die Optimierung des Übergangszustands zu erhalten. Betrachten Sie nun die folgenden S\ :sub:`N`\ 2 Reaktionen: 
