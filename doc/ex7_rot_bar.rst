@@ -147,7 +147,17 @@ Führen Sie also im Folgenden einen solchen relaxierten Multilevel-Oberflächens
 
     8. Tragen Sie die Potentialkurve für den Scan mit GFN2-xTB auf. Bei welchem Diederwinkel treten Minima und Maxima der Potentialkurve auf und wie werden die entsprechenden Konformere bezeichnet? 
 
-    9. Rechnen Sie nun mit r\ :sup:`2`-SCAN-3c die Energien für die zuvor bestimmten Extremumsgeometrien aus. Optimieren Sie zusätzlich die die Extremumsgeometrien mit r\ :sup:`2`-SCAN-3c unter Einschränkung des Diederwinkels nach (Nutzen Sie dafür den Input von 7, wobei sie die Zeile ``! GFN2-xTB TightOpt`` mit der Zeile ``! R2SCAN-3c TightSCF TightOpt`` ersetzen. Tragen Sie sowohl die Single-Point- als auch die Energie nach Optimierung mit der er GFN2-xTB Potentialkurve auf. Vergleichen Sie die drei berechneten Werte für die höchste Barrieren.  
+    9. Rechnen Sie nun mit r\ :sup:`2`-SCAN-3c die Energien für die zuvor bestimmten Extremumsgeometrien aus (Tipp: Diederwinkel 0°, 60°, 120°, 180°). Optimieren Sie zusätzlich die die Extremumsgeometrien mit r\ :sup:`2`-SCAN-3c unter Einschränkung des Diederwinkels nach. Tragen Sie sowohl die Single-Point- als auch die Energie nach Optimierung mit der er GFN2-xTB Potentialkurve auf. Vergleichen Sie die drei berechneten Werte für die höchste Barrieren. Input:
+
+ .. code-block:: none
+    
+          ! R2SCAN-3c TightSCF TightOpt
+          
+          %pal
+          nprocs 4
+          end
+          
+          * xyzfile 0 1 struc.xyz 
 
 .. hint::
 
