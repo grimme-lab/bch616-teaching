@@ -135,27 +135,26 @@ Beschreibung des Experiments
         * xyzfile -1 1 geom.xyz 
 
 
-    2.3. Finden Sie den Übergangszustand der Reaktion. Verwenden Sie dafür eine geeignete Geometrie aus dem relaxierten Scan in der Optimierung des Übergangszustands. Überprüfen Sie durch eine Frequenzrechnung, dass es sich tatsächlich um einen Übergangszustand handelt. Geben Sie nun auch die Bindungslängen in den Übergangsgeometrien an. 
+    2.3. Finden Sie den Übergangszustand der Reaktion. Verwenden Sie dafür eine geeignete Geometrie aus dem relaxierten Scan in der Optimierung des Übergangszustands. Überprüfen Sie durch eine Frequenzrechnung, dass es sich tatsächlich um einen Übergangszustand handelt (suchen sie im output nach ``***imaginary mode***``, es sollte genau eine imaginäre Frequenz gefunden werden). Geben Sie nun auch die Bindungslängen in den Übergangsgeometrien an. 
 
     .. code-block:: none
-
+        
         ! PBE0 D4 def2-TZVPP DEFGRID2 CPCM(DCM) TightSCF OptTS 
         ! AnFreq
-        
-        %geom inhess read
-              inhessname "orca.hess"
-        end
         
         %pal
         nprocs 4
         end
         
         
-        * xyzfile -1 1 geom.xyz 
-
-    .. hint::
-
-        Wenn die Optimierung des Übergangszustands nicht konvergiert, kann es hilfreich sein die Hessematrix an der Startgeometrie zu berechnen (``AnFreq``) und bei der Optimierung einzulesen (``%geom inhess read end``). Andernfalls kann auch durch einen feineren Scan die Startgeometrie verbessert werden. 
+        * xyz -1 1  
+          C       0.000462      0.000001     -0.753645
+          H       1.074276      0.000001     -0.758250
+          H      -0.536173     -0.929971     -0.758252
+          H      -0.536173      0.929973     -0.758251
+          I      -0.001505     -0.000001      1.874159
+          Br     -0.001083     -0.000003     -3.227623
+        *
 
     2.4. Erstellen Sie ein Energiediagramm relativ zu den Edukten in dem beide Reaktionen dargestellt sind. Tragen Sie auch die Energien für den optimierten Übergangszustand ein. Berechnen Sie die Aktivierungsenergien für die vier möglichen Reaktionen. Welche Reaktion ist demzufolge bevorzugt? 
 
