@@ -181,7 +181,7 @@ Beschreibung des Experiments
    :math:`\ce{O2}`,
 
 .. csv-table:: Änderung der freien Gibbs-Enthalpie, SVP Basissatz
-   :header: "Reaktion", ":math:`\\Delta G_\\mathrm{exp}` [kJ/mol]", ":math:`\\Delta G_\\mathrm{calc}` [kJ/mol]", ":math:`\\Delta G_\\mathrm{calc}` [Eh]"
+   :header: "Reaktion", ":math:`\Delta G_\mathrm{exp}` [kJ/mol]", ":math:`\Delta G_\mathrm{calc}` [kJ/mol]", ":math:`\Delta G_\mathrm{calc}` [Eh]"
    :widths: 30, 30, 30, 30
 
    :math:`\ce{2 H2 + O2 -> 2 H2O}`, -572.0, , 
@@ -189,7 +189,7 @@ Beschreibung des Experiments
    :math:`\ce{H2O + CO -> H2 + CO2}`, -41.2, , 
 
 .. csv-table:: Änderung der freien Gibbs-Enthalpie, TZVP Basissatz
-   :header: "Reaktion", ":math:`\\Delta G_\\mathrm{exp}` [kJ/mol]", ":math:`\\Delta G_\\mathrm{calc}` [kJ/mol]", ":math:`\\Delta G_\\mathrm{calc}` [Eh]"
+   :header: "Reaktion", ":math:`\Delta G_\mathrm{exp}` [kJ/mol]", ":math:`\Delta G_\mathrm{calc}` [kJ/mol]", ":math:`\Delta G_\mathrm{calc}` [Eh]"
    :widths: 30, 30, 30, 30
 
    :math:`\ce{2 H2 + O2 -> 2 H2O}`, -572.0, , 
@@ -197,7 +197,7 @@ Beschreibung des Experiments
    :math:`\ce{H2O + CO -> H2 + CO2}`, -41.2, , 
 
 .. csv-table:: Änderung der freien Gibbs-Enthalpie, QZVP Basissatz
-   :header: "Reaktion", ":math:`\\Delta G_\\mathrm{exp}` [kJ/mol]", ":math:`\\Delta G_\\mathrm{calc}` [kJ/mol]", ":math:`\\Delta G_\\mathrm{calc}` [Eh]"
+   :header: "Reaktion", ":math:`\Delta G_\mathrm{exp}` [kJ/mol]", ":math:`\Delta G_\mathrm{calc}` [kJ/mol]", ":math:`\Delta G_\mathrm{calc}` [Eh]"
    :widths: 30, 30, 30, 30
 
    :math:`\ce{2 H2 + O2 -> 2 H2O}`, -572.0, , 
