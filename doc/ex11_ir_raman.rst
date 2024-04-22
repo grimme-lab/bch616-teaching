@@ -86,22 +86,32 @@ Beschreibung des Experiments
 
     1. Damit die harmonisch Näherung angenommen werden kann, muss zunächst das Minimum der Potentialhyperfläche (PES) gefunden werden. Um eine möglichst glatte PES zu erhalten, verwenden Sie das große numerische Integrationsgrid ``DEFGRID3`` und sehr enge Konvergenzkriterien für das SCF (``VeryTightSCF``). Gleiches gilt auch für die Konvergenz der Geometrieoptimierung (``VeryTightOpt``), um imaginäre Moden bei der Frequenzrechnung zu vermeiden. Optimieren Sie nun die Geometrien mit r\ :sup:`2`-SCAN-3c und den angegebenen Einstellungen: 
 
-    .. code-block:: none   
-        :linenos:
+    .. code-block:: none  
 
         ! R2SCAN-3C VeryTightSCF VeryTightOpt DefGrid3 NORI
 
-    2. Bei der Berechnung von Schwingungsfrequenzen in ORCA werden IR-Intensitäten automatisch bestimmt. Für Raman-Aktivitäten werden hingegen die Polarisierbarkeit |alpha| entlang der Normalmoden benötigt, die in ORCA explizit angeforder werden muss (``% elprop Polar true end``). Dies ist in ORCA nicht möglich mit einer analytischen Hessematrix und erfordert eine numerische Frequenzrechnung (``NumFreq``). Berechnen Sie nun für die zuvor optimierten Geometrien die numerischen Schwingungsfrequenzen und IR- sowie Raman-Intensitäten mit r\ :sup:`2`-SCAN-3c in den selben Einstellungen wie zuvor: 
+        %pal
+        nprocs 4
+        end
 
-    .. code-block:: none   
-        :linenos:
-        
+        * xyzfile 0 1 struc.xyz
+
+    2. Bei der Berechnung von Schwingungsfrequenzen in ORCA werden IR-Intensitäten automatisch bestimmt. Für Raman-Aktivitäten werden hingegen die Polarisierbarkeit |alpha| entlang der Normalmoden benötigt, die in ORCA explizit angeforder werden muss (``% elprop Polar true end``). Dies ist in ORCA nicht möglich mit einer analytischen Hessematrix und erfordert eine numerische Frequenzrechnung (``NumFreq``). Berechnen Sie nun für die zuvor optimierten Geometrien die numerischen Schwingungsfrequenzen und IR- sowie Raman-Intensitäten mit r\ :sup:`2`-SCAN-3c in den selben Einstellungen wie zuvor (Die Rechnung dauert ca. 30 min!): 
+
+    .. code-block:: none
+
         ! R2SCAN-3C VeryTightSCF DefGrid3 NORI
         ! NumFreq
         
         % elprop
         Polar true
         end
+        
+        %pal
+        nprocs 4
+        end
+        
+        * xyzfile 0 1 struc.xyz
 
     3. Vergleichen Sie zunächst die harmonisch berechneten Frequenzen mit den experimentell gemessenen Frequenzen. Wie verlässlich sind die berechneten Werte? Diskutieren Sie auch die berechneten Trends der IR-Intensitäten von dem Hintergrund Ihrer quantenchemischen Intuition und Ihres Kenntnis des harmonischen Oszillators. Wieso zeigen die homonuklearen Moleküle keine IR-Intensität? 
     
