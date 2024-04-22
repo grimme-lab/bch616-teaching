@@ -130,8 +130,6 @@ Beschreibung des Experiments
       c. :math:`\ce{H-CH2CHO -> H. + CHOH2C.}`
       
       d. :math:`\ce{H-COCH3 -> H. + CH3OC.}`
-      
-   #. Wiederholen Sie die Rechnungen mit einem kleineren (SVP) und einem größeren (QZVP) Basissatz. Beobachten Sie einen Basissatzeffekt?
 
 .. csv-table:: Bindungsdissoziationsenergie von :math:`\ce{C-H}`-Bindungen
    :header: "Bindung", ":math:`D_{298}^{0}` [kJ/mol]"
@@ -143,7 +141,7 @@ Beschreibung des Experiments
    :math:`\ce{H-CH2CHO}`, 
    :math:`\ce{H-COCH3}`
 
-.. csv-table:: Freie Gibbs-Enthalpie, SVP Basissatz
+.. csv-table:: Freie Gibbs-Enthalpie
    :header: "Reaktanden", ":math:`\\Delta G` [Eh]", ":math:`\\Delta G` [kJ/mol]"
    :widths: 30, 30, 30
 
@@ -155,48 +153,7 @@ Beschreibung des Experiments
    :math:`\ce{H2O}`, ,
    :math:`\ce{O2}`,
 
-.. csv-table:: Freie Gibbs-Enthalpie, TZVP Basissatz
-   :header: "Reaktanden", ":math:`\\Delta G` [Eh]", ":math:`\\Delta G` [kJ/mol]"
-   :widths: 30, 30, 30
-
-   :math:`\ce{N2}`, ,
-   :math:`\ce{H2}`, ,
-   :math:`\ce{NH3}`, ,
-   :math:`\ce{CO}`, ,
-   :math:`\ce{CO2}`, ,
-   :math:`\ce{H2O}`, ,
-   :math:`\ce{O2}`,
-
-
-.. csv-table:: Freie Gibbs-Enthalpie, QZVP Basissatz
-   :header: "Reaktanden", ":math:`\\Delta G` [Eh]", ":math:`\\Delta G` [kJ/mol]"
-   :widths: 30, 30, 30
-
-   :math:`\ce{N2}`, ,
-   :math:`\ce{H2}`, ,
-   :math:`\ce{NH3}`, ,
-   :math:`\ce{CO}`, ,
-   :math:`\ce{CO2}`, ,
-   :math:`\ce{H2O}`, ,
-   :math:`\ce{O2}`,
-
-.. csv-table:: Änderung der freien Gibbs-Enthalpie, SVP Basissatz
-   :header: "Reaktion", ":math:`\Delta G_\mathrm{exp}` [kJ/mol]", ":math:`\Delta G_\mathrm{calc}` [kJ/mol]", ":math:`\Delta G_\mathrm{calc}` [Eh]"
-   :widths: 30, 30, 30, 30
-
-   :math:`\ce{2 H2 + O2 -> 2 H2O}`, -572.0, , 
-   :math:`\ce{N2 + 3 H2 -> 2 NH3}`, -92.3, , 
-   :math:`\ce{H2O + CO -> H2 + CO2}`, -41.2, , 
-
-.. csv-table:: Änderung der freien Gibbs-Enthalpie, TZVP Basissatz
-   :header: "Reaktion", ":math:`\Delta G_\mathrm{exp}` [kJ/mol]", ":math:`\Delta G_\mathrm{calc}` [kJ/mol]", ":math:`\Delta G_\mathrm{calc}` [Eh]"
-   :widths: 30, 30, 30, 30
-
-   :math:`\ce{2 H2 + O2 -> 2 H2O}`, -572.0, , 
-   :math:`\ce{N2 + 3 H2 -> 2 NH3}`, -92.3, , 
-   :math:`\ce{H2O + CO -> H2 + CO2}`, -41.2, , 
-
-.. csv-table:: Änderung der freien Gibbs-Enthalpie, QZVP Basissatz
+.. csv-table:: Änderung der freien Gibbs-Enthalpie
    :header: "Reaktion", ":math:`\Delta G_\mathrm{exp}` [kJ/mol]", ":math:`\Delta G_\mathrm{calc}` [kJ/mol]", ":math:`\Delta G_\mathrm{calc}` [Eh]"
    :widths: 30, 30, 30, 30
 
