@@ -96,7 +96,7 @@ Beschreibung des Experiments
 
         * xyzfile 0 1 struc.xyz
 
-    2. Bei der Berechnung von Schwingungsfrequenzen in ORCA werden IR-Intensitäten automatisch bestimmt. Für Raman-Aktivitäten werden hingegen die Polarisierbarkeit |alpha| entlang der Normalmoden benötigt, die in ORCA explizit angeforder werden muss (``% elprop Polar true end``). Dies ist in ORCA nicht möglich mit einer analytischen Hessematrix und erfordert eine numerische Frequenzrechnung (``NumFreq``). Berechnen Sie nun für die zuvor optimierten Geometrien die numerischen Schwingungsfrequenzen und IR- sowie Raman-Intensitäten mit r\ :sup:`2`-SCAN-3c in den selben Einstellungen wie zuvor (Die Rechnung dauert ca. 30 min!): 
+    2. Bei der Berechnung von Schwingungsfrequenzen in ORCA werden IR-Intensitäten automatisch bestimmt. Für Raman-Aktivitäten werden hingegen die Polarisierbarkeit |alpha| entlang der Normalmoden benötigt, die in ORCA explizit angeforder werden muss (``% elprop Polar true end``). Dies ist in ORCA nicht möglich mit einer analytischen Hessematrix und erfordert eine numerische Frequenzrechnung (``NumFreq``). Berechnen Sie nun für die zuvor optimierten Geometrien die numerischen Schwingungsfrequenzen und IR- sowie Raman-Intensitäten mit r\ :sup:`2`-SCAN-3c in den selben Einstellungen wie zuvor: 
 
     .. code-block:: none
 
@@ -121,7 +121,7 @@ Beschreibung des Experiments
 
     Nun soll das Schwingungsspektrum auch für Benzol berechnet werden. Hierbei steigt die Zahl der Normalmoden für nicht-lineare Moleküle mit :math:`3N-6`. Dadurch werden sowohl die IR- und Raman-Spektren komplexer, als auch die numerische Berechnung der Frequenzen teurer. Dennoch können numerische Frequenzen und Polarisierbarkeiten für kleine Moleküle wie Benzol noch in kurzer Zeit berechnet werden. 
 
-    1. Optimieren Sie die Geometrie von Benzol. Berechnen Sie anschließend die Schwingungsfrequenzen, IR- und Raman-Intensitäten. Verwenden Sie hierzu erneut die r\ :sup:`2`-SCAN-3c Methode mit den gleichen Einstellung wie in der vorherigen Aufgabe. 
+    1. Optimieren Sie die Geometrie von Benzol. Berechnen Sie anschließend die Schwingungsfrequenzen, IR- und Raman-Intensitäten. Verwenden Sie hierzu erneut die r\ :sup:`2`-SCAN-3c Methode mit den gleichen Einstellung wie in der vorherigen Aufgabe  (Die Rechnung dauert ca. 30 min!). 
 
     2. Ordnen Sie nun die berechneten den experimentellen Frequenzen von Benzol zu. Bestimmen Die auch den Charakter der Schwingung (sym/anti-CH-Streckschwinung, CH-Deformationsschwingung oder Ringschwingung). Visualisieren Sie dazu die Schwingungsmoden mit dem Programm Molden (siehe :ref:`app-molden` für eine kurze Einführung). Experimentelle Frequenzen:
 
@@ -188,9 +188,33 @@ Beschreibung des Experiments
 
     Abschließend soll nun auch eine chemische Fragestellung mit der theoretischen Schwingungsspektroskopie beantwortet werden. Dabei ist das Testsystem die Benzoesäure, die über zwei Wasserstoffbrückenbindungen verbrückt auch als Dimer vorliegen kann. 
     
-    1. Berechnen Sie zunächst die Schwingungsspektren der Benzoesäure als Monomer und Dimer in der Gasphase. Dabei kann hier auf Raman-Aktivitäten verzichtet werden und die Frequenzrechnung mit der analytischen Hessematrix durchgeführt werden (``AnFreq``). Abgesehen davon bleibt das vorgehen identisch. Plotten Sie die beiden berechneten Spektren erneut mit ``orca_mapspc``. 
+    1. Berechnen Sie zunächst die Schwingungsspektren der Benzoesäure als Monomer in der Gasphase. Optimieren Sie die Struktur dafür zuerst wie in den vorherigen Aufgaben. Nun kann bei der Frequenzrechnung auf Raman-Aktivitäten verzichtet werden und die analytischen Hessematrix genutzt werden (``AnFreq``). Abgesehen davon bleibt das vorgehen identisch. Plotten Sie die beiden berechneten Spektren erneut mit ``orca_mapspc``. Input für die Frequenzrechnung:
 
-    2. In :ref:`table-spec` ist das experimentelle IR-Spektrum von Benzoesäure in Gasphase (links) und in einer 2%-igen CCl\ :sub:`4` Lösung (rechts) abgebildet. [#]_ Vergleichen Sie diese mit den berechneten Spektren. Können Sie eine Aussage über das Vorliegen des Benzoesäure Monomers und Dimers machen? An welchen Banden machen Sie dies fest?
+    .. code-block:: none
+        ! R2SCAN-3C VeryTightSCF DefGrid3 NORI
+        ! AnFreq
+        
+        %pal
+        nprocs 4
+        end
+        
+        % freq
+        Hess2ElFlags 0,0,0,0
+        end
+        
+         * xyzfile 0 1 geom.xyz
+
+    2. Berechnen Sie die Schwingungsspektren auch in CCl\ :sub:`4`. Nutzen Sie dafür dieselben Inputs für Optimierung und Frequenzrechnung wie zuvor, wobei sie folgendes in den Inputs hinzufügen:
+
+    .. code-block:: none
+    
+        %cpcm
+         smd true
+         SMDsolvent "CCl4"
+        end
+
+
+    3. In :ref:`table-spec` ist das experimentelle IR-Spektrum von Benzoesäure in Gasphase (links) und in einer 2%-igen CCl\ :sub:`4` Lösung (rechts) abgebildet. [#]_ Vergleichen Sie diese mit den berechneten Spektren. Können Sie eine Aussage über das Vorliegen des Benzoesäure Monomers und Dimers machen? An welchen Banden machen Sie dies fest?
 
     .. |pic1| image:: img/benzoic-acid_gas.png
         :scale: 35%
@@ -206,18 +230,63 @@ Beschreibung des Experiments
         | |pic1|  | |pic2|  |
         +---------+---------+
 
+
+    5. Mithilfe der sehr effizienten GFN2-xTB Methode, soll nun auch das Gasphasen IR-Spektrum des Benzoesäuredimers berechnet werden. Dafür wird auch das Dimer optimiert und dann dessen Frequenzen berechnet. Beides zusammen geht mit folgendem ORCA Input: 
+
+    .. code-block:: none
+
+        ! GFN2-xTB VeryTightOpt
+        ! NumFreq 
+        
+        %pal
+        nprocs 4
+        end
+        
+        * xyz 0 1 
+        30
+        Coordinates from ORCA-job orca
+          O   4.08361963686171      1.42100218491426     -0.00000073226728
+          O   1.83133921050916      1.51376110969457     -0.00000053756247
+          C   2.89118961455814     -0.61275126220347     -0.00000015830084
+          C   1.66786596921808     -1.28923217083174      0.00000005650774
+          C   4.08873266661149     -1.33464374377284     -0.00000003849925
+          C   1.64337277394040     -2.67695964944375      0.00000040139691
+          C   4.05781228404398     -2.72342243751457      0.00000031385609
+          C   2.83755368068430     -3.39501341473763      0.00000053723225
+          C   2.88427383486136      0.86920719639148     -0.00000049420274
+          H   0.75047050342712     -0.71148827584570     -0.00000005200708
+          H   5.03274509066108     -0.80298251176861     -0.00000021712756
+          H   0.69345649532693     -3.20143513223073      0.00000056800684
+          H   4.98681514348201     -3.28415658889913      0.00000041400331
+          H   2.81696772552290     -4.48033640386284      0.00000081338830
+          H   4.00016402380650      2.42784908552584     -0.00000094507038
+          O   1.67544949026866      4.13087276718472     -0.00000067484339
+          O   3.92772992055675      4.03811393489232     -0.00000056319142
+          C   2.86787941980673      6.16462626264076     -0.00000012977032
+          C   4.09120303233605      6.84110723503027      0.00000008450553
+          C   1.67033633312375      6.88651868255242     -0.00000002372187
+          C   4.11569615382849      8.22883471528941      0.00000040502321
+          C   1.70125664287554      8.27529737658171      0.00000030086711
+          C   2.92151520995280      8.94688841795884      0.00000051914385
+          C   2.87479526761332      4.68266780421806     -0.00000047595502
+          H   5.00859853276044      6.26336339406959     -0.00000000626668
+          H   0.72632393627822      6.35485740291696     -0.00000019498359
+          H   5.06561240572427      8.75331024546315      0.00000056989514
+          H   0.77225375376621      8.83603147964344      0.00000038541034
+          H   2.94210110784763     10.03221140797559      0.00000077470791
+          H   1.75890513974578      3.12402588816740     -0.00000090017462
+        *
+
+    Wie unterscheiden sich die berechneten IR-Spektren des Monomers und des Dimers in Gasphase?
+
     .. hint::
 
         Im Dimer treten aufgrund der zwei enthaltenen Monomere die Moden zweifach auf. Diese können aber auch Kombinationsmoden sein und müssen nicht entartet sein. 
 
 
-    Betrachten Sie nun besonders die Carbonylstreckschwingung, die einfach experimentell verfolgt werden kann und es erlaubt das Gleichgewicht zwischen Monomer und Dimer zu bestimmen. Die Messung in Acetonitrile zeigt zwei Banden im IR-Spektrum bei 1730cm\ :sup:`-1` und 1682cm\ :sup:`-1`. [#]_
-
-    3. Berechnen Sie die Schwingungsspektren auch in Acetonitril (``CPCM(Acetonitrile)``). Welcher Peak gehört zu welcher Spezies? Vergleichen Sie sowohl die absoluten Frequenzen als auch die Änderung zwischen Monomer und Dimer mit den experimentellen Werten. Wie gut ist die Übereinstimmung, wenn der Effekt des Lösungsmittels vernachlässigt wird?  
-    
     Wasserstoffbrückenbindungen sind ein wichtiges Phänomen, beispielsweise für die Lösungsmitteleigenschaften von Wasser und das Benzoesäuredimer zeigt deren substantiellen Einfluss auf das IR-Spektrum. Das wirft für die Modellierung von IR-Spektren in protischen Lösungsmitteln wie Wasser die Frage auf, ob die häufig verwendeten impliziten Lösungsmittelmodel wie CPCM ausreichen. Dazu soll im Folgenden der Effekt von weiteren umgebenden Benzoesäuremolekülen auf die Schwingungsfrequenzen implizit modelliert werden. 
 
-    4. Modellieren Sie also nun ein Benzoesäuremonomer in der Umgebung von Benzoesäure mit dem impliziten Lösungsmittelmodel CPCM. Setzen Sie dafür die Dielektrizitätskonstante :math:`\varepsilon_0=8.94` der Wert von Benzoesäure. [#]_ Fügen Sie dazu den folgenden Block in der Inputdatei für die Optimierung und Frequenzrechnung hinzu: 
+    6. Modellieren Sie also nun ein Benzoesäuremonomer in der Umgebung von Benzoesäure mit dem impliziten Lösungsmittelmodel CPCM. Setzen Sie dafür die Dielektrizitätskonstante :math:`\varepsilon_0=8.94` der Wert von Benzoesäure. [#]_ Fügen Sie dazu den folgenden Block in der Inputdatei für die Optimierung und Frequenzrechnung hinzu: 
 
     .. code-block:: none   
         :linenos:
@@ -227,7 +296,7 @@ Beschreibung des Experiments
         end
 
 
-    5. Beeinflusst das Kontinuumsmodell die Schwingungsfrequenzen der Benzoesäure in gleichem Maße wie im Benzoesäuredimer? Achten Sie dabei besonders auf die OH-Streckschwingung. Was bedeutet dies für die Anwendung von impliziten Lösungsmittelmodellen bei protischen Lösungsmitteln wie beispielsweise Wasser?
+    7. Beeinflusst das Kontinuumsmodell die Schwingungsfrequenzen der Benzoesäure in gleichem Maße wie im Benzoesäuredimer? Achten Sie dabei besonders auf die OH-Streckschwingung. Was bedeutet dies für die Anwendung von impliziten Lösungsmittelmodellen bei protischen Lösungsmitteln wie beispielsweise Wasser?
 
 
 .. [#] Coblentz Society, Inc., "Evaluated Infrared Reference Spectra" in NIST Chemistry WebBook, NIST Standard Reference Database Number 69, Eds. P.J. Linstrom and W.G. Mallard, National Institute of   Standards and Technology, Gaithersburg MD, 20899, https://doi.org/10.18434/T4D303, (retrieved February 25, 2023). 
