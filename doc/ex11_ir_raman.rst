@@ -231,18 +231,12 @@ Beschreibung des Experiments
         +---------+---------+
 
 
-    5. Mithilfe der sehr effizienten GFN2-xTB Methode, soll nun auch das Gasphasen IR-Spektrum des Benzoesäuredimers berechnet werden. Dafür wird auch das Dimer optimiert und dann dessen Frequenzen berechnet. Beides zusammen geht mit folgendem ORCA Input: 
+    4. Mithilfe der sehr effizienten GFN2-xTB Methode, soll nun auch das Gasphasen IR-Spektrum des Benzoesäuredimers berechnet werden. Dafür wird auch das Dimer optimiert und dann dessen Frequenzen berechnet. Optimieren Sie dafür zunäcsht folgende Dimer Struktur mithilfe von GFN2-xTB (über das ``xtb`` Programm): 
 
     .. code-block:: none
 
-        ! GFN2-xTB VeryTightOpt
-        ! NumFreq 
-        
-        %pal
-        nprocs 4
-        end
-        
-        * xyz 0 1 
+        30
+        Coordinates from ORCA-job orca
           O   4.08361963686171      1.42100218491426     -0.00000073226728
           O   1.83133921050916      1.51376110969457     -0.00000053756247
           C   2.89118961455814     -0.61275126220347     -0.00000015830084
@@ -273,18 +267,40 @@ Beschreibung des Experiments
           H   0.77225375376621      8.83603147964344      0.00000038541034
           H   2.94210110784763     10.03221140797559      0.00000077470791
           H   1.75890513974578      3.12402588816740     -0.00000090017462
-        *
 
+    In der Kommandozeile müssen sie dafür folgendes eingeben (in ``struc.xyz`` sollte die obere Struktur gespeichert sein):
+
+    .. code-block:: none
+
+        xtb struc.xyz --opt vtight > xtb.out
+
+    Die optimierte Struktur befindet sich nun in ``xtbopt.xyz``. (Mit ``molden xtbopt.log`` können sie wie gehabt die Optimierung visualisieren)
+
+    5. Berechnen Sie nun die IR-Frequenzen mit GFN2-xTB + PTB, indem Sie die optimierte Geometrie in einen neuen Ordner kopieren und folgendes eingeben:
+
+    .. code-block:: none
+
+        xtb xtbopt.xyz --ptb --hess > xtb.out
+
+    Die IR-Frequenzen befinden sich in der Datei ``vibspectrum``.
+
+    6. Abschließend nutzen Sie folgenden Befehl um die IR-aktiven Moden aus dem ``vibspectrum`` in eine Daten Datei zu schreiben:
+
+    .. code-block:: none
+
+        nsm vibspectrum --plot --range 0.0 4000.0  
+
+    Plotten Sie nun die erstelle ``plot.dat`` Datei mithilfe eines geeigneten Programms (Gnuplot, Excel, Libreofficecalc, ...) 
     Wie unterscheiden sich die berechneten IR-Spektren des Monomers und des Dimers in Gasphase?
 
     .. hint::
 
-        Im Dimer treten aufgrund der zwei enthaltenen Monomere die Moden zweifach auf. Diese können aber auch Kombinationsmoden sein und müssen nicht entartet sein. 
+      Im Dimer treten aufgrund der zwei enthaltenen Monomere die Moden zweifach auf. Diese können aber auch Kombinationsmoden sein und müssen nicht entartet sein. 
 
 
     Wasserstoffbrückenbindungen sind ein wichtiges Phänomen, beispielsweise für die Lösungsmitteleigenschaften von Wasser und das Benzoesäuredimer zeigt deren substantiellen Einfluss auf das IR-Spektrum. Das wirft für die Modellierung von IR-Spektren in protischen Lösungsmitteln wie Wasser die Frage auf, ob die häufig verwendeten impliziten Lösungsmittelmodel wie CPCM ausreichen. Dazu soll im Folgenden der Effekt von weiteren umgebenden Benzoesäuremolekülen auf die Schwingungsfrequenzen implizit modelliert werden. 
 
-    6. Modellieren Sie also nun ein Benzoesäuremonomer in der Umgebung von Benzoesäure mit dem impliziten Lösungsmittelmodel CPCM. Setzen Sie dafür die Dielektrizitätskonstante :math:`\varepsilon_0=8.94` der Wert von Benzoesäure. [#]_ Fügen Sie dazu den folgenden Block in der Inputdatei für die Optimierung und Frequenzrechnung hinzu: 
+    7. Modellieren Sie also nun ein Benzoesäuremonomer in der Umgebung von Benzoesäure mit dem impliziten Lösungsmittelmodel CPCM. Setzen Sie dafür die Dielektrizitätskonstante :math:`\varepsilon_0=8.94` der Wert von Benzoesäure. [#]_ Nutzen Sie dafür wieder ORCA und die Inputs aus Punkt 2 dieser Aufgabe., wobei Sie den ``%cpcm`` Block in der Inputdatei für die Optimierung und Frequenzrechnung wie folgt anpassen: 
 
     .. code-block:: none   
         :linenos:
@@ -294,7 +310,7 @@ Beschreibung des Experiments
         end
 
 
-    7. Beeinflusst das Kontinuumsmodell die Schwingungsfrequenzen der Benzoesäure in gleichem Maße wie im Benzoesäuredimer? Achten Sie dabei besonders auf die OH-Streckschwingung. Was bedeutet dies für die Anwendung von impliziten Lösungsmittelmodellen bei protischen Lösungsmitteln wie beispielsweise Wasser?
+    8. Beeinflusst das Kontinuumsmodell die Schwingungsfrequenzen der Benzoesäure in gleichem Maße wie im Benzoesäuredimer? Achten Sie dabei besonders auf die OH-Streckschwingung. Was bedeutet dies für die Anwendung von impliziten Lösungsmittelmodellen bei protischen Lösungsmitteln wie beispielsweise Wasser?
 
 
 .. [#] Coblentz Society, Inc., "Evaluated Infrared Reference Spectra" in NIST Chemistry WebBook, NIST Standard Reference Database Number 69, Eds. P.J. Linstrom and W.G. Mallard, National Institute of   Standards and Technology, Gaithersburg MD, 20899, https://doi.org/10.18434/T4D303, (retrieved February 25, 2023). 
