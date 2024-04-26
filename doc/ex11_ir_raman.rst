@@ -210,10 +210,9 @@ Beschreibung des Experiments
     .. code-block:: none
 
         ! R2SCAN-3C VeryTightSCF DefGrid3 NORI
-        ! NumFreq
+        ! AnFreq
 
         %cpcm
-         smd true
          SMDsolvent "CCl4"
         end
 
