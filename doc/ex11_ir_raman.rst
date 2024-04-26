@@ -188,9 +188,10 @@ Beschreibung des Experiments
 
     Abschließend soll nun auch eine chemische Fragestellung mit der theoretischen Schwingungsspektroskopie beantwortet werden. Dabei ist das Testsystem die Benzoesäure, die über zwei Wasserstoffbrückenbindungen verbrückt auch als Dimer vorliegen kann. 
     
-    1. Berechnen Sie zunächst die Schwingungsspektren der Benzoesäure als Monomer in der Gasphase. Optimieren Sie die Struktur dafür zuerst wie in den vorherigen Aufgaben. Nun kann bei der Frequenzrechnung auf Raman-Aktivitäten verzichtet werden und die analytischen Hessematrix genutzt werden (``AnFreq``). Abgesehen davon bleibt das vorgehen identisch. Plotten Sie die beiden berechneten Spektren erneut mit ``orca_mapspc``. Input für die Frequenzrechnung:
+    1. Berechnen Sie zunächst die Schwingungsspektren der Benzoesäure als Monomer in der Gasphase. Optimieren Sie die Struktur dafür zuerst wie in den vorherigen Aufgaben. Plotten Sie die beiden berechneten Spektren erneut mit ``orca_mapspc``. Input für die Frequenzrechnung:
 
     .. code-block:: none
+
         ! R2SCAN-3C VeryTightSCF DefGrid3 NORI
         ! AnFreq
         
@@ -204,15 +205,27 @@ Beschreibung des Experiments
         
          * xyzfile 0 1 geom.xyz
 
-    2. Berechnen Sie die Schwingungsspektren auch in CCl\ :sub:`4`. Nutzen Sie dafür dieselben Inputs für Optimierung und Frequenzrechnung wie zuvor, wobei sie folgendes in den Inputs hinzufügen:
+    2. Berechnen Sie die Schwingungsspektren auch in CCl\ :sub:`4`. Nutzen Sie dafür denselben Input wie zuvor für die Optimierung, wobei Sie den Block ``%cpcm`` einfügen (siehe Frequenzinput), der Input für die Frequenzrechnung sieht wie folgt aus:
 
     .. code-block:: none
-    
+
+        ! R2SCAN-3C VeryTightSCF DefGrid3 NORI
+        ! NumFreq
+
         %cpcm
          smd true
          SMDsolvent "CCl4"
         end
 
+        %pal
+        nprocs 4
+        end
+        
+        % freq
+        Hess2ElFlags 0,0,0,0
+        end
+        
+         * xyzfile 0 1 geom.xyz
 
     3. In :ref:`table-spec` ist das experimentelle IR-Spektrum von Benzoesäure in Gasphase (links) und in einer 2%-igen CCl\ :sub:`4` Lösung (rechts) abgebildet. [#]_ Vergleichen Sie diese mit den berechneten Spektren. Können Sie eine Aussage über das Vorliegen des Benzoesäure Monomers und Dimers machen? An welchen Banden machen Sie dies fest?
 
