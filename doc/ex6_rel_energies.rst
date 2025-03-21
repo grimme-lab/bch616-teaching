@@ -30,7 +30,7 @@ Beschreibung des Experiments
 .. admonition:: 1. Vorarbeit
 
    Verfahren Sie wie in den vorherigen Experimenten. Erstellen Sie die beiden Geometriekonformere von Glyoxal (cis, und trans-) und die drei verschiedenen Konformere/Isomere von Butadien (cis-, trans-) und Cyclobuten. 
-   Führen Sie alle Berechnungen mit dem TPSS Funktional durch und nutzten Sie einen TZVP Basissatz.
+   Führen Sie alle Berechnungen mit dem `TPSS` Funktional und der `D4` Dispersionskorrektur durch und nutzten Sie einen `def2-TZVP` Basissatz.
 
 .. admonition:: 2. Geometrieoptimierung
 

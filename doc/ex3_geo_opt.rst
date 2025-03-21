@@ -21,10 +21,11 @@ Es ist eine mehrdimensionale Funktion über alle Freiheitsgrade des Moleküls.
 Für ein nichtlineares Molekül mit N Atomen ist die Energie eine Funktion von 3N-6 internen Koordinaten.
 Deswegen ist es unmöglich die Energiehyperfläche zu visualisieren. 
 Nur für sehr einfache Systeme mit ein bis zwei Koordinaten ist eine Darstellung möglich.
-Ein Beispiel für eine solche Energiehyperfläche ist in Abbildung \ref{fig:PES} zu sehen.
+Ein Beispiel für eine solche Energiehyperfläche ist in Abbildung :ref:`fig_PES` zu sehen.
 Jeder Punkt auf der Energiehyperfläche entspricht einer Anordnung der N Atome im Molekül, also einer möglichen Struktur des Moleküls.
 Die Höhe der Oberfläche gibt die Energie dieser Struktur an.
 
+.. _fig_PES:
 .. figure:: img/Pes.png
    :width: 400px
    :align: center
@@ -133,15 +134,15 @@ Beschreibung des Experiments
 
 .. admonition:: 1. Geometrieoptimierung
 
-    Führen Sie eine Geometrieoptimierung für die fünf Moleküle aus dem letzten Experiment durch. Verwenden Sie dabei das TPSS Funktional und einen TZVP Basissatz. Vergleichen Sie die optimierte Struktur mit den experimentellen Daten aus der folgenden Tabelle. Tragen Sie Ihre Ergebnisse in Tabellen ein.
+    Führen Sie eine Geometrieoptimierung für die fünf Moleküle aus dem letzten Experiment durch. Verwenden Sie dabei das `TPSS` Funktional und einen `def2-TZVP` Basissatz. Vergleichen Sie die optimierte Struktur mit den experimentellen Daten aus der folgenden Tabelle. Tragen Sie Ihre Ergebnisse in Tabellen ein.
 		
 .. admonition:: 2. Basissatzeffekt
     
-    Führen Sie die Berechnungen mit einem kleinen (`SVP`) und einen größeren Basissatz (QZVP) durch. Inwieweit können Sie einen Basissatzeffekt feststellen? Vergleichen Sie dazu zwei sinnvolle Größen, bspw. Gesamtenergie (eV) und Bindungslänge (|angst|).
+    Führen Sie die Berechnungen mit einem kleinen (`def2-SVP`) und einen größeren Basissatz (`def2-QZVP`) durch. Inwieweit können Sie einen Basissatzeffekt feststellen? Vergleichen Sie dazu zwei sinnvolle Größen, bspw. Gesamtenergie (eV) und Bindungslänge (|angst|).
 
 .. admonition:: 3. Bindungsordnung
 
-    Berechnen Sie die Bindungsordnung für die Moleküle aus dem letzten Experiment. Verwenden Sie dazu die Mayer Bindungsordnung und vergleichen Sie die Ergebnisse mit der chemischen Natur der Bindung. Erstellen Sie zusätzlich Z-Matrizen für Ethan, Ethen und Ethin und optimieren Sie die Geometrien (TPSS/TZVP; starten Sie von folgenden geschätzten Bindungslängen: :math:`\ce{C=C}` 1.34 |angst|, und :math:`\ce{C#C}` 1.22 |angst|). Tragen Sie die Bindungsordnung gegen die Bindungslänge für die :math:`\ce{C-C}`-Bindung in :math:`\ce{C2H6}`, :math:`\ce{C2H4}`, und :math:`\ce{C2H2}` auf und beschreiben Sie deren Zusammenhang.
+    Berechnen Sie die Bindungsordnung für die Moleküle aus dem letzten Experiment. Verwenden Sie dazu die Mayer Bindungsordnung und vergleichen Sie die Ergebnisse mit der chemischen Natur der Bindung. Erstellen Sie zusätzlich Z-Matrizen für Ethan, Ethen und Ethin und optimieren Sie die Geometrien (`TPSS-D4/def2-TZVP`; starten Sie von folgenden geschätzten Bindungslängen: :math:`\ce{C=C}` 1.34 |angst|, und :math:`\ce{C#C}` 1.22 |angst|). Tragen Sie die Bindungsordnung gegen die Bindungslänge für die :math:`\ce{C-C}`-Bindung in :math:`\ce{C2H6}`, :math:`\ce{C2H4}`, und :math:`\ce{C2H2}` auf und beschreiben Sie deren Zusammenhang.
 
 
 .. csv-table:: Geometrieparameter und Bindungsordnung (Distanz in |angst|, Winkel in °).

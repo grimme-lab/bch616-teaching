@@ -82,13 +82,13 @@ Beschreibung des Experiments
     | Cl\ :sub:`2`         | 560                                                |
     +----------------------+----------------------------------------------------+
 
-    Die Frequenzen sollen mit der composite-Methode r\ :sup:`2`-SCAN-3c berechnet werden. Diese nutzt das meta-GGA Dichtefunktional r\ :sup:`2`-SCAN mit der D4 Dispersionskorrektur und der geometrischen Counter-Poise Korrektur in der modifizierten triple-|zeta| Basissatz mTZVPP. Folgen Sie zur Berechnung der Schwingungsspektren mit r\ :sup:`2`-SCAN-3c den folgenden Schritten:  
+    Die Frequenzen sollen mit der composite-Methode r\ :sup:`2`-SCAN-3c berechnet werden. Diese nutzt das meta-GGA Dichtefunktional r\ :sup:`2`-SCAN mit der D4 Dispersionskorrektur und der geometrischen Counter-Poise Korrektur in der modifizierten triple-|zeta| Basissatz def2-mTZVPP. Folgen Sie zur Berechnung der Schwingungsspektren mit r\ :sup:`2`-SCAN-3c den folgenden Schritten:  
 
     1. Damit die harmonisch Näherung angenommen werden kann, muss zunächst das Minimum der Potentialhyperfläche (PES) gefunden werden. Um eine möglichst glatte PES zu erhalten, verwenden Sie das große numerische Integrationsgrid ``DEFGRID3`` und sehr enge Konvergenzkriterien für das SCF (``VeryTightSCF``). Gleiches gilt auch für die Konvergenz der Geometrieoptimierung (``VeryTightOpt``), um imaginäre Moden bei der Frequenzrechnung zu vermeiden. Optimieren Sie nun die Geometrien mit r\ :sup:`2`-SCAN-3c und den angegebenen Einstellungen: 
 
     .. code-block:: none  
 
-        ! R2SCAN-3C VeryTightSCF VeryTightOpt DefGrid3 NORI
+        ! R2SCAN-3C VeryTightSCF VeryTightOpt DefGrid3
 
         %pal
         nprocs 4
@@ -100,7 +100,7 @@ Beschreibung des Experiments
 
     .. code-block:: none
 
-        ! R2SCAN-3C VeryTightSCF DefGrid3 NORI
+        ! R2SCAN-3C VeryTightSCF DefGrid3
         ! NumFreq
         
         % elprop
@@ -192,15 +192,11 @@ Beschreibung des Experiments
 
     .. code-block:: none
 
-        ! R2SCAN-3C VeryTightSCF DefGrid3 NORI
+        ! R2SCAN-3C VeryTightSCF DefGrid3
         ! AnFreq
         
         %pal
         nprocs 4
-        end
-        
-        % freq
-        Hess2ElFlags 0,0,0,0
         end
         
          * xyzfile 0 1 geom.xyz
@@ -209,7 +205,7 @@ Beschreibung des Experiments
 
     .. code-block:: none
 
-        ! R2SCAN-3C VeryTightSCF DefGrid3 NORI
+        ! R2SCAN-3C VeryTightSCF DefGrid3
         ! AnFreq
 
         %cpcm
@@ -218,10 +214,6 @@ Beschreibung des Experiments
 
         %pal
         nprocs 4
-        end
-        
-        % freq
-        Hess2ElFlags 0,0,0,0
         end
         
          * xyzfile 0 1 geom.xyz

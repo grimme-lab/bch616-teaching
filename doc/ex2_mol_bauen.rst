@@ -58,7 +58,7 @@ Ein Beispiel einer Single-Point-Rechnung für Wasserstoffperoxid (:math:`\ce{H2O
 .. code-block:: none
 
    # Optimierung von H2CO
-   ! TPSS TZVP TightOpt TightSCF
+   ! TPSS D4 def2-TZVP TightOpt TightSCF
    ! PrintBasis
 
    %output
@@ -77,7 +77,7 @@ und einmal mit Z-Matrix:
 .. code-block:: none
 
    # Optimierung von H2CO
-   ! TPSS TZVP TightOpt TightSCF
+   ! TPSS D4 def2-TZVP TightOpt TightSCF
    ! PrintBasis
 
    %output
@@ -91,7 +91,7 @@ und einmal mit Z-Matrix:
    H  1 2 3  1.10  120.0000  180.0000
    *
 
-Verwenden Sie bitte, wenn nicht explizit anders gefordert, die Methode *TPSS*, einen *TZVP* Basissatz sowie die Schlüsselwörter *TightOpt* und *TightSCF*.
+Verwenden Sie bitte, wenn nicht explizit anders gefordert, das Dichtefunktional `TPSS`, die `D4` Dispersionskorrektur, einen `def2-TZVP` Basissatz sowie die Schlüsselwörter `TightOpt` und `TightSCF`.
 
 Für die Darstellung der Orbitale mit Hilfe von Gabedit verwenden Sie bitte die Schlüsselwörter *PrintBasis* und den ``print[p_mos] 1`` Befehl im Output-Block.
 
@@ -113,7 +113,7 @@ Um nur einen bestimmten Teil eines Moleküls zu optimieren, kann man eine beschr
 
 .. code-block:: none
 
-   ! TPSS TZVP TightSCF TightOpt
+   ! TPSS D4 def2-TZVP TightSCF TightOpt
    %geom
       Constraints # Start Beschraenkungen
          { B 0 1 1.25 C }
@@ -165,7 +165,7 @@ In dem folgenden Beispiel wird die Bindungslänge zwischen C und O in 12 äquiva
 
 .. code-block:: none
 
-   ! TPSS TZVP TightSCF TightOpt
+   ! TPSS D4 def2-TZVP TightSCF TightOpt
    %geom
       Scan
          B 0 1 = 1.35, 1.10, 12
@@ -186,7 +186,7 @@ Diese Bindung wird mit ``TS_Mode{B A1 A2}`` angegeben.
 
 .. code-block:: none
 
-   ! TPSS SVP TightSCF SlowConv NumFreq
+   ! TPSS D4 def2-SVP TightSCF SlowConv NumFreq
    ! OptTS
    %geom
       Calc_Hess true

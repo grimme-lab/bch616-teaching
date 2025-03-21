@@ -33,17 +33,17 @@ Beschreibung des Experiments
 
    Die Berechnung besteht aus mehreren Schritten:
 
-   1. Optimieren Sie die Molekülgeometrie in der Gasphase, nutzten Sie das TPSS Funktional und einen TZVP Basissatz.
+   1. Optimieren Sie die Molekülgeometrie in der Gasphase, nutzten Sie das `TPSS` Funktional, die `D4` Dispersionskorrektur und einen `def2-TZVP` Basissatz.
 
    .. code-block:: none
 
-      ! TPSS TZVP TightSCF TightOpt
+      ! TPSS D4 def2-TZVP TightSCF TightOpt
 
    2. Optimieren Sie die Struktur in wässriger Lösung, nutzen Sie dazu das CPCM Modell.
 
    .. code-block:: none
 
-      ! TPSS TZVP CPCM(water) TightSCF TightOpt
+      ! TPSS D4 def2-TZVP CPCM(water) TightSCF TightOpt
 
    3. Tragen Sie die Werte der Solvatationsenergie in eine Tabelle ein.
    4. Betrachten Sie die absoluten Werte. Was fällt Ihnen auf?
@@ -54,14 +54,14 @@ Beschreibung des Experiments
 
    Glycin ist eine der zwanzig natürlich vorkommenden Aminosäuren und die kleinste Aminosäure, welche in Lösung als Zwitterion vorliegt. 
    Sie bietet sich daher gut als Testmolekül für das CPCM-Modell an.
-   Ist es in der Lage Glycin in der zwitterionischen Form zu stabilisieren? Führen Sie die Berechnungen auf TPSS/TZVP Level durch. 
+   Ist es in der Lage Glycin in der zwitterionischen Form zu stabilisieren? Führen Sie die Berechnungen auf `TPSS-D4/def2-TZVP` Level durch. 
 
    1. Optimieren Sie beide Strukturen (neutrale und zwitterionische Form) von Glycin sowohl in der Gasphase als auch in Wasser. Was fällt auf? Berechnen Sie die Stabilisierungsenergie der neutralen Form in der Gasphase und die der zwitterionischen Form in Lösung. 
    2. Variieren Sie die Dielektrizitätskonstante und bestimmen Sie den Wert, an welchem die zwitterionische Form gerade noch stabilisiert wird. Benutzen Sie für die neutrale Form die gasphasenoptimierte Geometrie aus 1. und für die zwitterionische Form ausschließlich die bereits in Wasser optimierte Geometrie. Überlegen Sie dazu zunächst, in welchem Bereich beide Formen gleich stabil sein könnten. Variieren Sie dort die Dielektrizitätskonstante in Schritten von 0.1.
 
    .. code-block:: none
 
-      ! TPSS TZVP TightSCF
+      ! TPSS d4 def2-TZVP TightSCF
 
       %cpcm		     
          epsilon 80.40 # Dielektrizitaetskonstante Wasser

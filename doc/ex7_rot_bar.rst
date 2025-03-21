@@ -16,7 +16,7 @@ Beschreibung des Experiments
 ----------------------------
 
 Beginnen zunächst mit Ethan. Nutzen Sie für alle Rechnungen die r\ :sup:`2`-SCAN-3c composite-Methode, die besonders für relative Energien von Konformeren eine hohe Genauigkeit besitzt.
-Die Methode verwendet das r\ :sup:`2`-SCAN Dichtefunktional mit D4-Dispersionskorrektur und geometrischer Counter-Poise Korrektur mit dem modifizierten mTZVPP Basissatz.
+Die Methode verwendet das r\ :sup:`2`-SCAN Dichtefunktional mit `D4` Dispersionskorrektur und geometrischer Counter-Poise Korrektur mit dem modifizierten `def2-mTZVPP` Basissatz.
 
 .. admonition:: Teil I
 
@@ -125,9 +125,9 @@ Führen Sie also im Folgenden einen solchen relaxierten Multilevel-Oberflächens
 
 .. admonition:: Teil II
 
-    6. Erstellen Sie einen ORCA-Input mit der gegebenen Geometrie von trans-1,2-Diphenylethan.
+    1. Erstellen Sie einen ORCA-Input mit der gegebenen Geometrie von trans-1,2-Diphenylethan.
 
-    7. Starten Sie einen relaxierten Oberflächenscan von trans- bis cis-1,2-Diphenylethan mit GFN2-xTB mithilfe des folgenden Inputs:
+    2. Starten Sie einen relaxierten Oberflächenscan von trans- bis cis-1,2-Diphenylethan mit GFN2-xTB mithilfe des folgenden Inputs:
 
     .. code-block:: none
     
@@ -145,9 +145,9 @@ Führen Sie also im Folgenden einen solchen relaxierten Multilevel-Oberflächens
           
           * xyzfile 0 1 struc.xyz 
 
-    8. Tragen Sie die Potentialkurve für den Scan mit GFN2-xTB auf. Bei welchem Diederwinkel treten Minima und Maxima der Potentialkurve auf und wie werden die entsprechenden Konformere bezeichnet? 
+    3. Tragen Sie die Potentialkurve für den Scan mit GFN2-xTB auf. Bei welchem Diederwinkel treten Minima und Maxima der Potentialkurve auf und wie werden die entsprechenden Konformere bezeichnet? 
 
-    9. Rechnen Sie nun mit r\ :sup:`2`-SCAN-3c die Energien für die zuvor bestimmten Extremumsgeometrien aus (Tipp: Diederwinkel 0°, 60°, 120°, 180°). Optimieren Sie zusätzlich die die Extremumsgeometrien mit r\ :sup:`2`-SCAN-3c unter Einschränkung des Diederwinkels nach. Tragen Sie sowohl die Single-Point- als auch die Energie nach Optimierung mit der er GFN2-xTB Potentialkurve auf. Vergleichen Sie die drei berechneten Werte für die höchste Barrieren. Input:
+    4. Rechnen Sie nun mit r\ :sup:`2`-SCAN-3c die Energien für die zuvor bestimmten Extremumsgeometrien aus (Tipp: Diederwinkel 0°, 60°, 120°, 180°). Optimieren Sie zusätzlich die die Extremumsgeometrien mit r\ :sup:`2`-SCAN-3c unter Einschränkung des Diederwinkels nach. Tragen Sie sowohl die Single-Point- als auch die Energie nach Optimierung mit der er GFN2-xTB Potentialkurve auf. Vergleichen Sie die drei berechneten Werte für die höchste Barrieren. 
 
  .. code-block:: none
     
@@ -173,9 +173,9 @@ auch Geschwindigkeitskonstanten molekularer Prozesse bestimmt werden. Benötigt 
 
 .. admonition:: Teil III
 
-    10. Berechnen Sie :math:`\Delta G^{\ddagger}` für den geschwindigkeitsbestimmenden Schritt der Rotation von Ethan und 1,2-Diphenylethan (höchste Barriere), indem Sie für die optimierten Extremumsgeometrien Frequenzrechnung mit r\ :sup:`2`-SCAN-3c (``AnFreq``) durchführen. Geben Sie auch die thermostatistische Korrektur an. Ist dies ein wichtiger Beitrag bei diesem Prozess. 
+    1. Berechnen Sie :math:`\Delta G^{\ddagger}` für den geschwindigkeitsbestimmenden Schritt der Rotation von Ethan und 1,2-Diphenylethan (höchste Barriere), indem Sie für die optimierten Extremumsgeometrien Frequenzrechnung mit r\ :sup:`2`-SCAN-3c (``AnFreq``) durchführen. Geben Sie auch die thermostatistische Korrektur an. Ist dies ein wichtiger Beitrag bei diesem Prozess. 
 
-    11. Bestimmen Sie nun die Geschwindigkeitskonstante bei 298K für die Rotation mit Hilfe der Eyring-Gleichung. Laufen die Prozesse bei Raumtemperatur ab? Hätten Sie aus rein sterischer Hinsicht dieses Ergebnis erwartet?
+    2. Bestimmen Sie nun die Geschwindigkeitskonstante bei 298K für die Rotation mit Hilfe der Eyring-Gleichung. Laufen die Prozesse bei Raumtemperatur ab? Hätten Sie aus rein sterischer Hinsicht dieses Ergebnis erwartet?
 
 
 

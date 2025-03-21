@@ -10,7 +10,7 @@ Experiment 5: Interpretation der Ergebnisse von MO Rechnungen
 Hintergrund
 -----------
 
-In diesem Experiment sollen Sie sich das erste Mal mit Molekularorbital-Berechnungen (MO) auseinander setzen. Ziel des Experiments ist es Sie mit der Menge an Ergebnissen vertraut zu machen, die eine solche Rechnung liefert.
+In diesem Experiment sollen Sie sich das erste Mal mit Molekularorbital-Berechnungen (MO) auseinander setzen. Ziel des Experiments ist es Sie mit der Vielfalt an Ergebnissen vertraut zu machen, die eine solche Rechnung liefert.
 
 
 Totale Energie
@@ -55,9 +55,9 @@ Unglücklicherweise haben die Orbitalenergien keine `absolute` Bedeutung.
 Sie wurden in die Theorie eingeführt um die Orthonormalität zwischen verschiedenen MO zu gewährleisten.
 Dennoch ist es möglich den Orbitalenergien der besetzten Orbitale eine Bedeutung zu geben (Koopman Theorem):
 
-.. note:: Koopman Theorem
+.. note::
 
-   Die Orbitalenergie eines besetzten kanonischen MO entspricht ungefähr der Energie die benötigt wird um ein Elektron von diesem Orbital zu entfernen.
+   Die Orbitalenergie eines besetzten kanonischen MO entspricht ungefähr der Energie die benötigt wird um ein Elektron von diesem Orbital zu entfernen (`Koopman Theorem`).
    Dies ist vergleichbar mit dem ersten bzw. mit höheren Ionisationspotentialen.
 
 Dieser Ansatz ermöglicht es uns, der negativen Energie des HOMO's (highest occupied MO) dem Ionisationspotential des Moleküls zuzuordnen.
@@ -138,7 +138,7 @@ Die Zuordnung, welche Teil der Spur zu welchem Atom gehören ist aber vollkommen
 Beschreibung des Experiments
 ----------------------------
 
-Nehmen Sie die Moleküle die Sie schon in den letzten Experimenten verwendet haben und die entsprechenden Ergebnisse aus den vorherigen Rechnungen (TPSS/TZVP).
+Nehmen Sie die Moleküle die Sie schon in den letzten Experimenten verwendet haben und die entsprechenden Ergebnisse aus den vorherigen Rechnungen (`TPSS-D4/def2-TZVP`).
 
 .. admonition:: 1. Populationsanalyse
 
@@ -183,7 +183,7 @@ Nehmen Sie die Moleküle die Sie schon in den letzten Experimenten verwendet hab
       ":math:`\ce{H2O}`", 1.850, "12.6188 ±0.0009"
 
    .. csv-table:: Ionisationspotentiale nach dem Koopman's Theorem in eV.
-      :header: "Molekül", "Exp.", "Berechnete Daten", ":math:`\\Delta(\\mathrm{calc-exp})`"
+      :header: "Molekül", "Exp.", "Berechnete Daten", ":math:`\Delta(\mathrm{calc-exp})`"
       :widths: 20, 20, 20, 20
 
       ":math:`\ce{CH4}`", "12.610", "", ""
@@ -201,7 +201,7 @@ Nehmen Sie die Moleküle die Sie schon in den letzten Experimenten verwendet hab
    Bestimmen Sie das Dipolmoment, dieses finden Sie am Ende des Outputs und vergleichen Sie die Ergebnisse mit den experimentellen Daten aus der vorherigen Tabelle.
 
    .. csv-table:: Dipolmoment in Debye.
-      :header: "Molekül", "Exp.", "Berechnete Daten", ":math:`\\Delta(\\mathrm{calc-exp})`"
+      :header: "Molekül", "Exp.", "Berechnete Daten", ":math:`\Delta(\mathrm{calc-exp})`"
       :widths: 20, 20, 20, 20
 
       ":math:`\ce{CH4}`", "0.000", "", ""

@@ -22,7 +22,7 @@ Sie basiert auf der Boltzmann-Verteilung über die verfügbaren Mikrozustände:
 
     Q = \sum\limits_{j=1}^N g_j \cdot e^{-\frac{E_j}{k_B \cdot T}}
 
-Wobei :math:`N` die Anzahl der erreichbaren Zustände, :math:`E_j` die Energie des :math:`j`ten Zustandes, :math:`k_B` die Boltzmann-Konstante und :math:`T` die Temperatur in Kelvin ist (der Term :math:`k_B \cdot T` kann als vorhandene thermische Energie gesehen werden).
+Wobei :math:`N` die Anzahl der erreichbaren Zustände, :math:`E_j` die Energie des :math:`j` ten Zustandes, :math:`k_B` die Boltzmann-Konstante und :math:`T` die Temperatur in Kelvin ist (der Term :math:`k_B \cdot T` kann als vorhandene thermische Energie gesehen werden).
 Der Entartungsgrad :math:`g_j` ist direkt gegeben durch die Entartung des :math:`j`-ten Zustandes. Die Werte sind gleich, wenn die Zustände nicht entartet sind.
 Nehmen wir als Beispiel ein homogenes chemisches System von Molekülen, z. B. ein molekulares Gas.
 Aus der makroskopischen Sicht sind die Systemkomponenten die Moleküle und die Systemenergie :math:`E_j` ist abhängig von Ordnung der Komponenten und deren Energie.
@@ -108,7 +108,7 @@ Beschreibung des Experiments
    * Haber-Bosch-Reaktion: :math:`\ce{N2 + 3 H2 -> 2 NH3}`
    * Wassergasgleichgewicht: :math:`\ce{H2O + CO -> H2 + CO2}`
 
-   #. Im ersten Schritt optimieren Sie die Geometrie aller Reaktanden. Nutzen Sie dazu das TPSS Funktional und einen TZVP Basissatz.
+   #. Im ersten Schritt optimieren Sie die Geometrie aller Reaktanden. Nutzen Sie dazu das `TPSS` Funktional, die `D4` Dispersionskorrektur und einen `def2-TZVP` Basissatz.
    #. Führen Sie eine Frequenzrechnung für die optimierten Strukturen durch und entnehmen Sie dem Output die relevanten thermochemischen Daten.
    #. Berechnen Sie die Änderung der freien Gibbs-Enthalpie für alle Reaktionen und vergleichen Sie diese mit den experimentellen Werten.
 
@@ -117,7 +117,7 @@ Beschreibung des Experiments
 
    Als nächstes soll die Stärke verschiedener :math:`\ce{C-H}`-Bindungen an verschiedenen, einfachen, organischen Molekülen untersucht werden. Folgende Systeme sollen untersucht werden: Methan, Acetylen, Benzen und Acetaldehyd.
 
-   #. Optimieren Sie die Struktur für alle Moleküle. Starten Sie wieder mit der Kombination von TPSS und TZVP.
+   #. Optimieren Sie die Struktur für alle Moleküle auf den `TPSS-D4/def2-TZVP` Theorielevel.
 
    #. Machen Sie sich mit der Berechnung von Radikalen vertraut (Stichworte: Multiplizität, UHF-Rechnung). Bestimmen Sie die Bindungsenergie für folgenden Vorgang: :math:`\ce{CH4 -> H3C. + H.}`. Vergleichen Sie diese mit :math:`\frac{1}{4}` der Atomisierungsenergie von :math:`\ce{CH4}`.
 
@@ -142,7 +142,7 @@ Beschreibung des Experiments
    :math:`\ce{H-COCH3}`
 
 .. csv-table:: Freie Gibbs-Enthalpie
-   :header: "Reaktanden", ":math:`\\Delta G` [Eh]", ":math:`\\Delta G` [kJ/mol]"
+   :header: "Reaktanden", ":math:`\Delta G` [Eh]", ":math:`\Delta G` [kJ/mol]"
    :widths: 30, 30, 30
 
    :math:`\ce{N2}`, ,

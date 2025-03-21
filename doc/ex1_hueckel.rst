@@ -5,6 +5,9 @@ Experiment 1: Hückel-Theorie für |pi|-Elektronensystem (HMO)
 
 .. contents::
 
+Hintergrund
+-----------
+
 Die Hückelmethode ist eine der einfachsten semiempirischen Methoden zur quantenchemischen Beschreibung molekularer Systeme. Sie wurde 1931 von E. Hückel zur Berechnung planarer konjugierter Kohlenwasserstoffe entworfen. Eine herausragende historische Bedeutung kommt ihr deshalb zu, weil man - vor allem durch Berücksichtigung der Symmetrieeigenschaften - auf eine aufwendige numerische Behandlung, d.h. Computer, verzichten konnte.
 
 Näherungen in der Hückel-Theorie
