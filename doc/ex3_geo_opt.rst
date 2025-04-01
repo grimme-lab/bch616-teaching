@@ -134,7 +134,7 @@ Beschreibung des Experiments
 
 .. admonition:: 1. Geometrieoptimierung
 
-    Führen Sie eine Geometrieoptimierung für die fünf Moleküle aus dem letzten Experiment durch. Verwenden Sie dabei das `TPSS` Funktional und einen `def2-TZVP` Basissatz. Vergleichen Sie die optimierte Struktur mit den experimentellen Daten aus der folgenden Tabelle. Tragen Sie Ihre Ergebnisse in Tabellen ein.
+    Führen Sie eine Geometrieoptimierung für die fünf Moleküle aus dem letzten Experiment durch. Verwenden Sie dabei das `TPSS` Funktional mit der `D4` Dispersionskorrektur und einen `def2-TZVP` Basissatz. Vergleichen Sie die optimierte Struktur mit den experimentellen Daten aus der folgenden Tabelle. Tragen Sie Ihre Ergebnisse in Tabellen ein.
 		
 .. admonition:: 2. Basissatzeffekt
     

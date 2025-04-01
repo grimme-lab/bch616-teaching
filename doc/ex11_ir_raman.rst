@@ -207,10 +207,7 @@ Beschreibung des Experiments
 
         ! R2SCAN-3C VeryTightSCF DefGrid3
         ! AnFreq
-
-        %cpcm
-         SMDsolvent "CCl4"
-        end
+        ! SMD(CCl4)
 
         %pal
         nprocs 4
