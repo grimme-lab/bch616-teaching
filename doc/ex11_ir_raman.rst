@@ -171,7 +171,7 @@ Beschreibung des Experiments
 
     3. Geben Sie eine durchschnittliche und maximale absolute Abweichung der berechneten Frequenzen von den experimentellen Referenzwerten an.
 
-    4. Plotten Sie auch das berechnet IR-Spektrum mit ``orca_mapspc`` (siehe :ref:`app-orca_mapspc` für eine kurze Einführung). :ref:`fig_benzene_IR` zeigt ein experimentelles Referenzspektrum gemessen in der Gasphase.
+    4. Plotten Sie auch das berechnet IR-Spektrum mit ``orca_mapspc`` (siehe :ref:`app-orca_mapspc` für eine kurze Einführung). :numref:`fig_benzene_IR` zeigt ein experimentelles Referenzspektrum gemessen in der Gasphase.
 
 
     .. _fig_benzene_IR:
@@ -215,7 +215,7 @@ Beschreibung des Experiments
         
          * xyzfile 0 1 geom.xyz
 
-    3. In :ref:`table-spec` ist das experimentelle IR-Spektrum von Benzoesäure in Gasphase (links) und in einer 2%-igen CCl\ :sub:`4` Lösung (rechts) abgebildet. [#]_ Vergleichen Sie diese mit den berechneten Spektren. Können Sie eine Aussage über das Vorliegen des Benzoesäure Monomers und Dimers machen? An welchen Banden machen Sie dies fest?
+    3. In :numref:`table-spec` ist das experimentelle IR-Spektrum von Benzoesäure in Gasphase (links) und in einer 2%-igen CCl\ :sub:`4` Lösung (rechts) abgebildet. [#]_ Vergleichen Sie diese mit den berechneten Spektren. Können Sie eine Aussage über das Vorliegen des Benzoesäure Monomers und Dimers machen? An welchen Banden machen Sie dies fest?
 
     .. |pic1| image:: img/benzoic-acid_gas.png
         :scale: 35%

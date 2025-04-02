@@ -21,16 +21,17 @@ Es ist eine mehrdimensionale Funktion über alle Freiheitsgrade des Moleküls.
 Für ein nichtlineares Molekül mit N Atomen ist die Energie eine Funktion von 3N-6 internen Koordinaten.
 Deswegen ist es unmöglich die Energiehyperfläche zu visualisieren. 
 Nur für sehr einfache Systeme mit ein bis zwei Koordinaten ist eine Darstellung möglich.
-Ein Beispiel für eine solche Energiehyperfläche ist in Abbildung :ref:`fig_PES` zu sehen.
+Ein Beispiel für eine solche Energiehyperfläche ist in Abbildung :numref:`fig_PES` zu sehen.
 Jeder Punkt auf der Energiehyperfläche entspricht einer Anordnung der N Atome im Molekül, also einer möglichen Struktur des Moleküls.
 Die Höhe der Oberfläche gibt die Energie dieser Struktur an.
 
 .. _fig_PES:
-.. figure:: img/Pes.png
-   :width: 400px
-   :align: center
 
-   Energiehyperfläche eines zweiatomigen Moleküls. Die Energie ist in Einheiten von :math:`E_{\text{min}}` angegeben. Die rote Linie zeigt den Pfad der Geometrieoptimierung.
+.. figure:: img/Pes.png
+    :width: 400px
+    :align: center
+
+    Energiehyperfläche eines zweiatomigen Moleküls. Die Energie ist in Einheiten von :math:`E_{\text{min}}` angegeben. Die rote Linie zeigt den Pfad der Geometrieoptimierung.
 
 Auf der Energiehyperfläche sind drei Minima zu sehen. 
 Ein Minimum ist der Boden eines Tals auf der Oberfläche, jede Bewegung weg von diesem Punkt führt zu einer Konfiguration mit einer höheren Energie.
