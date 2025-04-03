@@ -42,7 +42,7 @@ Beschreibung des Experiments
 
 .. admonition:: 4. Frequenzrechnung
 
-   Bestimmen Sie, ob es sich bei den stationären Punkten um lokale Minima handelt. Führen Sie dazu eine Frequenzrechnung durch (Schlüsselwort `NumFreq`).
+   Bestimmen Sie, ob es sich bei den stationären Punkten um lokale Minima handelt. Führen Sie dazu eine Frequenzrechnung durch (Schlüsselwort `AnFreq`).
 
 .. admonition:: 5. Diskussion
 

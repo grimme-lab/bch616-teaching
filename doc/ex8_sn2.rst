@@ -23,7 +23,7 @@ Beschreibung des Experiments
 
 .. admonition:: 1. Der pericyclische Ringschluss von 1,3-Butadien: 
 
-    Zunächst soll es um den Ringschluss von 1,3-Butadien zu Cyclobuten gehen. In Experiment :ref:`exp_rel_conf` haben Sie bereits die möglichen Konformere von 1,3-Butadien Butadien betrachtet und auch deren Population nach der Boltzmannverteilung berechenet. 
+    Zunächst soll es um den Ringschluss von 1,3-Butadien zu Cyclobuten gehen. In Experiment :ref:`exp_rel_conf` haben Sie bereits die möglichen Konformere von 1,3-Butadien betrachtet und auch deren Population nach der Boltzmannverteilung berechenet. 
 
     1.1 Welches Konformer ist der sinnvolle Ausgangspunkt für den Ringschluss? Erwarten Sie basierend auf der Boltzmannverteilung zwischen den Konformeren von 1,3-Butadien, dass der Ringschluss bei Raumtemperatur eine effiziente Reaktion ist und wie würden Sie die Reaktionsbedingungen anpassen, um dies zu verbessern?
 
