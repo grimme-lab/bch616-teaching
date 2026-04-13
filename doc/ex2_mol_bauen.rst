@@ -15,7 +15,15 @@ Dabei sollen diese sowohl mittels "Papier und Stift" als auch mit graphischen Ed
 
 Aufruf des ORCA Programms
 -------------------------
-Um das Programm ORCA aufrufen zu können müssen Sie eine Inputdatei erstellen (z.B. ``meininput.inp``) und dann folgenden Befehl ausführen:
+Um das Programm ORCA aufrufen zu können, müssen Sie als erstes das ORCA Programm laden. Um dies zu tun, müssen Sie folgenden Befehl in ihrer Shell eingeben:
+
+.. code-block:: bash
+
+   module load orca
+
+Wenn sie das Modul geladen haben, bleibt dieses solange geladen, bis Sie die Shell schließen.
+
+Danach erstellen Sie eine Inputdatei (z.B. ``meininput.inp``) und dann führen Sie folgenden Befehl aus:
 
 .. code-block:: bash
 
@@ -51,7 +59,7 @@ Der generelle Aufbau einer Inputdatei sieht so aus:
       Z-Matrix
    *
 
-Zu Beachten ist: die Multiplizität ist definiert als `2S+1` wobei `S` der Gesamtspin ist. Für geschlossenschalige Moleküle ist die Multiplizität immer `1`.
+Zu Beachten ist: die Multiplizität ist definiert als `2S+1`, wobei `S` der Gesamtspin ist. Für geschlossenschalige Moleküle ist die Multiplizität immer `1`.
 
 Ein Beispiel einer Single-Point-Rechnung für Wasserstoffperoxid (:math:`\ce{H2O2}`), einmmal mit Kartesischen Koordinaten:
 
@@ -321,4 +329,4 @@ Beschreibung des Experiments
    |                              | O                                                |
    +                              +--------------------------------------------------+
    |                              | H                                                |
-   +------------------------------+--------------------------------------------------+
+   -------------------------------+--------------------------------------------------+

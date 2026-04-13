@@ -21,7 +21,7 @@ copyright = '2024, Grimme group'
 author = 'Grimme group'
 
 # The full version, including alpha/beta/rc tags
-release = 'SS 25'
+release = 'SS 26'
 
 
 # -- General configuration ---------------------------------------------------

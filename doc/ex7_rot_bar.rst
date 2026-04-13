@@ -37,7 +37,7 @@ Die Methode verwendet das r\ :sup:`2`-SCAN Dichtefunktional mit `D4` Dispersions
           end
           
           %paras
-            ang = 000.0000, 120.0000, 120
+            ang = 000.0000, 120.0000, 121
           end
           
           *int 0 1
@@ -139,7 +139,7 @@ Führen Sie also im Folgenden einen solchen relaxierten Multilevel-Oberflächens
           
           %geom
             Scan
-                d 3 1 0 2 = 180.0000, 000.0000, 90
+                d 3 1 0 2 = 180.0000, 000.0000, 91
             end
           end
           
