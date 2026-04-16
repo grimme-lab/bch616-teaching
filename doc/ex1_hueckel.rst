@@ -189,7 +189,7 @@ Wechseln Sie in dieses Verzeichnis (``cd hueckel``).
 
    .. code-block:: bash
 
-      viewhuck < pyr.out
+      viewhuck pyr.in
 
    Das Programm erzeugt eine Postskript-Datei (``Dateiname.ps``). Diese kann z.B. mit ``okular Dateiname.ps`` geöffnet werden.
 
