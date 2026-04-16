@@ -314,8 +314,8 @@ e) Finden Sie die jeweils bevorzugte Kohlenstoffposition für a. elektrophile un
 
       3
       O  0.0 0.0 0.0
-      H   x   y  0.0
-      H   x  -y  0.0
+      H   a   b  0.0
+      H   a  -b  0.0
 
    * CH\ :sub:`2`\ O
 
@@ -323,11 +323,11 @@ e) Finden Sie die jeweils bevorzugte Kohlenstoffposition für a. elektrophile un
 
       4
       C  0.0 0.0 0.0
-      O   x  0.0 0.0
-      H  -y   z  0.0
-      H  -y  -z  0.0
+      O   a  0.0 0.0
+      H  -b   c  0.0
+      H  -b  -c  0.0
 
-   Berechnen Sie die Werte für x, y und z aus den Angaben zu Bindungslänge und -winkel:
+   Berechnen Sie die Werte für a, b und c aus den Angaben zu Bindungslänge und -winkel:
 
    - R(OH): 0.95
    - R(CO): 1.2
@@ -465,7 +465,7 @@ Protokoll
    +------+-------+------+-------+
 
 
-.. table:: (6e.) Ionisationspotential für verschiedene Moleküle.
+.. table:: (6e.) Ladungsordnung der Kohlenstoffatome für Quinolin(IIa) und Isoquinolin(IIb) .
    :align: center
 
    +-----+-----+-----+
@@ -493,7 +493,7 @@ Protokoll
    +-----+-----+-----+
 
 
-.. table:: (6f.) Ionisierungsenergien
+.. table:: (7) Ionisierungsenergien
    :align: center
 
    +---------------------+---------+----------------------------------+
